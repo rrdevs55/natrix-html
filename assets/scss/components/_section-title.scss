@@ -1,0 +1,164 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.6 sectiontitle
+/*----------------------------------------*/
+// Section subtitle 1
+
+.section-title {
+    &__wrapper {
+        margin-bottom: 65px;
+
+        @media #{$md} {
+            margin-bottom: 40px;
+        }
+
+        @media #{$sm,$xs} {
+            margin-bottom: 30px;
+            text-align: start;
+        }
+
+        .section {
+            &__title {
+                font-size: 65px;
+                font-weight: 600;
+                line-height: 70px;
+                color: #FFFFFF;
+                margin-bottom: 0;
+                font-family: var(--rr-ff-heading);
+
+                span {
+                    font-style: italic;
+                    font-weight: 300;
+                }
+
+                @media #{$md} {
+                    font-size: 55px;
+                    line-height: 60px;
+                }
+
+                @media #{$sm} {
+                    font-size: 44px;
+                    line-height: 55px;
+                }
+
+                @media #{$xs} {
+                    font-size: 35px;
+                    line-height: 45px;
+                }
+
+                @media #{$md,$sm,$xs} {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-title {
+    &__wrapper {
+        &_2 {
+            margin-bottom: 40px;
+
+            .section {
+                &__title {
+                    font-size: 200px;
+                    font-weight: 300;
+                    color: var(--rr-common-white);
+                    line-height: 200px;
+                    font-style: italic;
+                    font-family: var(--rr-ff-heading);
+
+                    @media #{$lg} {
+                        font-size: 130px;
+                        line-height: 130px;
+                    }
+                    @media #{$md} {
+                        font-size: 90px;
+                        line-height: 90px;
+                    }
+                    @media #{$sm} {
+                        font-size: 70px;
+                        line-height: 70px;
+                    }
+                    @media #{$xs} {
+                        font-size: 60px;
+                        line-height: 60px;
+                    }
+
+                    span {
+                        font-weight: 600;
+                        font-style: normal;
+                    }
+                }
+            }
+
+        }
+
+        &_3 {
+            .section {
+                &__title {
+                    font-size: 150px;
+                    line-height: 150px;
+
+                    @media #{$md} {
+                        font-size: 80px;
+                        line-height: 80px;
+                    }
+
+                    @media #{$sm} {
+                        font-size: 65px;
+                        line-height: 65px;
+                    }
+
+                    @media #{$xs} {
+                        font-size: 40px;
+                        line-height: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.section-top {
+    &__area-title {
+        left: 0;
+        right: 0;
+        top: 10px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .title {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 26px;
+            text-transform: capitalize;
+            color: var(--rr-text-body-2);
+            font-family: var(--rr-ff-body);
+
+            &::before {
+                content: "";
+                width: 7px;
+                height: 7px;
+                margin-right: 15px;
+                display: inline-block;
+                transform: translateY(-2px);
+                background-color: var(--rr-text-body-2);
+            }
+        }
+
+        span {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 26px;
+            font-family: var(--rr-text-body);
+        }
+    }
+}

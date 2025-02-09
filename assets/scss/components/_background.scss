@@ -1,0 +1,29 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.2 background
+/*----------------------------------------*/
+
+.white-bg {
+  background-color: var(--rr-common-white);
+}
+
+.black-bg {
+  background-color: var(--rr-common-black);
+}
+
+.heading-bg {
+  background-color: var(--rr-heading-primary);
+}
+
+.body-bg {
+  background-color: var(--rr-body-primary);
+}
+
+.testimonial-bg {
+  background-color: #F6F6F6;
+}
+
+.testimonial-bg-2 {
+  background-color: #EEE7DF;
+}

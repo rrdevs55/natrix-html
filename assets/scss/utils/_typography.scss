@@ -1,0 +1,138 @@
+// Font family -----
+
+
+//  Oak Sans / 
+@font-face {
+    font-family: "Oak Sans";
+    src: url("../fonts/OakSans-SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Oak Sans";
+    src: url("../fonts/OakSans-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Oak Sans";
+    src: url("../fonts/OakSans-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Oak Sans";
+    src: url("../fonts//OakSans-Light.ttf");
+    font-weight: 300;
+}
+
+//  HKGrotesk / 
+@font-face {
+    font-family: "HK Grotesk";
+    src: url("../fonts/HKGrotesk-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "HK Grotesk";
+    src: url("../fonts/HKGrotesk-SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "HK Grotesk";
+    src: url("../fonts/HKGrotesk-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "HK Grotesk";
+    src: url("../fonts/HKGrotesk-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "HK Grotesk";
+    src: url("../fonts/HKGrotesk-Light.ttf");
+    font-weight: 300;
+}
+
+// font family
+$font-family: (
+    ff: ("body": "Oak Sans",
+        "heading": "HK Grotesk",
+        "fontawesome": 'Font Awesome 6 Pro',
+    )
+);
+
+
+// :root {
+//     --font_heading: "HK Grotesk";
+//     --font_body: "Oak Sans";
+//     --font_awesome: 'Font Awesome 6 Pro';
+// }
+
+
+
+// Font Family Classes
+// .font {
+//     &-heading {
+//         &-instrumentsans-medium {
+//             @include heading (var(--font_body), 500, 0.90);
+//         }
+
+//         &-sequelsans-romanbody {
+//             @include heading (var(--font_sequelsansromanbody), 310, 0.90);
+//         }
+
+//         &-thunder-regular {
+//             @include heading (var(--font_thunder), 400, 0.85);
+//         }
+
+//         &-bdogrotesk-regular {
+//             @include heading (var(--font_bdogrotesk), 400, 0.95);
+//         }
+
+//     }
+// }
+
+
+
+// font weight
+$font-scale: (
+    fw: ("normal": normal,
+        "thin": 100,
+        "elight": 200,
+        "light": 300,
+        "regular": 400,
+        "medium": 500,
+        "sbold": 600,
+        "bold": 700,
+        "ebold": 800,
+        "black": 900,
+    )
+);
+
+// font size
+$font-size: (
+    fs: ("body": 18px,
+        "body2": 18px,
+        "p": 18px,
+        "h1": 70px,
+        "h2": 100px,
+        "h3": 90px,
+        "h4": 24px,
+        "h5": 20px,
+        "h6": 15px,
+    ),
+    lh: ("body": 28px,
+        "body2": 28px,
+        "p": 24px,
+        "h1": 72px,
+        "h2": 105px,
+        "h3": 100px,
+        "h4": 28px,
+        "h5": 32px,
+        "h6": 30px,
+    )
+);

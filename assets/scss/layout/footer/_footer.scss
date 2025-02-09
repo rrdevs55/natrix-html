@@ -1,0 +1,210 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.1 footer
+/*----------------------------------------*/
+
+
+.footer-section {
+    &__logo {
+        img {
+            max-width: 101px;
+        }
+    }
+
+    &__dec {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        margin-top: 45px;
+        margin-bottom: 55px;
+        font-family: var(--rr-ff-body);
+
+        @media #{$lg,$md,$sm,$xs} {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__form {
+        position: relative;
+        border-bottom: 1px solid rgb(217 217 217 / 10%);
+
+        input {
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin-bottom: 22px;
+
+            @include rs-placeholder {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 1;
+                color: var(--rr-text-body);
+                font-family: var(--rr-ff-body);
+            }
+        }
+
+        button {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1;
+            color: #FFFFFF;
+            right: 0;
+            top: 5px;
+            position: absolute;
+            font-family: var(--rr-ff-heading);
+        }
+    }
+
+    .section-title {
+        &__wrapper {
+            margin-bottom: 150px;
+
+            @media #{$md} {
+                margin-bottom: 80px;
+            }
+
+            @media #{$sm,$xs} {
+                margin-bottom: 70px;
+            }
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 70px;
+
+        @media #{$sm} {
+            margin-bottom: 50px;
+        }
+
+        @media #{$xs} {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        margin-bottom: 22px;
+        color: var(--rr-text-body);
+        font-family: var(--rr-ff-heading);
+    }
+
+    &__map {
+        a {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+            font-family: var(--rr-ff-body);
+            text-decoration-line: underline;
+
+            &:hover {
+                color: var(--rr-theme-primary);
+            }
+
+            @media #{$xs} {
+                margin-right: 22px;
+            }
+
+            @media #{$md} {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__social {
+        a {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 35px;
+            margin-right: 37px;
+            display: inline-block;
+            text-transform: capitalize;
+            text-decoration-line: underline;
+            font-family: var(--rr-ff-heading);
+
+            &:hover {
+                color: var(--rr-theme-primary);
+            }
+
+            @media #{$md} {
+                margin-right: 20px;
+            }
+
+            @media #{$xs} {
+                margin-right: 22px;
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__wedget {
+        &.wedget_1 {
+            margin-right: 115px;
+
+            @media #{$xl} {
+                margin-right: 80px;
+            }
+
+            @media #{$lg} {
+                margin-right: 30px;
+            }
+
+            @media #{$md,$sm,$xs} {
+                margin-right: 0px;
+            }
+        }
+
+        &.wedget_2 {
+            margin-left: 150px;
+
+            @media #{$xl} {
+                margin-left: 80px;
+            }
+
+            @media #{$lg} {
+                margin-left: 30px;
+            }
+
+            @media #{$md,$sm,$xs} {
+                margin-left: 0px;
+            }
+
+            @media #{$sm,$xs} {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+.copyright {
+    &__wrapper {
+        background: #1B1B1B;
+        padding: 36.5px 0;
+
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+            font-family: var(--rr-ff-body);
+
+            a {
+                text-decoration-line: underline;
+
+                &:hover {
+                    color: var(--rr-theme-primary);
+                }
+            }
+        }
+    }
+}

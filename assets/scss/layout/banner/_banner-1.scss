@@ -1,0 +1,201 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1 banner Style 1
+/*----------------------------------------*/
+
+
+
+
+.banner-section-space {
+    padding-top: 205px;
+    padding-bottom: 100px;
+
+    @media #{$md} {
+        padding-top: 170px;
+        padding-bottom: 80px;
+    }
+
+    @media #{$sm,$xs} {
+        padding-top: 160px;
+        padding-bottom: 70px;
+    }
+}
+
+.banner-section {
+    position: relative;
+
+    &__title {
+        font-size: 100px;
+        font-weight: 600;
+        line-height: 100px;
+        margin-bottom: 15px;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-heading);
+
+        @media #{$lg} {
+            font-size: 80px;
+            line-height: 80px;
+        }
+
+        @media #{$md} {
+            font-size: 65px;
+            line-height: 75px;
+
+            br {
+                display: none;
+            }
+        }
+
+        @media #{$sm} {
+            font-size: 45px;
+            line-height: 55px;
+
+            br {
+                display: none;
+            }
+        }
+
+        @media #{$xs} {
+            font-size: 35px;
+            line-height: 50px;
+
+            br {
+                display: none;
+            }
+        }
+
+        span {
+            font-weight: 300;
+            font-style: italic;
+        }
+    }
+
+    &__title {
+        img {
+            width: inherit;
+            margin: 0 10px;
+
+            @media #{$sm} {
+                width: 7%;
+                margin: 0 5px;
+            }
+
+            @media #{$xs} {
+                width: 12%;
+            }
+        }
+    }
+
+    &__dec {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        margin-bottom: 35px;
+        color: var(--rr-text-body);
+        font-family: var(--rr-ff-body);
+
+        @media #{$xs} {
+            br {
+                display: none;
+            }
+        }
+
+        span {
+            font-weight: 500;
+            color: var(--rr-theme-primary);
+        }
+
+        &::before {
+            content: "";
+            width: 40px;
+            display: inline-block;
+        }
+    }
+
+    &__social {
+        left: 50px;
+        top: 215px;
+        row-gap: 30px;
+        position: absolute;
+        display: inline-grid;
+
+        @media #{$xxl} {
+            left: 29px;
+        }
+
+        @media #{$xl,$lg,$md} {
+            top: auto;
+            bottom: 100px;
+            display: inline-flex;
+            column-gap: 30px;
+        }
+
+        a {
+            color: #C0C0C0;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                color: var(--rr-theme-primary);
+            }
+        }
+    }
+
+    &__bg {
+        &__text {
+            position: absolute;
+            top: 54.5%;
+            left: 220px;
+            transform: translateY(-50%) rotate(-13deg);
+            z-index: -1;
+
+            @media #{$xxxl} {
+                left: 100px;
+            }
+
+            @media #{$xxl} {
+                left: 70px;
+            }
+
+            @media #{$xl,$lg} {
+                top: 58.5%;
+                left: 60px;
+            }
+
+            @media #{$md} {
+                top: 58.5%;
+                left: 40px;
+            }
+
+            h3 {
+                font-size: 175px;
+                color: transparent;
+                -webkit-text-stroke: 2px #171717;
+
+                @media (min-width: 1700px) and (max-width: 1770px) {
+                    font-size: 165px;
+                }
+
+                @media #{$xxxl} {
+                    font-size: 155px;
+                }
+
+                @media #{$xxl} {
+                    font-size: 140px;
+                }
+
+                @media #{$xl} {
+                    font-size: 110px;
+                }
+
+                @media #{$lg} {
+                    font-size: 100px;
+                }
+
+                @media #{$md} {
+                    font-size: 80px;
+                }
+            }
+        }
+    }
+}

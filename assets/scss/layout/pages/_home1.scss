@@ -1,0 +1,227 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  8.12 home1
+/*----------------------------------------*/
+// Faizen video animation css
+
+
+.thumb-bg-section {
+    &__wrapper {
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__counter {
+        background-color: #FFCD4D;
+        display: inline-block;
+        padding: 0 50px;
+        padding-top: 96px;
+        padding-bottom: 80px;
+
+
+        @media #{$lg,$md,$xs} {
+            padding: 0 30px;
+        }
+
+        @media #{$xl,$lg} {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        @media #{$md,$xs} {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        &__thumb {
+            max-width: 431px;
+            max-height: 279px;
+            margin-top: 100px;
+            margin-bottom: 97px;
+
+            @media #{$xl,$lg} {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            @media #{$md,$xs} {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+        }
+
+        .title {
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 35px;
+            color: #2E2828;
+            font-family: var(--rr-ff-body);
+
+            @media #{$xs} {
+                font-size: 23px;
+            }
+        }
+    }
+
+    &__count {
+        h4 {
+            font-size: 120px;
+            font-weight: 600;
+            line-height: 1;
+            color: #2E2828;
+            font-family: var(--rr-ff-heading);
+
+            @media #{$md} {
+                font-size: 90px;
+            }
+
+            @media #{$xs} {
+                font-size: 70px;
+            }
+
+            .odometer.odometer-auto-theme,
+            .odometer.odometer-theme-default {
+                font-family: var(--rr-ff-heading);
+                line-height: 1;
+            }
+        }
+    }
+}
+
+
+.brand-slide-section {
+    .brand-slide__active {
+        .swiper-wrapper {
+            display: flex;
+            column-gap: 95px;
+            align-items: center;
+            justify-content: space-between;
+            transition-timing-function: linear;
+
+            @media #{$sm} {
+                column-gap: 50px;
+            }
+
+            @media #{$xs} {
+                column-gap: 30px;
+            }
+
+            .swiper-slide {
+                width: auto;
+            }
+        }
+    }
+
+    &__wrapper {
+        .title {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            text-align: center;
+            margin-bottom: 70px;
+            color: var(--rr-text-body);
+            font-family: var(--rr-ff-body);
+
+            @media #{$sm,$xs} {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+
+
+.title-slide-section {
+    &__item {
+        h3 {
+            font-size: 150px;
+            font-weight: 500;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            column-gap: 80px;
+            margin-right: -100%;
+            color: var(--rr-common-white);
+            font-family: var(--rr-ff-heading);
+
+            @media #{$xl} {
+                font-size: 120px;
+            }
+
+            @media #{$lg,$md} {
+                font-size: 100px;
+            }
+
+            @media #{$sm} {
+                font-size: 70px;
+            }
+
+            @media #{$xs} {
+                font-size: 50px;
+                margin-right: -155%;
+            }
+
+            img {
+                width: inherit;
+            }
+        }
+    }
+}
+
+
+
+.funfact-area-2 {
+    .thumb {
+        text-align: end;
+
+        img {
+            width: 100%;
+            transform: scale(0.8);
+            transform-origin: top right;
+        }
+    }
+}
+
+
+.counter-section {
+    &__count {
+        @media #{$md,$sm,$xs} {
+            text-align: center;
+        }
+
+        h4 {
+            font-size: 120px;
+            font-weight: 500;
+            line-height: 120px;
+            color: transparent;
+            font-family: var(--rr-ff-heading);
+            -webkit-text-stroke: 1px var(--rr-common-white);
+
+            .odometer.odometer-auto-theme,
+            .odometer.odometer-theme-default {
+                font-family: var(--rr-ff-heading);
+                line-height: 1;
+            }
+
+            @media #{$lg,$xs} {
+                font-size: 100px;
+            }
+        }
+
+        p {
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 35px;
+            color: var(--rr-text-body);
+            font-family: var(--rr-ff-body);
+
+            @media #{$lg} {
+                font-size: 26px;
+            }
+        }
+    }
+}
