@@ -585,23 +585,6 @@
 	});
 
     // Popup Search Box
-    // $(function () {
-    //     $("#popup-search-box").removeClass("toggled");
-
-    //     $(".dl-search-icon").on("click", function (e) {
-    //         e.stopPropagation();
-    //         $("#popup-search-box").toggleClass("toggled");
-    //         $("#popup-search").focus();
-    //     });
-
-    //     $("#popup-search-box input").on("click", function (e) {
-    //         e.stopPropagation();
-    //     });
-
-    //     $("#popup-search-box, body").on("click", function () {
-    //         $("#popup-search-box").removeClass("toggled");
-    //     });
-    // });
     $(".search-open-btn").on("click", function () {
         $(".search__popup").addClass("search-opened");
     });
@@ -1735,7 +1718,25 @@
 
    
 
+    const videoBox = document.getElementById("videoBox");
+    const closeBtn = document.getElementById("closeBtn");
 
+    // ভিডিও ওপেন করা
+    videoBox.addEventListener("click", function () {
+        videoBox.classList.add("full-screen");
+        closeBtn.style.display = "flex";
+    });
+
+    // মাউস মুভ করলে ক্লোজ বাটন অনুসরণ করবে
+    document.addEventListener("mousemove", function (e) {
+        closeBtn.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+
+    // ক্লোজ বাটনে ক্লিক করলে ভিডিও ছোট হয়ে যাবে
+    closeBtn.addEventListener("click", function () {
+        videoBox.classList.remove("full-screen");
+        closeBtn.style.display = "none";
+    });
 
 
 

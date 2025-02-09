@@ -3,3 +3,40 @@
 /*  8.12 home3
 /*----------------------------------------*/
 
+
+
+
+
+
+
+
+
+
+
+
+
+.thumb-bg-section-2 {
+    &__wrapper {
+        width: 100%;
+        height: 915px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media #{$xl} {
+            height: 700px;
+        }
+
+        @media #{$lg} {
+            height: 600px;
+        }
+
+        @media #{$md} {
+            height: 500px;
+        }
+
+        @media #{$sm,$xs} {
+            height: 400px;
+        }
+    }
+}

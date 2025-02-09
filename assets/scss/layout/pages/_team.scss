@@ -99,3 +99,60 @@
         }
     }
 }
+
+
+
+
+
+
+
+
+.team-section-2 {
+    &__info {
+        margin-top: 25px;
+
+        @media #{$lg,$md,$sm,$xs} {
+            margin-top: 20px;
+        }
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-heading);
+
+        &:hover {
+            color: var(--rr-theme-primary);
+        }
+
+        @media #{$lg,$md,$sm,$xs} {
+            font-size: 22px;
+        }
+    }
+
+    &__position {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: var(--rr-text-body);
+        font-family: var(--rr-ff-body);
+
+        @media #{$lg,$md,$sm,$xs} {
+            font-size: 17px;
+        }
+    }
+
+    .title-slide-section {
+        &__item {
+            h3 {
+                font-weight: 500;
+                font-size: 250px;
+                line-height: 1;
+                color: var(--rr-common-white);
+                font-family: var(--rr-ff-heading);
+            }
+        }
+    }
+}
