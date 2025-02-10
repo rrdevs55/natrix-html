@@ -1561,26 +1561,6 @@
     }
 
 
-
-
-
-    // document.addEventListener("DOMContentLoaded", () => {
-    //     const mainImage = document.getElementById("main-image");
-    //     const textItems = document.querySelectorAll(".text-item");
-
-    //     textItems.forEach(item => {
-    //         item.addEventListener("mouseover", () => {
-    //             const newImage = item.getAttribute("data-background");
-    //             mainImage.style.opacity = "0"; // ফেড-আউট
-
-    //             setTimeout(() => {
-    //                 mainImage.src = newImage;
-    //                 mainImage.style.opacity = "1"; // ফেড-ইন
-    //             }, 300);
-    //         });
-    //     });
-    // });
-
     document.addEventListener("DOMContentLoaded", () => {
         const mainImage = document.getElementById("main-image");
         const textItems = document.querySelectorAll(".services-section__item");
@@ -1588,11 +1568,11 @@
         textItems.forEach(item => {
             item.addEventListener("mouseover", () => {
                 const newImage = item.getAttribute("data-image");
-                mainImage.style.opacity = "0"; // ফেড-আউট
+                mainImage.style.opacity = "0"; 
 
                 setTimeout(() => {
                     mainImage.src = newImage;
-                    mainImage.style.opacity = "1"; // ফেড-ইন
+                    mainImage.style.opacity = "1";
                 }, 300);
             });
         });
@@ -1630,15 +1610,109 @@
 
 
 
+    // const panelsSections = gsap.utils.toArray(".panels");
+    // for (var i = 0; i < panelsSections.length; i++) {
+
+    //     var thePanelsSection = panelsSections[i];
+    //     const panels = gsap.utils.toArray(".panels-container .panel", thePanelsSection);
+    //     const panelsContainer = thePanelsSection.querySelector(".panels-container");
+
+    //     gsap.set(panelsContainer, {
+    //         height: window.innerHeight
+    //     });
+    //     gsap.set(panels, {
+    //         height: window.innerHeight
+    //     });
+
+    //     var totalPanelsWidth = 0;
+    //     panels.forEach(function (panel) {
+    //         totalPanelsWidth += $(panel).width();
+    //     });
+
+    //     gsap.set(panelsContainer, {
+    //         width: totalPanelsWidth
+    //     });
+    //     gsap.to(panels, {
+    //         x: -totalPanelsWidth + innerWidth,
+    //         ease: "none",
+    //         scrollTrigger: {
+    //             trigger: panelsContainer,
+    //             pin: true,
+    //             pinSpacing: true,
+    //             start: "-10%  top",
+    //             end: "-80% bottom",
+    //             scrub: 1,
+    //             end: (st) => "+=" + (st.vars.trigger.offsetWidth - innerWidth),
+    //         }
+    //     });
+
+    // }
+
+
+
+    // gsap.registerPlugin(ScrollTrigger);
+
+    // const panelsContainer = document.querySelector(".panels-container");
+    // const panels = gsap.utils.toArray(".panel");
+
+    // let totalPanelsWidth = 0;
+    // // panels.forEach(panel => {
+    // //     totalPanelsWidth += panel.offsetWidth + 20; 
+    // // });
+    // panels.forEach(panel => {
+    //     totalPanelsWidth += panel.offsetWidth; 
+    // });
+
+    // gsap.set(panelsContainer, { width: totalPanelsWidth });
+
+    // gsap.to(panelsContainer, {
+    //     x: -totalPanelsWidth + innerWidth,
+    //     ease: "none",
+    //     scrollTrigger: {
+    //         trigger: ".panels",
+    //         pin: true,
+    //         scrub: 1,
+    //         start: "-20% top",
+    //         end: "+=" + totalPanelsWidth,
+    //         anticipatePin: 3
+    //     }
+    // });
+
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const panelsContainer = document.querySelector(".panels-container");
+    const panels = gsap.utils.toArray(".panel");
+
+    let totalPanelsWidth = panels.reduce((acc, panel) => acc + panel.offsetWidth, 0);
+
+    gsap.set(panelsContainer, { width: totalPanelsWidth });
+
+    // ✅ GSAP Horizontal Scroll Animation (Bug Fixed)
+    gsap.to(panelsContainer, {
+        x: -(totalPanelsWidth - window.innerWidth), 
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".panels",
+            pin: true,
+            scrub: 3,
+            start: "-20% top",
+            end: "+=" + (totalPanelsWidth - window.innerWidth), 
+            anticipatePin: 3,
+            markers: true
+        }
+    });
+
+
 
     document.addEventListener("DOMContentLoaded", () => {
         const circle = document.querySelector(".progress-ring__circle");
         const stepCounter = document.getElementById("step-counter");
-        const section = document.querySelector(".work-process__section"); // আপনার নির্দিষ্ট সেকশন
+        const section = document.querySelector(".work-process__section"); 
 
         const totalSteps = 4;
         let currentStep = 1;
-        const circumference = 830; // বৃত্তের পরিধি
+        const circumference = 830;
 
         function resetProgress() {
             circle.style.strokeDashoffset = circumference;
@@ -1656,21 +1730,18 @@
             const sectionHeight = section.offsetHeight;
             const scrollPos = window.scrollY;
             const windowHeight = window.innerHeight;
-            const maxScroll = sectionHeight - windowHeight; // শুধুমাত্র সেকশনের মধ্যে সীমাবদ্ধ
+            const maxScroll = sectionHeight - windowHeight; 
 
-            // ✅ 10% স্ক্রল না হলে কিছুই হবে না
             if (scrollPos < sectionTop + (sectionHeight * 0.1)) {
                 resetProgress();
                 return;
             }
 
-            // ✅ বটমের ১০% থাকলে এনিমেশন বন্ধ হবে
             if (scrollPos > sectionTop + (sectionHeight * 0.9)) {
                 resetProgress();
                 return;
             }
 
-            // ✅ এখন শুধুমাত্র সেকশনের মধ্যে অ্যানিমেশন চলবে
             const relativeScroll = scrollPos - sectionTop;
             const step = Math.ceil((relativeScroll / maxScroll) * totalSteps);
 
@@ -1712,31 +1783,55 @@
     });
 
 
+    var swiperProject = new Swiper(".project-section-2__active", {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        loop: true,
+        centeredSlides: false,
+        autoplay: true,
+        centerMode: true,
+        speed: 400,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            767: {
+                slidesPerView: 2,
+            },
+            992: {
+                sliderPerView: 3,
+            },
+            1200: {
+                slidesPerView: 4,
+            },
+        },
+    });
+
 
 
     
 
    
 
-    const videoBox = document.getElementById("videoBox");
-    const closeBtn = document.getElementById("closeBtn");
+    // const videoBox = document.getElementById("videoBox");
+    // const closeBtn = document.getElementById("closeBtn");
 
-    // ভিডিও ওপেন করা
-    videoBox.addEventListener("click", function () {
-        videoBox.classList.add("full-screen");
-        closeBtn.style.display = "flex";
-    });
+    // // ভিডিও ওপেন করা
+    // videoBox.addEventListener("click", function () {
+    //     videoBox.classList.add("full-screen");
+    //     closeBtn.style.display = "flex";
+    // });
 
-    // মাউস মুভ করলে ক্লোজ বাটন অনুসরণ করবে
-    document.addEventListener("mousemove", function (e) {
-        closeBtn.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-    });
+    // // মাউস মুভ করলে ক্লোজ বাটন অনুসরণ করবে
+    // document.addEventListener("mousemove", function (e) {
+    //     closeBtn.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    // });
 
-    // ক্লোজ বাটনে ক্লিক করলে ভিডিও ছোট হয়ে যাবে
-    closeBtn.addEventListener("click", function () {
-        videoBox.classList.remove("full-screen");
-        closeBtn.style.display = "none";
-    });
+    // // ক্লোজ বাটনে ক্লিক করলে ভিডিও ছোট হয়ে যাবে
+    // closeBtn.addEventListener("click", function () {
+    //     videoBox.classList.remove("full-screen");
+    //     closeBtn.style.display = "none";
+    // });
 
 
 

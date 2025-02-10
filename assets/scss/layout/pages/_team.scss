@@ -105,7 +105,7 @@
 
 
 
-
+// team--2 ------------
 
 .team-section-2 {
     &__info {
@@ -124,7 +124,7 @@
         font-family: var(--rr-ff-heading);
 
         &:hover {
-            color: var(--rr-theme-primary);
+            color: var(--rr-theme-primary-2);
         }
 
         @media #{$lg,$md,$sm,$xs} {
@@ -152,6 +152,22 @@
                 line-height: 1;
                 color: var(--rr-common-white);
                 font-family: var(--rr-ff-heading);
+
+                @media #{$xl} {
+                    font-size: 140px;
+                }
+                @media #{$lg} {
+                    font-size: 120px;
+                }
+                @media #{$md} {
+                    font-size: 95px;
+                }
+                @media #{$sm} {
+                    font-size: 72px;
+                }
+                @media #{$xs} {
+                    font-size: 40px;
+                }
             }
         }
     }

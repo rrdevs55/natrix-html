@@ -140,3 +140,123 @@
         }
     }
 }
+
+
+
+
+
+
+
+
+.project-section-2 {
+    &__top {
+        display: flex;
+        align-items: start;
+        justify-content: end;
+        column-gap: 234px;
+        flex-wrap: wrap;
+
+        .section-title__wrapper {
+            @media #{$md,$sm,$xs} {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media #{$md,$sm,$xs} {
+            transform: translate(0);
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        .section {
+            &__title {
+                font-weight: 600;
+                font-size: 120px;
+                line-height: 120px;
+                margin-bottom: 0;
+                color: var(--rr-common-white);
+                font-family: var(--rr-ff-heading);
+
+                @media #{$md} {
+                    font-size: 100px;
+                    line-height: 100px;
+                }
+
+                @media #{$sm} {
+                    font-size: 80px;
+                    line-height: 85px;
+                }
+
+                @media #{$xs} {
+                    font-size: 48px;
+                    line-height: 50px;
+                }
+
+                span {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 1;
+                    display: inline-block;
+                    font-style: normal;
+                    color: var(--rr-text-body);
+                    transform: translate(10px, -50px);
+                    font-family: var(--rr-ff-body);
+
+                    @media #{$md,$sm,$xs} {
+                        transform: translate(0);
+                    }
+                }
+            }
+        }
+    }
+
+    &__wrapper {
+        margin: 0 50px;
+
+        @media #{$xl,$lg,$md,$sm,$xs} {
+            margin: 0 20px;
+        }
+    }
+
+    &__btn {
+        margin-top: 10px;
+    }
+
+    &__thumb {
+        margin-bottom: 32px;
+
+        @media #{$xs} {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 28px;
+        margin-bottom: 5px;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-heading);
+
+        @media #{$xxl} {
+            font-size: 28px;
+        }
+
+        @media #{$xl,$xs} {
+            font-size: 25px;
+        }
+
+        &:hover {
+            color: var(--rr-theme-primary-2);
+        }
+    }
+
+    &__date {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-body);
+    }
+
+}

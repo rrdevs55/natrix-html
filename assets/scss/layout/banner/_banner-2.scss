@@ -21,7 +21,11 @@
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-top: none;
         position: relative;
+        z-index: 1;
 
+        @media #{$xl,$lg} {
+            margin: 0 20px;
+        }
         @media #{$md,$sm,$xs} {
             margin: 0;
             border: none;

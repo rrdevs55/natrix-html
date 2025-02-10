@@ -49,8 +49,25 @@
         span {
             background: var(--rr-theme-primary);
         }
-        &-2{
+
+        &-2 {
             padding: 18.3px 38.8px;
+        }
+    }
+
+    &-2 {
+        border-radius: 0;
+        transition: all 0.3s ease-in-out;
+        color: var(--rr-common-white);
+        background: var(--rr-theme-primary-2);
+
+        &:hover {
+            color: #1B1B1B;
+
+            svg [fill="white"] {
+                fill: #1B1B1B;
+            }
+
         }
     }
 }
