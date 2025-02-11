@@ -95,6 +95,7 @@ h6 {
   --rr-common-selection: #3C66FA;
   --rr-color-white: #fff;
   --rr-body-primary: #121212;
+  --rr-body-primary-2: #161616;
   --rr-theme-primary: #FFCD4D;
   --rr-theme-primary-2: #21A56E;
   --rr-heading-primary: #FFFFFF;
@@ -1060,6 +1061,20 @@ section {
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .section-space-top-100 {
     padding-top: 70px;
+  }
+}
+
+.section-space-bottom-100 {
+  padding-bottom: 100px;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .section-space-bottom-100 {
+    padding-bottom: 80px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .section-space-bottom-100 {
+    padding-bottom: 70px;
   }
 }
 
@@ -8175,7 +8190,6 @@ START: Slider CSS
   color: var(--rr-text-body);
   font-family: var(--rr-ff-body);
 }
-
 .why-choose-us-2__content__item {
   display: flex;
   align-items: start;
@@ -8207,7 +8221,6 @@ START: Slider CSS
 .why-choose-us-2__content__item:last-of-type .why-choose-us-2__number span::before {
   display: none;
 }
-
 .why-choose-us-2__text {
   padding-bottom: 35px;
   margin-bottom: 35px;
@@ -8219,7 +8232,6 @@ START: Slider CSS
     margin-bottom: 22px;
   }
 }
-
 .why-choose-us-2__number span {
   font-weight: 500;
   font-size: 18px;
@@ -8254,8 +8266,7 @@ START: Slider CSS
     display: none;
   }
 }
-
-h3.why-choose-us-2__title {
+.why-choose-us-2__title {
   font-weight: 500;
   font-size: 30px;
   line-height: 35px;
@@ -8263,8 +8274,7 @@ h3.why-choose-us-2__title {
   color: var(--rr-common-white);
   font-family: var(--rr-ff-heading);
 }
-
-p.why-choose-us-2__dec {
+.why-choose-us-2__dec {
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
@@ -8272,9 +8282,115 @@ p.why-choose-us-2__dec {
   font-family: var(--rr-ff-body);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
-  p.why-choose-us-2__dec br {
+  .why-choose-us-2__dec br {
     display: none;
   }
+}
+
+.award-section {
+  background-color: var(--rr-body-primary-2);
+}
+.award-section__wrap {
+  padding-left: 80px;
+  padding-top: 100px;
+  margin-top: -350px;
+  background-color: var(--rr-body-primary-2);
+}
+.award-section__dec {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--rr-text-body);
+  font-family: var(--rr-ff-body);
+}
+.award-section__text {
+  margin-left: 80px;
+  margin-top: 25px;
+}
+.award-section__item {
+  border-bottom: 1px solid rgba(217, 217, 217, 0.1019607843);
+  padding: 26px 0;
+  padding-bottom: 21px;
+}
+.award-section__item:first-of-type {
+  border-top: 1px solid rgba(217, 217, 217, 0.1019607843);
+}
+.award-section__item.item-1 .rr-hover-reveal-bg, .award-section__item.item-5 .rr-hover-reveal-bg {
+  width: 164px;
+  height: 245px;
+}
+.award-section__item.item-2 .award-section__content {
+  column-gap: 230px;
+}
+.award-section__item.item-3 .award-section__content {
+  column-gap: 225px;
+}
+.award-section__item.item-4 .award-section__content {
+  column-gap: 185px;
+}
+.award-section__item.item-5 .award-section__content {
+  column-gap: 240px;
+}
+.award-section__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 220px;
+}
+.award-section__place span {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--rr-common-white);
+  font-family: var(--rr-ff-body);
+}
+.award-section__date {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 6px;
+  color: var(--rr-text-body-2);
+  font-family: var(--rr-ff-body);
+}
+.award-section__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--rr-common-white);
+  font-family: var(--rr-ff-heading);
+}
+.award-section__position span {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--rr-common-white);
+  font-family: var(--rr-ff-body);
+}
+.award-section__inner-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rr-hover-reveal-item .rr-hover-reveal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 139px;
+  height: 244px;
+  opacity: 0;
+  margin: -150px 0 0 -150px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 99;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: opacity 0.3s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.rr-hover-reveal-item:hover .rr-hover-reveal-bg {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*----------------------------------------*/

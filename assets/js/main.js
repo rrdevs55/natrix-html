@@ -60,23 +60,23 @@
         });
 	});
 
-    // hover reveal start
-    const hoveritem = document.querySelectorAll(".rr-hover-reveal-item");
+    // // hover reveal start
+    // const hoveritem = document.querySelectorAll(".rr-hover-reveal-item");
 
-    function moveImage(e, hoveritem, index) {
-        const item = hoveritem.getBoundingClientRect();
-        const x = e.clientX - item.x;
-        const y = e.clientY - item.y;
-        if (hoveritem.children[index]) {
-            hoveritem.children[index].style.transform = `translate(${x}px, ${y}px)`;
-        }
-    }
-    hoveritem.forEach((item, i) => {
-        item.addEventListener("mousemove", (e) => {
-            setInterval(moveImage(e, item, 1), 50);
-        });
-    });
-    // hover reveal end
+    // function moveImage(e, hoveritem, index) {
+    //     const item = hoveritem.getBoundingClientRect();
+    //     const x = e.clientX - item.x;
+    //     const y = e.clientY - item.y;
+    //     if (hoveritem.children[index]) {
+    //         hoveritem.children[index].style.transform = `translate(${x}px, ${y}px)`;
+    //     }
+    // }
+    // hoveritem.forEach((item, i) => {
+    //     item.addEventListener("mousemove", (e) => {
+    //         setInterval(moveImage(e, item, 1), 50);
+    //     });
+    // });
+    // // hover reveal end
 
 
     $(".preloader-close").on("click", function () {
@@ -1703,6 +1703,23 @@
         }
     });
 
+    // hover reveal start
+    const hoveritem = document.querySelectorAll(".rr-hover-reveal-item");
+
+    function moveImage(e, hoveritem, index) {
+        const item = hoveritem.getBoundingClientRect();
+        const x = e.clientX - item.x;
+        const y = e.clientY - item.y;
+        if (hoveritem.children[index]) {
+            hoveritem.children[index].style.transform = `translate(${x}px, ${y}px)`;
+        }
+    }
+    hoveritem.forEach((item, i) => {
+        item.addEventListener("mousemove", (e) => {
+            setInterval(moveImage(e, item, 1), 50);
+        });
+    });
+    // hover reveal end
 
 
     document.addEventListener("DOMContentLoaded", () => {
