@@ -8087,6 +8087,155 @@ START: Slider CSS
   font-family: var(--rr-ff-heading);
 }
 
+.why-choose-us-2__counter__wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .why-choose-us-2__counter__wrapper {
+    margin-bottom: 30px;
+  }
+}
+.why-choose-us-2__counter__item {
+  width: 50%;
+}
+.why-choose-us-2__counter__item:nth-child(1), .why-choose-us-2__counter__item:nth-child(2) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.why-choose-us-2__counter__item:nth-child(1), .why-choose-us-2__counter__item:nth-child(3) {
+  padding: 45px 0px;
+  padding-bottom: 55px;
+  padding-left: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+.why-choose-us-2__counter__item:nth-child(2), .why-choose-us-2__counter__item:nth-child(4) {
+  padding: 45px 80px;
+  padding-bottom: 55px;
+  padding-right: 0;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .why-choose-us-2__counter__item:nth-child(2), .why-choose-us-2__counter__item:nth-child(4) {
+    padding-left: 70px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .why-choose-us-2__counter__item:nth-child(2), .why-choose-us-2__counter__item:nth-child(4) {
+    padding-left: 30px;
+  }
+}
+.why-choose-us-2__counter__item h4 {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 80px;
+  line-height: 1;
+  color: var(--rr-common-white);
+  font-family: var(--rr-ff-heading);
+}
+.why-choose-us-2__counter__item h4 .odometer.odometer-auto-theme,
+.why-choose-us-2__counter__item h4 .odometer.odometer-theme-default {
+  font-family: var(--rr-ff-heading);
+  letter-spacing: 6px;
+}
+.why-choose-us-2__counter__item p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--rr-text-body);
+  font-family: var(--rr-ff-body);
+}
+
+.why-choose-us-2__content__item {
+  display: flex;
+  align-items: start;
+  column-gap: 40px;
+  flex-wrap: wrap;
+  margin-left: 110px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .why-choose-us-2__content__item {
+    margin-left: 60px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .why-choose-us-2__content__item {
+    margin-left: 30px;
+    flex-wrap: nowrap;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .why-choose-us-2__content__item {
+    margin-left: 0;
+  }
+}
+.why-choose-us-2__content__item:last-of-type .why-choose-us-2__text {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.why-choose-us-2__content__item:last-of-type .why-choose-us-2__number span::before {
+  display: none;
+}
+
+.why-choose-us-2__text {
+  padding-bottom: 35px;
+  margin-bottom: 35px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .why-choose-us-2__text {
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+  }
+}
+
+.why-choose-us-2__number span {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 500px;
+  position: relative;
+  color: var(--rr-common-white);
+  font-family: var(--rr-ff-body);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.why-choose-us-2__number span::before {
+  content: "";
+  width: 1px;
+  height: 160px;
+  position: absolute;
+  border-left: 1px dashed rgba(255, 255, 255, 0.1);
+  top: 50px;
+  left: 50%;
+}
+
+h3.why-choose-us-2__title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 19px;
+  color: var(--rr-common-white);
+  font-family: var(--rr-ff-heading);
+}
+
+p.why-choose-us-2__dec {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--rr-text-body);
+  font-family: var(--rr-ff-body);
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  p.why-choose-us-2__dec br {
+    display: none;
+  }
+}
+
 /*----------------------------------------*/
 /*  8.1 brand
 /*----------------------------------------*/
