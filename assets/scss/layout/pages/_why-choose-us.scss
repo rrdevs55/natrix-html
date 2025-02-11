@@ -11,13 +11,32 @@
             align-items: center;
             flex-wrap: wrap;
 
-            @media #{$md} {
+            @media #{$md,$sm,$xs} {
+                width: 80%;
+                margin: 0 auto;
+                text-align: center;
                 margin-bottom: 30px;
+            }
+
+            @media #{$sm,$xs} {
+                width: 100%;
             }
         }
 
         &__item {
             width: 50%;
+
+            @media #{$xs} {
+                width: 100%;
+            }
+
+            @media #{$xs} {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+                &:last-of-type {
+                    border: none;
+                }
+            }
 
             &:nth-child(1),
             &:nth-child(2) {
@@ -30,6 +49,10 @@
                 padding-bottom: 55px;
                 padding-left: 0;
                 border-right: 1px solid rgba(255, 255, 255, 0.05);
+
+                @media #{$xs} {
+                    border-right: none;
+                }
             }
 
             &:nth-child(2),
@@ -44,6 +67,10 @@
 
                 @media #{$lg} {
                     padding-left: 30px;
+                }
+
+                @media #{$md,$sm,$xs} {
+                    padding-left: 0;
                 }
             }
 
@@ -141,6 +168,10 @@
     font-family: var(--rr-ff-body);
     border: 1px solid rgb(255 255 255 / 10%);
 
+    @media #{$sm,$xs} {
+        margin-bottom: 15px;
+    }
+
     &::before {
         content: "";
         width: 1px;
@@ -149,6 +180,10 @@
         border-left: 1px dashed rgba(255, 255, 255, 0.1);
         top: 50px;
         left: 50%;
+
+        @media #{$sm,$xs} {
+            display: none;
+        }
     }
 }
 
@@ -168,7 +203,7 @@ p.why-choose-us-2__dec {
     color: var(--rr-text-body);
     font-family: var(--rr-ff-body);
 
-    @media #{$lg} {
+    @media #{$lg,$sm,$xs} {
         br {
             display: none;
         }
