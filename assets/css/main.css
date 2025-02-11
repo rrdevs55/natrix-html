@@ -1134,6 +1134,20 @@ section {
   }
 }
 
+.section-space-top-160 {
+  padding-top: 160px;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .section-space-top-160 {
+    padding-top: 80px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .section-space-top-160 {
+    padding-top: 70px;
+  }
+}
+
 .section-space-bottom-160 {
   padding-bottom: 160px;
 }
@@ -6471,6 +6485,9 @@ body .ui-tooltip {
   margin-bottom: 0;
 }
 
+.blog-section-2 {
+  background-color: var(--rr-body-primary-2);
+}
 .blog-section-2__top {
   display: flex;
   align-items: end;
@@ -6804,6 +6821,78 @@ body .ui-tooltip {
 /*----------------------------------------*/
 /*  6.2 footer-2
 /*----------------------------------------*/
+.footer-section-2__title {
+  font-weight: 500;
+  font-size: 250px;
+  line-height: 250px;
+  text-align: center;
+  color: var(--rr-common-white);
+  font-family: var(--rr-ff-heading);
+}
+.footer-section-2 .footer-section__dec {
+  margin-top: 45px;
+  margin-bottom: 55px;
+}
+.footer-section-2 .footer-section__form {
+  max-width: 445px;
+  margin: 0 auto;
+  margin-bottom: 45px;
+}
+.footer-section-2__social {
+  display: flex;
+  column-gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.footer-section-2__social a {
+  color: var(--rr-text-body);
+}
+.footer-section-2__social a:hover {
+  color: var(--rr-theme-primary-2);
+}
+
+.footer-section__form button:hover {
+  color: var(--rr-theme-primary-2);
+}
+
+.copyright-2__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 44.5px 0;
+  border-top: 1px solid rgba(217, 217, 217, 0.1);
+}
+
+.copyright-2__wrapper p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--rr-text-body);
+  font-family: var(--rr-text-body);
+}
+.copyright-2__wrapper p a {
+  text-decoration: underline;
+}
+.copyright-2__wrapper p a:hover {
+  color: var(--rr-theme-primary-2);
+}
+
+.copyright-2__menu ul {
+  list-style: none;
+}
+.copyright-2__menu ul li {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0 22px;
+  display: inline-block;
+  color: var(--rr-text-body);
+  font-family: var(--rr-text-body);
+}
+.copyright-2__menu ul li a:hover {
+  color: var(--rr-theme-primary-2);
+}
+
 /*----------------------------------------*/
 /*  6.4 footer-copyright
 /*----------------------------------------*/

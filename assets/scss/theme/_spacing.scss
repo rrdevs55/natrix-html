@@ -114,6 +114,17 @@
 		padding-bottom: 70px;
 	}
 }
+.section-space-top-160 {
+	padding-top: 160px;
+
+	@media #{$md} {
+		padding-top: 80px;
+	}
+
+	@media #{$sm,$xs} {
+		padding-top: 70px;
+	}
+}
 .section-space-bottom-160 {
 	padding-bottom: 160px;
 
