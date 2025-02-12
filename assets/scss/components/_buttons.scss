@@ -131,8 +131,11 @@
                 background-color: var(--rr-theme-primary-2) !important;
             }
 
-            svg [fill="#C0C0C0"] {
+            svg  [fill="#C0C0C0"] {
                 fill: var(--rr-theme-primary-2);
+            }
+            svg [fill="white"] {
+                fill: var(--rr-theme-primary-2) !important;
             }
         }
     }

@@ -143,6 +143,12 @@
             line-height: 1;
             color: var(--rr-common-white);
             font-family: var(--rr-ff-heading);
+
+            .odometer.odometer-auto-theme,
+            .odometer.odometer-theme-default {
+                font-family: var(--rr-ff-heading);
+                line-height: 1;
+            }
         }
 
         p {
