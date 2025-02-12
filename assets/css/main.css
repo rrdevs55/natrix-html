@@ -6675,6 +6675,9 @@ body .ui-tooltip {
   position: absolute;
   font-family: var(--rr-ff-heading);
 }
+.footer-section__form button:hover {
+  color: var(--rr-theme-primary);
+}
 .footer-section .section-title__wrapper {
   margin-bottom: 150px;
 }
@@ -6801,6 +6804,9 @@ body .ui-tooltip {
   }
 }
 
+.copyright {
+  margin-top: -2px;
+}
 .copyright__wrapper {
   background: #1B1B1B;
   padding: 36.5px 0;
