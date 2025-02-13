@@ -711,6 +711,24 @@
         });
     }
 
+    if ($('.project-section-3').length > 0) {
+        let mm = gsap.matchMedia();
+        mm.add("(min-width: 768px)", () => {
+            return gsap.to('.project-section-3-panel-pin', {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: '.project-section-3',
+                    scrub: 1,
+                    start: 'top -5%',
+                    end: "bottom 45%",
+                    pin: '.project-section-3-panel-pin',
+                    markers: false,
+                    toggleActions: 'play reverse play reverse',
+                }
+            });
+        });
+    }
+
 
 
     if (window.innerWidth > 768) {
@@ -1044,6 +1062,7 @@
             }
         });
     });
+
     document.addEventListener("DOMContentLoaded", function () {
         const swiper = new Swiper(".title-slider-3__active-2", {
             slidesPerView: 'auto',
