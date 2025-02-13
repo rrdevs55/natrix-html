@@ -201,51 +201,148 @@
 
 
 
-.rr-header {
-    &__menu {
-        &__wrapper {
-            .main-menu {
-                nav {
-                    ul {
-                        li {
-                            &:hover {
-                                a {
-                                    color: var(--rr-theme-primary-2);
+.rr-header-2 {
+    .rr-header {
+        &__menu {
+            &__wrapper {
+                .main-menu {
+                    nav {
+                        ul {
+                            li {
+                                &:hover {
+                                    a {
+                                        color: var(--rr-theme-primary-2);
+                                    }
                                 }
-                            }
 
-                            .sub-menu {
-                                li {
-                                    &:hover {
+                                .sub-menu {
+                                    li {
+                                        &:hover {
+                                            a {
+                                                color: var(--rr-theme-primary-2);
+                                            }
+                                        }
+
                                         a {
-                                            color: var(--rr-theme-primary-2);
+                                            color: var(--rr-common-white);
+
+                                            &:hover {
+                                                &::before {
+                                                    background-color: var(--rr-theme-primary-2);
+                                                }
+                                            }
                                         }
                                     }
 
-                                    a:hover {
-                                        &::before {
-                                            background-color: var(--rr-theme-primary-2);
-                                        }
-                                    }
+                                    ;
                                 }
-
-                                ;
                             }
                         }
                     }
                 }
             }
         }
-    }
 
-    &__right {
-        #popup-search-box {
-            &:hover {
-                svg [fill="white"] {
-                    fill: var(--rr-theme-primary-2);
+        &__right {
+            #popup-search-box {
+                &:hover {
+                    svg [fill="white"] {
+                        fill: var(--rr-theme-primary-2);
+                    }
                 }
             }
         }
     }
 
+}
+
+
+
+.rr-header-3 {
+    .rr-header {
+        &__btn-wrap {
+            .rr-btn {
+                color: #111013;
+                margin-right: 10px;
+                letter-spacing: -0.04em;
+                padding: 13.5px 27.4px;
+                border-radius: 500px;
+                background-color: var(--rr-common-white);
+
+                span {
+                    background-color: var(--rr-theme-primary-3);
+                }
+            }
+        }
+
+        &__menu {
+            &__wrapper {
+                .main-menu {
+                    nav {
+                        ul {
+                            li {
+                                &:hover {
+                                    a {
+                                        color: var(--rr-theme-primary-3);
+                                    }
+                                }
+
+                                .sub-menu {
+                                    li {
+                                        &:hover {
+                                            a {
+                                                color: var(--rr-theme-primary-3);
+                                            }
+                                        }
+
+                                        a {
+                                            color: var(--rr-common-white);
+
+                                            &:hover {
+                                                &::before {
+                                                    background-color: var(--rr-theme-primary-3);
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    ;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__right {
+            #popup-search-box {
+                &:hover {
+                    svg [fill="white"] {
+                        fill: var(--rr-theme-primary-3);
+                    }
+                }
+            }
+
+            .bar-icon {
+                width: 45px;
+                height: 45px;
+                border: 1px solid rgb(255 255 255 / 20%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 500px;
+
+                img {
+                    width: fit-content;
+                }
+
+                &:hover {
+                    img {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+    }
 }

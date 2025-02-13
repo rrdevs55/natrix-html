@@ -26,6 +26,7 @@
         @media #{$xl,$lg} {
             margin: 0 20px;
         }
+
         @media #{$md,$sm,$xs} {
             margin: 0;
             border: none;
@@ -467,5 +468,219 @@
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+// banner-3-----------------------------------
+.banner-section-3 {
+    position: relative;
+    z-index: 2;
+
+    &__title {
+        font-weight: 500;
+        font-size: 120px;
+        line-height: 120px;
+        color: #f6f6f6;
+        font-family: var(--rr-ff-heading);
+
+        @media #{$lg,$sm} {
+            font-size: 110px;
+            line-height: 110px;
+        }
+
+        @media #{$md} {
+            font-size: 80px;
+            line-height: 85px;
+        }
+
+        @media #{$xs} {
+            font-size: 50px;
+            line-height: 60px;
+        }
+    }
+
+    &__title {
+        img {
+            width: fit-content;
+            margin-left: 45px;
+            margin-top: -5px;
+            animation: animationglob 5s cubic-bezier(1, 0.99, 0.03, 0.01) infinite;
+
+            @media #{$xs} {
+                margin-left: 20px;
+                width: 12%;
+            }
+        }
+    }
+
+    &__text {
+        margin-left: 135px;
+        margin-top: 5px;
+
+        @media #{$xl} {
+            margin-left: 100px;
+        }
+
+        @media #{$lg} {
+            margin-left: 50px;
+        }
+
+        @media #{$md,$sm,$xs} {
+            margin-left: 0px;
+        }
+
+        @media #{$sm,$xs} {
+            margin-top: 30px;
+        }
+
+        >span {
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 25px;
+            color: var(--rr-common-white);
+            font-family: var(--rr-ff-body);
+
+            &::after {
+                content: "";
+                background: #252525;
+                width: 80px;
+                height: 1px;
+                display: inline-block;
+                transform: translateY(-5px);
+                margin-left: 18px;
+            }
+        }
+    }
+
+    &__dec {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        margin-top: 32px;
+        margin-bottom: 40px;
+        color: var(--rr-text-body-2);
+        font-family: var(--rr-ff-body);
+    }
+
+    &__bg-shape {
+        position: absolute;
+        top: 165px;
+        left: 0;
+        z-index: -1;
+    }
+
+    &.banner-section-space {
+        padding-top: 230px;
+        padding-bottom: 0px;
+
+        @media #{$md} {
+            padding-top: 170px;
+        }
+
+        @media #{$sm,$xs} {
+            padding-top: 160px;
+        }
+    }
+}
+
+
+
+
+
+
+
+.title-slider-3 {
+    padding-top: 236px;
+
+    @media #{$md} {
+        padding-top: 80px;
+    }
+
+    @media #{$sm,$xs} {
+        padding-top: 70px;
+    }
+
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__active {
+        background-color: var(--rr-theme-primary-3);
+        transform: rotate(-5.07deg);
+        position: relative;
+        z-index: 2;
+
+        @media #{$xs} {
+            transform: rotate(-15.07deg);
+        }
+
+        &-2 {
+            background-color: #171717;
+            transform: rotate(11.87deg);
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @media #{$xs} {
+                transform: rotate(16.87deg);
+            }
+        }
+    }
+
+    &__title {
+        font-size: 70px;
+        line-height: 1;
+        padding: 27.5px;
+        font-weight: 500;
+        color: rgb(16, 16, 16);
+        text-transform: capitalize;
+        font-family: var(--rr-ff-heading);
+
+        @media #{$md} {
+            font-size: 50px;
+            padding: 20px;
+        }
+
+        @media #{$sm} {
+            font-size: 35px;
+            padding: 15px;
+        }
+
+        @media #{$xs} {
+            font-size: 28px;
+            padding: 15px;
+        }
+
+
+        span {
+            color: transparent;
+            -webkit-text-stroke: 1px rgb(84, 84, 84);
+        }
+
+        &-2 {
+            color: var(--rr-common-white);
+
+            span {
+                color: transparent;
+                -webkit-text-stroke: 1px var(--rr-common-white);
+            }
+        }
+    }
+
+    .swiper-wrapper {
+        transition-timing-function: linear;
+
+        .swiper-slide {
+            width: auto;
+        }
     }
 }

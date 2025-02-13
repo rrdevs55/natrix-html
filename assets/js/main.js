@@ -1029,6 +1029,37 @@
         });
     });
 
+    document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".title-slider-3__active", {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            centeredSlides: true,
+            speed: 25000,
+            loop: true,
+            freeMode: true,
+            autoplay: {
+                delay: 1,
+                reverseDirection: false,
+                disableOnInteraction: false
+            }
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".title-slider-3__active-2", {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            centeredSlides: true,
+            speed: 25000,
+            loop: true,
+            freeMode: true,
+            autoplay: {
+                delay: 1,
+                reverseDirection: true,
+                disableOnInteraction: false
+            }
+        });
+    });
+
 
     var swiperProject = new Swiper(".project-section-2__active", {
         slidesPerView: 4,
@@ -1056,6 +1087,16 @@
             },
         },
     });
+
+    // var swipertitle = new Swiper(".title-slider-3__active", {
+    //     slidesPerView: 'auto',
+    //     spaceBetween: 0,
+    //     loop: true,
+    //     centeredSlides: false,
+    //     autoplay: true,
+    //     centerMode: true,
+    //     speed: 400,
+    // });
 
 
 

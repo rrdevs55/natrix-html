@@ -70,6 +70,25 @@
 
         }
     }
+
+    &-3 {
+        color: #2E2828;
+        padding: 18.5px 34.4px;
+        border-radius: 500px;
+        background-color: var(--rr-theme-primary-3);
+
+        .white-btn {
+            background: var(--rr-common-white);
+
+            span {
+                background: var(--rr-theme-primary-3);
+            }
+        }
+
+        span {
+            background: var(--rr-common-white);
+        }
+    }
 }
 
 
@@ -131,9 +150,10 @@
                 background-color: var(--rr-theme-primary-2) !important;
             }
 
-            svg  [fill="#C0C0C0"] {
+            svg [fill="#C0C0C0"] {
                 fill: var(--rr-theme-primary-2);
             }
+
             svg [fill="white"] {
                 fill: var(--rr-theme-primary-2) !important;
             }
