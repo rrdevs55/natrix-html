@@ -89,6 +89,21 @@
             background: var(--rr-common-white);
         }
     }
+
+    &.transparent-btn {
+        color: #FFF;
+        padding: 17.5px 45px;
+        border-radius: 500px;
+        background-color: transparent;
+        border: 1px solid rgb(37, 37, 37);
+
+        span {
+            background: var(--rr-theme-primary-3);
+        }
+        &:hover{
+            color: rgb(27, 27, 27);
+        }
+    }
 }
 
 

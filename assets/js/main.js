@@ -1107,6 +1107,37 @@
         },
     });
 
+    var swiperfeedback = new Swiper(".feedback-section__active", {
+        slidesPerView: 4,
+        spaceBetween: 50,
+        loop: true,
+        centeredSlides: true,
+        autoplay: true,
+        centerMode: true,
+        speed: 400,
+        navigation: {
+            nextEl: ".feedback-section__button__next",
+            prevEl: ".feedback-section__button__prev",
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            767: {
+                slidesPerView: 1,
+            },
+            992: {
+                sliderPerView: 3,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+            1700: {
+                slidesPerView: 4,
+            },
+        },
+    });
+
     // var swipertitle = new Swiper(".title-slider-3__active", {
     //     slidesPerView: 'auto',
     //     spaceBetween: 0,

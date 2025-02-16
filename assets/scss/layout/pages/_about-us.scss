@@ -265,3 +265,162 @@
         }
     }
 }
+
+
+
+
+
+
+// About-3 ---------------------
+.about-section-3 {
+    position: relative;
+
+    &__thumb {
+        &__wrap {
+            position: relative;
+        }
+
+        img {
+            width: fit-content;
+
+            @media #{$sm,$xs} {
+                width: 100%;
+            }
+        }
+
+        &.image_2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            @media #{$xs} {
+                position: inherit;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__content {
+        margin-left: 90px;
+
+        @media #{$xl} {
+            margin-left: 60px;
+        }
+
+        @media #{$lg} {
+            margin-left: 30px;
+        }
+
+        @media #{$md,$sm,$xs} {
+            margin-left: 0px;
+            margin-top: 30px;
+        }
+    }
+
+    .section-title__wrapper {
+        margin-bottom: 105px;
+
+        .section__title {
+            span {
+                background: #fff;
+                border-radius: 100px;
+                padding: 0px 36.5px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 14px;
+                margin-right: 15px;
+                transform: translateY(10px);
+
+                @media #{$sm,$xs} {
+                    padding: 0px 24px;
+                    margin-left: 0px;
+                    margin-right: 0px;
+                }
+
+                @media #{$xs} {
+                    padding: 0px 15px;
+                    transform: translateY(5px);
+                }
+
+                img {
+                    width: fit-content;
+
+                    @media #{$xs} {
+                        width: 60%;
+                    }
+                }
+            }
+
+            @media #{$lg} {
+                br {
+                    display: none;
+                }
+            }
+
+            @media #{$xs} {
+                font-size: 32px;
+                line-height: 42px;
+            }
+
+        }
+    }
+
+    &__dec {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: var(--rr-text-body-2);
+        font-family: var(--rr-ff-body);
+    }
+
+    &__btn {
+        margin-top: 40px;
+        margin-bottom: 45px;
+    }
+
+    &__count {
+        h4 {
+            font-weight: 500;
+            font-size: 65px;
+            line-height: 70px;
+            color: var(--rr-common-white);
+            font-family: var(--rr-ff-heading);
+
+            span {
+                font-size: 120px;
+                line-height: 1;
+
+                &.odometer.odometer-auto-theme,
+                .odometer.odometer-theme-default {
+                    font-family: var(--rr-ff-heading);
+                    line-height: 1;
+                }
+            }
+        }
+
+        >span {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            margin-left: 60px;
+            color: var(--rr-common-white);
+            font-family: var(--rr-ff-body);
+        }
+    }
+
+    &__shape-1 {
+        position: absolute;
+        left: 210px;
+        top: -70px;
+
+        @media #{$xl} {
+            left: 150px;
+        }
+
+        @media #{$lg} {
+            left: 180px;
+            top: -115px;
+        }
+    }
+}

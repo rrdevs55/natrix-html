@@ -1,0 +1,119 @@
+@use "../../utils" as *;
+
+
+
+
+
+
+
+.feedback-section {
+    .section-title {
+        &__wrapper {
+            margin-bottom: 0;
+
+            @media #{$sm,$xs} {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 65px;
+
+        @media #{$sm,$xs} {
+            display: block;
+        }
+    }
+
+    &__item {
+        background: #161616;
+        border: 1px solid #252525;
+        padding: 50px;
+        max-width: 500px;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        flex-wrap: wrap;
+        margin-bottom: 70px;
+
+        &__thumb {
+            width: 74px;
+            height: 98px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-heading);
+    }
+
+    &__position {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1;
+        color: var(--rr-text-body-2);
+        font-family: var(--rr-ff-body);
+    }
+
+    &__dec {
+        font-weight: 500;
+        font-style: italic;
+        font-size: 26px;
+        line-height: 40px;
+        margin-top: 32px;
+        color: var(--rr-text-body-2);
+        font-family: var(--rr-ff-body);
+    }
+
+    &__wrapper{
+        margin-left: -262px;
+
+        @media #{$xl} {
+            margin-left: -490px;
+        }
+        @media #{$lg,$md,$sm,$xs} {
+            margin-left: 0px;
+        }
+
+        .swiper-slide {
+            max-width: 500px;
+        }
+    }
+
+    &__arrow {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+    }
+
+    &__button {
+        width: 62px;
+        height: 62px;
+        background: rgb(22, 22, 22);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        border: 1px solid rgb(22, 22, 22);
+
+        &:hover {
+            background-color: transparent;
+            border: 1px solid rgb(37, 37, 37);
+        }
+    }
+}
