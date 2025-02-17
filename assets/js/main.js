@@ -729,6 +729,24 @@
         });
     }
 
+    if ($('.faq-section').length > 0) {
+        let mm = gsap.matchMedia();
+        mm.add("(min-width: 992px)", () => {
+            return gsap.to('.faq-section-panel-pin', {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: '.faq-section',
+                    scrub: 1,
+                    start: 'top 10%',
+                    end: "bottom 25%",
+                    pin: '.faq-section-panel-pin',
+                    markers: false,
+                    toggleActions: 'play reverse play reverse',
+                }
+            });
+        });
+    }
+
 
 
     if (window.innerWidth > 768) {

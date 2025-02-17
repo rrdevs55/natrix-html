@@ -238,6 +238,7 @@
 
 // footer-3 -----------------------------------------
 .cta-section {
+    background-color: var(--rr-body-primary-2);
     &__wrapper {
         display: flex;
         align-items: start;
@@ -253,6 +254,19 @@
         line-height: 70px;
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading);
+
+        @media #{$md,$sm,$xs} {
+            margin-bottom: 20px;
+        }
+
+        @media #{$xs} {
+            font-size: 40px;
+            line-height: 40px;
+
+            br {
+                display: none;
+            }
+        }
     }
 
     &__dec {
@@ -262,14 +276,44 @@
         margin-bottom: 40px;
         color: var(--rr-text-body);
         font-family: var(--rr-ff-body);
+
+        @media #{$xs} {
+            br {
+                display: none;
+            }
+        }
     }
 }
 
 .footer-section-3 {
+    background-color: var(--rr-body-primary-2);
+
     .footer-section {
         &__wedget {
             &.wedget_1 {
                 margin-right: 208px;
+
+                @media #{$xl} {
+                    margin-right: 155px;
+                }
+
+                @media #{$lg} {
+                    margin-right: 75px;
+                }
+
+                @media #{$md,$sm,$xs} {
+                    margin-right: 0px;
+                }
+            }
+        }
+
+        &__content {
+            @media #{$xs} {
+                margin-bottom: 40px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
 
@@ -323,6 +367,8 @@
 }
 
 .copyright-3 {
+    background-color: var(--rr-body-primary-2);
+
     .copyright {
         &__wrapper p {
             font-weight: 500;
@@ -334,6 +380,29 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
 
+            @media #{$xl} {
+                font-size: 120px;
+            }
+
+            @media #{$lg} {
+                font-size: 100px;
+            }
+
+            @media #{$md} {
+                font-size: 75px;
+                line-height: 75px;
+            }
+
+            @media #{$sm} {
+                font-size: 60px;
+                line-height: 60px;
+            }
+
+            @media #{$xs} {
+                font-size: 34px;
+                line-height: 1;
+            }
+
             a {
                 text-decoration: none;
             }
@@ -342,6 +411,14 @@
         &__wrapper {
             background: transparent;
             padding-bottom: 50px;
+
+            @media #{$md,$sm,$xs} {
+                padding-top: 0;
+            }
+
+            @media #{$xs} {
+                padding-bottom: 45px;
+            }
         }
     }
 }

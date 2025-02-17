@@ -4,3 +4,137 @@
 /* 8.1 404
 /*----------------------------------------*/
 
+
+
+
+.faq-section {
+    &__title {
+        font-weight: 500;
+        font-size: 65px;
+        line-height: 70px;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-heading);
+
+        @media #{$lg} {
+            font-size: 50px;
+            line-height: 60px;
+        }
+
+        @media #{$xs} {
+            font-size: 38px;
+            line-height: 50px;
+        }
+
+        @media #{$md,$sm,$xs} {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__wrapper {
+        margin-left: 80px;
+
+        @media #{$lg} {
+            margin-left: 50px;
+        }
+
+        @media #{$md,$sm,$xs} {
+            margin-left: 0px;
+        }
+
+        .accordion-item {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid rgb(255 255 255 / 5%);
+
+            &:first-of-type {
+                border-top: 1px solid rgb(255 255 255 / 5%);
+            }
+        }
+
+        .accordion-button {
+            padding: 27.5px 0;
+            color: var(--rr-common-white);
+            background-color: transparent;
+            font-family: var(--rr-ff-heading);
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 30px;
+
+            @media #{$xs} {
+                font-size: 20px;
+            }
+
+            &:not(.collapsed) {
+                background-color: transparent;
+                box-shadow: inherit;
+                color: inherit;
+                padding-bottom: 24px;
+
+                &::after {
+                    content: "\f068";
+                    transform: inherit;
+                    background-image: none;
+                }
+            }
+
+            &:focus {
+                border-color: inherit;
+                box-shadow: inherit;
+            }
+
+            &::after {
+                width: fit-content;
+                height: inherit;
+                content: "\2b";
+                font-size: 12px;
+                background-image: inherit;
+                background-repeat: no-repeat;
+                background-size: inherit;
+                font-family: var(--rr-ff-fontawesome);
+
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+        }
+
+        .accordion-body {
+            padding: 0;
+            padding-bottom: 26px;
+
+            p {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 27px;
+                color: var(--rr-text-body);
+                font-family: var(--rr-ff-body);
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 50px;
+
+        span {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            color: var(--rr-text-body);
+            font-family: var(--rr-ff-body);
+
+            a {
+                color: var(--rr-common-white);
+                background: linear-gradient(var(--rr-text-body) 0%, var(--rr-text-body) 100%);
+                background-size: 100% 1px;
+                background-repeat: no-repeat;
+                background-position: left 100%;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-size: 0 1px;
+                    color: var(--rr-theme-primary-3);
+                }
+            }
+        }
+    }
+}
