@@ -106,10 +106,16 @@
             font-size: 18px;
             font-weight: 400;
             line-height: 27px;
+            color: var(--rr-text-body);
             font-family: var(--rr-ff-body);
-            text-decoration-line: underline;
+            background: linear-gradient(var(--rr-text-body) 0%, var(--rr-text-body) 100%);
+            background-size: 100% 1px;
+            background-repeat: no-repeat;
+            background-position: left 100%;
+            transition: all 0.3s ease-in-out;
 
             &:hover {
+                background-size: 0 1px;
                 color: var(--rr-theme-primary);
             }
 
@@ -127,14 +133,20 @@
         a {
             font-size: 18px;
             font-weight: 500;
-            line-height: 35px;
+            line-height: 1;
             margin-right: 37px;
             display: inline-block;
             text-transform: capitalize;
-            text-decoration-line: underline;
             font-family: var(--rr-ff-heading);
+            color: var(--rr-text-body);
+            background: linear-gradient(var(--rr-text-body) 0%, var(--rr-text-body) 100%);
+            background-size: 100% 1px;
+            background-repeat: no-repeat;
+            background-position: left 100%;
+            transition: all 0.3s ease-in-out;
 
             &:hover {
+                background-size: 0 1px;
                 color: var(--rr-theme-primary);
             }
 
@@ -193,6 +205,7 @@
 
 .copyright {
     margin-top: -2px;
+
     &__wrapper {
         background: #1B1B1B;
         padding: 36.5px 0;
@@ -210,6 +223,125 @@
                     color: var(--rr-theme-primary);
                 }
             }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// footer-3 -----------------------------------------
+.cta-section {
+    &__wrapper {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-bottom: 75px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 65px;
+        line-height: 70px;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-heading);
+    }
+
+    &__dec {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        margin-bottom: 40px;
+        color: var(--rr-text-body);
+        font-family: var(--rr-ff-body);
+    }
+}
+
+.footer-section-3 {
+    .footer-section {
+        &__wedget {
+            &.wedget_1 {
+                margin-right: 208px;
+            }
+        }
+
+        &__form {
+            border-bottom: none;
+
+            input {
+                height: 70px;
+                padding: 0 35px;
+                margin-bottom: 0;
+                border-radius: 100px;
+                border: 1px solid rgb(37, 37, 37);
+
+                @include rs-placeholder {
+                    color: var(--rr-common-white);
+                }
+            }
+
+            button {
+                top: 50%;
+                right: 35px;
+                transform: translateY(-50%);
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    svg [fill="white"] {
+                        fill: var(--rr-theme-primary-3);
+                    }
+                }
+            }
+        }
+
+        &__map {
+            a {
+
+                &:hover {
+                    color: var(--rr-theme-primary-3);
+                }
+            }
+        }
+
+        &__social {
+            a {
+
+                &:hover {
+                    color: var(--rr-theme-primary-3);
+                }
+            }
+        }
+    }
+}
+
+.copyright-3 {
+    .copyright {
+        &__wrapper p {
+            font-weight: 500;
+            font-size: 138px;
+            line-height: 138px;
+            color: var(--rr-common-white);
+            font-family: var(--rr-ff-heading);
+            background: linear-gradient(180deg, #949494 -46.43%, #161616 117.14%);
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        &__wrapper {
+            background: transparent;
+            padding-bottom: 50px;
         }
     }
 }
