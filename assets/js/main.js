@@ -1113,7 +1113,7 @@
         loop: true,
         centeredSlides: true,
         autoplay: true,
-        centerMode: true,
+        centerMode: false,
         speed: 400,
         navigation: {
             nextEl: ".feedback-section__button__next",
@@ -1122,12 +1122,16 @@
         breakpoints: {
             320: {
                 slidesPerView: 1,
+                spaceBetween: 30,
+                centeredSlides: false,
             },
             767: {
                 slidesPerView: 1,
+                spaceBetween: 30,
+                centeredSlides: false,
             },
             992: {
-                sliderPerView: 3,
+                sliderPerView: 2,
             },
             1200: {
                 slidesPerView: 3,
@@ -1138,15 +1142,30 @@
         },
     });
 
-    // var swipertitle = new Swiper(".title-slider-3__active", {
-    //     slidesPerView: 'auto',
-    //     spaceBetween: 0,
-    //     loop: true,
-    //     centeredSlides: false,
-    //     autoplay: true,
-    //     centerMode: true,
-    //     speed: 400,
+
+    
+
+    // $(document).ready(function ($) {
+    //     $('[data-tp-throwable-scene]').each(function () {
+    //         var $element = $(this);
+
+    //         // প্লাগইনটি ইনিশিয়েট করুন
+    //         var tpThrowableInstance = $element.tpThrowable();
+
+    //         // মাউস এন্টার করলে এনিমেশন শুরু
+    //         $element.on('mouseenter', function () {
+    //             tpThrowableInstance.startRain();  // এনিমেশন চালু হবে
+    //         });
+
+    //         // মাউস লিভ করলে এনিমেশন থামাবে
+    //         $element.on('mouseleave', function () {
+    //             tpThrowableInstance.destroy();  // এনিমেশন বন্ধ হবে
+    //         });
+    //     });
     // });
+
+
+
 
 
 

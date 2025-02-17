@@ -1,1 +1,107 @@
 @use "../../utils" as *;
+
+
+
+
+
+.pricing-section-3 {
+    &__item {
+        padding: 50px;
+        transition: all 0.3s ease-in-out;
+        border: 1px solid var(--rr-body-primary-2);
+        background-color: var(--rr-body-primary-2);
+
+        @media #{$lg,$xs} {
+            padding: 30px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.051);
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27px;
+            margin-top: 6px;
+            margin-bottom: 30px;
+            display: inline-block;
+            color: var(--rr-common-white);
+            font-family: var(--rr-ff-body);
+        }
+    }
+
+    .section-title {
+        &__wrapper {
+            margin-bottom: 70px;
+
+            @media #{$md} {
+                margin-bottom: 40px;
+            }
+
+            @media #{$sm,$xs} {
+                margin-bottom: 30px;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 27px;
+                margin-top: 16px;
+                color: var(--rr-text-body-2);
+                font-family: var(--rr-ff-body);
+                @media #{$xs} {
+                        font-size: 17px;
+                    }
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 27px;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-heading);
+    }
+
+    &__price {
+        font-weight: 600;
+        font-size: 65px;
+        line-height: 70px;
+        margin-bottom: 0;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-heading);
+    }
+
+    &__list {
+        margin-top: 25px;
+        padding-top: 32px;
+        margin-bottom: 40px;
+        border-top: 1px solid rgb(255 255 255 / 5%);
+
+        ul {
+            list-style: none;
+
+            li {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                margin-bottom: 10px;
+                color: var(--rr-text-body-2);
+                font-family: var(--rr-ff-body);
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                svg {
+                    margin-right: 10px;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+}

@@ -33,6 +33,10 @@
         border: 1px solid #252525;
         padding: 50px;
         max-width: 500px;
+
+        @media #{$xs} {
+            padding: 25px;
+        }
     }
 
     &__author {
@@ -41,6 +45,10 @@
         column-gap: 30px;
         flex-wrap: wrap;
         margin-bottom: 70px;
+
+        @media #{$xs} {
+            column-gap: 20px;
+        }
 
         &__thumb {
             width: 74px;
@@ -78,20 +86,29 @@
         margin-top: 32px;
         color: var(--rr-text-body-2);
         font-family: var(--rr-ff-body);
+
+        @media #{$xs} {
+            font-size: 19px;
+            line-height: 32px;
+        }
     }
 
-    &__wrapper{
+    &__wrapper {
         margin-left: -262px;
 
         @media #{$xl} {
             margin-left: -490px;
         }
+
         @media #{$lg,$md,$sm,$xs} {
             margin-left: 0px;
         }
 
         .swiper-slide {
             max-width: 500px;
+            @media #{$md,$sm,$xs} {
+                    width: auto;
+                }
         }
     }
 
@@ -116,4 +133,8 @@
             border: 1px solid rgb(37, 37, 37);
         }
     }
+}
+.swiper-wrapper{
+    margin: 0 auto;
+    margin-left: 40px;
 }
