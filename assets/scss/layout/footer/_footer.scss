@@ -244,7 +244,7 @@
         align-items: start;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding-bottom: 75px;
+        padding-bottom: 72px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
@@ -315,6 +315,10 @@
                     margin-bottom: 0;
                 }
             }
+        }
+        &__dec {
+            margin-top: 45px;
+            margin-bottom: 43px;
         }
 
         &__form {
