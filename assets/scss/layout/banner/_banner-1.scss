@@ -147,7 +147,7 @@
             top: 54.5%;
             left: 220px;
             transform: translateY(-50%) rotate(-13deg);
-            z-index: -1;
+            z-index: 1;
 
             @media #{$xxxl} {
                 left: 100px;

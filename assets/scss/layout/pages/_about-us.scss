@@ -103,8 +103,6 @@
 
 
 
-
-
 // about-2 --------------
 
 .about-section-2 {
@@ -269,8 +267,6 @@
 
 
 
-
-
 // About-3 ---------------------
 .about-section-3 {
     position: relative;
@@ -423,4 +419,41 @@
             top: -115px;
         }
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// inner-page start --------------------------
+
+
+h2.about-breadcrumb__title {
+    font-weight: 500;
+    font-size: 120px;
+    line-height: 120px;
+    margin-bottom: 0;
+    display: inline-block;
+    color: var(--rr-common-white);
+    font-family: var(--rr-ff-heading);
+}
+
+h2.about-breadcrumb__title P {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 0;
+    display: inline-block;
+    transform: translateY(15px);
+    color: var(--rr-text-body-2);
+    font-family: var(--rr-ff-body);
 }

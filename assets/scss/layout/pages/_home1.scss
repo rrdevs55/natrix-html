@@ -17,6 +17,7 @@
     &__counter {
         background-color: #FFCD4D;
         display: inline-block;
+        margin: -1px 0;
         padding: 0 50px;
         padding-top: 96px;
         padding-bottom: 80px;
@@ -170,6 +171,12 @@
             }
         }
     }
+    .swiper-wrapper{
+        transition-timing-function: linear;
+        .swiper-slide{
+            width: auto;
+        }
+    }
 }
 
 
@@ -197,9 +204,8 @@
             font-size: 120px;
             font-weight: 500;
             line-height: 120px;
-            color: transparent;
+            color: var(--rr-common-white);
             font-family: var(--rr-ff-heading);
-            -webkit-text-stroke: 1px var(--rr-common-white);
 
             .odometer.odometer-auto-theme,
             .odometer.odometer-theme-default {

@@ -750,7 +750,7 @@
 
 
     if (window.innerWidth > 768) {
-        gsap.set('.title-slide-section-text', { x: '20%' });
+        gsap.set('.title-slide-section-text', { x: '0%' });
 
         gsap.timeline({
             scrollTrigger: {
@@ -762,7 +762,7 @@
                 markers: false,
                 toggleActions: 'play reverse play reverse',
             }
-        }).to('.title-slide-section-text', { x: '0%' });
+        }).to('.title-slide-section-text', { x: '-35%' });
     }
 
 
@@ -797,7 +797,7 @@
                 setTimeout(() => {
                     mainImage.src = newImage;
                     mainImage.style.opacity = "1";
-                }, 300);
+                }, 500);
             });
         });
     });
@@ -814,7 +814,7 @@
                     end: 'bottom 5%',
                     scrub: false,
                     markers: false,
-                    toggleActions: 'play reverse play reverse',
+                    toggleActions: 'play none none reverse',
                 }
             });
 
@@ -824,8 +824,8 @@
             itemSplitted.split({ type: "chars, words" });
 
             tl.from(itemSplitted.chars, {
-                duration: 0.8,
-                delay: 0.5,
+                duration: 0.3,
+                delay: 0.1,
                 x: 100,
                 autoAlpha: 0,
                 stagger: 0.05
@@ -841,11 +841,11 @@
             var fadeItems = section.find(".fade-top");
 
             fadeItems.each(function (index, element) {
-                var delay = index * 0.15;
+                var delay = index * 0.1;
 
                 gsap.set(element, {
                     opacity: 0,
-                    y: 100,
+                    y: 70,
                 });
 
                 ScrollTrigger.create({
@@ -853,17 +853,17 @@
                     start: "top 90%",
                     end: "bottom 5%",
                     scrub: false,
-                    toggleActions: "play reverse play reverse",
+                    toggleActions: "play none none reverse",
                     onEnter: function () {
                         gsap.to(element, {
                             opacity: 1,
                             y: 0,
-                            duration: 1,
+                            duration: 0.5,
                             delay: delay
                         });
                     },
                     onLeaveBack: function () {
-                        gsap.to(element, { opacity: 0, y: 100, duration: 0.5 });
+                        gsap.to(element, { opacity: 0, y: 70, duration: 0.3 });
                     }
                 });
             });
@@ -879,9 +879,9 @@
                 scrollTrigger: {
                     trigger: splitTextLine,
                     start: 'top 90%',
-                    end: 'bottom 60%',
+                    end: 'bottom 5%',
                     scrub: false,
-                    markers: false,
+                    markers: true,
                     toggleActions: "play reverse play reverse",
                 }
             });
@@ -896,7 +896,7 @@
                 type: "lines"
             })
             tl.from(itemSplitted.lines, {
-                duration: 1,
+                duration: 0.8,
                 delay: 0.3,
                 opacity: 0,
                 rotationX: -80,
@@ -907,6 +907,37 @@
         });
     }
 
+    //split-text animation
+    let animation = document.querySelectorAll(".animation");
+
+    animation.forEach(animation => {
+        let split = new SplitText(animation.querySelector(".rr_title_animation"), { type: "chars, words" }),
+            tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: animation,
+                    start: "top bottom",
+                    toggleActions: "play none none reverse",
+                    onEnter: () => {
+                        tl.timeScale(2.3);
+                    },
+
+                    onLeaveBack: () => {
+                        tl.timeScale(2.3).reverse();
+                    },
+                }
+            });
+        tl.to(animation.querySelector(".sup_animation"), { opacity: 1, x: -50, ease: "back" })
+            .from(split.chars, {
+                opacity: 0,
+                y: 50,
+                rotation: 1,
+                duration: 2,
+                ease: "back",
+                stagger: 0.05
+            });
+    });
+    //split-text animation end
+
 
 
     if ($(".img-custom-anim-img").length > 0 && window.innerWidth > 768) {
@@ -915,16 +946,16 @@
 
             ScrollTrigger.create({
                 trigger: img,
-                start: "top 90%",
+                start: "top 95%",
                 end: "bottom 5%",
-                toggleActions: "play reverse play reverse",
-                markers: false,
+                toggleActions: "play none none reverse",
+                markers: true,
                 onEnter: () => {
                     gsap.to(img, {
                         opacity: 1,
                         x: 0,
                         clipPath: "inset(0 0 0 0)",
-                        duration: 1,
+                        duration: 0.3,
                         ease: "cubic-bezier(0.645, 0.045, 0.355, 1)",
                     });
                 },
@@ -933,7 +964,7 @@
                         opacity: 0,
                         x: -50,
                         clipPath: "inset(0 100% 0 0)",
-                        duration: 0.5,
+                        duration: 0.3,
                     });
                 }
             });
@@ -945,22 +976,26 @@
     const panelsContainer = document.querySelector(".panels-container");
     const panels = gsap.utils.toArray(".panel");
     let totalPanelsWidth = panels.reduce((acc, panel) => acc + panel.offsetWidth, 0);
+
     gsap.set(panelsContainer, { width: totalPanelsWidth });
-    //  GSAP Horizontal Scroll Animation (Bug Fixed)
+
     gsap.to(panelsContainer, {
         x: -(totalPanelsWidth - window.innerWidth),
         ease: "none",
         scrollTrigger: {
             trigger: ".panels",
             pin: true,
-            scrub: 3,
-            start: "-20% top",
-            end: "+=" + (totalPanelsWidth - window.innerWidth),
+            pinSpacing: true, 
+            scrub: true, 
+            start: "-33% top",
+            end: "+=" + (totalPanelsWidth - window.innerWidth + 500), 
             anticipatePin: 3,
             markers: false,
-            toggleActions: 'play reverse play reverse'
+            toggleActions: "play none none reverse",
         }
     });
+
+
 
     // hover reveal start
     const hoveritem = document.querySelectorAll(".rr-hover-reveal-item");
@@ -1061,7 +1096,29 @@
                 delay: 1,
                 reverseDirection: false,
                 disableOnInteraction: false
-            }
+            },
+            touchReleaseOnEdges: true,  
+            simulateTouch: false,       
+            allowTouchMove: false,       
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".title-slide__active", {
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+            centeredSlides: true,
+            speed: 25000,
+            loop: true,
+            freeMode: true,
+            autoplay: {
+                delay: 1,
+                reverseDirection: false,
+                disableOnInteraction: false,
+            },
+            touchReleaseOnEdges: true,
+            simulateTouch: false,
+            allowTouchMove: false,
         });
     });
 
