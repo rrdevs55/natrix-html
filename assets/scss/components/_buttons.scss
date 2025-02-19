@@ -88,6 +88,9 @@
         span {
             background: var(--rr-common-white);
         }
+        &-sm{
+            padding: 18.5px 33.7px;
+        }
     }
 
     &.transparent-btn {
@@ -100,11 +103,17 @@
         span {
             background: var(--rr-theme-primary-3);
         }
-        &:hover{
+
+        &:hover {
             color: rgb(27, 27, 27);
         }
-        &-2{
+
+        &-2 {
             padding: 17.5px 35.8px;
+        }
+
+        &-3 {
+            padding: 17.5px 31.1px;
         }
     }
 }
@@ -114,7 +123,7 @@
 
 .rr-arrow__btn {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 27px;
     position: relative;
     display: inline-flex;
@@ -122,6 +131,10 @@
     column-gap: 15px;
     color: var(--rr-common-white);
     font-family: var(--rr-ff-body);
+
+    &:focus {
+        color: inherit;
+    }
 
 
     &::before {
@@ -147,15 +160,6 @@
     }
 
     &-2 {
-        color: var(--rr-text-body);
-
-        &::before {
-            background-color: var(--rr-text-body);
-        }
-
-        &::after {
-            background-color: var(--rr-text-body);
-        }
 
         &:hover {
             color: var(--rr-theme-primary-2) !important;

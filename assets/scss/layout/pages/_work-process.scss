@@ -18,6 +18,11 @@
     }
 
     &__left {
+        margin-left: 135px;
+
+        @media #{$md,$sm,$xs} {
+            margin-left: 0;
+        }
         @media #{$sm,$xs} {
             margin-bottom: 30px;
         }

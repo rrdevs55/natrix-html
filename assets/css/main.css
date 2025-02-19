@@ -1300,6 +1300,9 @@ section {
 .rr-btn-3 span {
   background: var(--rr-common-white);
 }
+.rr-btn-3-sm {
+  padding: 18.5px 33.7px;
+}
 .rr-btn.transparent-btn {
   color: #FFF;
   padding: 17.5px 45px;
@@ -1316,10 +1319,13 @@ section {
 .rr-btn.transparent-btn-2 {
   padding: 17.5px 35.8px;
 }
+.rr-btn.transparent-btn-3 {
+  padding: 17.5px 31.1px;
+}
 
 .rr-arrow__btn {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 27px;
   position: relative;
   display: inline-flex;
@@ -1327,6 +1333,9 @@ section {
   column-gap: 15px;
   color: var(--rr-common-white);
   font-family: var(--rr-ff-body);
+}
+.rr-arrow__btn:focus {
+  color: inherit;
 }
 .rr-arrow__btn::before {
   content: "";
@@ -1347,15 +1356,6 @@ section {
   right: 0;
   transition: all 0.6s ease-in-out;
   background-color: var(--rr-common-white);
-}
-.rr-arrow__btn-2 {
-  color: var(--rr-text-body);
-}
-.rr-arrow__btn-2::before {
-  background-color: var(--rr-text-body);
-}
-.rr-arrow__btn-2::after {
-  background-color: var(--rr-text-body);
 }
 .rr-arrow__btn-2:hover {
   color: var(--rr-theme-primary-2) !important;
@@ -5654,6 +5654,7 @@ body .ui-tooltip {
 
 .banner-section {
   position: relative;
+  z-index: 1;
 }
 .banner-section__title {
   font-size: 100px;
@@ -5770,7 +5771,7 @@ body .ui-tooltip {
   top: 54.5%;
   left: 220px;
   transform: translateY(-50%) rotate(-13deg);
-  z-index: 1;
+  z-index: -1;
 }
 @media only screen and (min-width: 1600px) and (max-width: 1700px) {
   .banner-section__bg__text {
@@ -6962,7 +6963,7 @@ body .ui-tooltip {
 }
 .footer-section__map a {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 27px;
   color: var(--rr-text-body);
   font-family: var(--rr-ff-body);
@@ -6988,7 +6989,7 @@ body .ui-tooltip {
 }
 .footer-section__social a {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1;
   margin-right: 37px;
   display: inline-block;
@@ -6996,7 +6997,7 @@ body .ui-tooltip {
   font-family: var(--rr-ff-heading);
   color: var(--rr-text-body);
   background: linear-gradient(var(--rr-text-body) 0%, var(--rr-text-body) 100%);
-  background-size: 100% 1px;
+  background-size: 100% 0.5px;
   background-repeat: no-repeat;
   background-position: left 100%;
   transition: all 0.3s ease-in-out;
@@ -7465,6 +7466,12 @@ body .ui-tooltip {
     margin-bottom: 15px;
   }
 }
+.about-section__btn .rr-arrow__btn::before {
+  bottom: -4px;
+}
+.about-section__btn .rr-arrow__btn::after {
+  bottom: -4px;
+}
 .about-section .section-title__wrapper {
   margin-bottom: 85px;
   margin-left: 190px;
@@ -7515,6 +7522,8 @@ body .ui-tooltip {
   font-style: italic;
   font-size: 120px;
   line-height: 1;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
   color: var(--rr-common-white);
   font-family: var(--rr-ff-heading);
 }
@@ -7756,7 +7765,7 @@ body .ui-tooltip {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  margin-left: 60px;
+  margin-left: 20px;
   color: var(--rr-common-white);
   font-family: var(--rr-ff-body);
 }
@@ -8059,6 +8068,7 @@ h2.about-breadcrumb__title P {
   font-weight: 500;
   font-size: 250px;
   line-height: 1;
+  margin-right: -120%;
   color: var(--rr-common-white);
   font-family: var(--rr-ff-heading);
 }
@@ -8217,7 +8227,6 @@ h2.about-breadcrumb__title P {
   display: flex;
   align-items: center;
   column-gap: 80px;
-  margin-right: -100%;
   color: var(--rr-common-white);
   font-family: var(--rr-ff-heading);
 }
@@ -8406,6 +8415,7 @@ h2.about-breadcrumb__title P {
   transform: rotate(-5.07deg);
   position: relative;
   z-index: 2;
+  margin: 0 -20px;
 }
 @media (max-width: 575px) {
   .title-slider-3__active {
@@ -8418,6 +8428,7 @@ h2.about-breadcrumb__title P {
   position: absolute;
   top: 0;
   left: 0;
+  margin: 0 -35px;
 }
 @media (max-width: 575px) {
   .title-slider-3__active-2 {
@@ -9123,12 +9134,31 @@ h2.about-breadcrumb__title P {
   }
 }
 .projects-section .section-title__wrapper_2 .rr-arrow__btn {
+  color: var(--rr-text-body);
   transform: translateY(60px);
+}
+.projects-section .section-title__wrapper_2 .rr-arrow__btn::before {
+  background-color: var(--rr-text-body);
+}
+.projects-section .section-title__wrapper_2 .rr-arrow__btn::after {
+  background-color: var(--rr-text-body);
 }
 @media (max-width: 575px) {
   .projects-section .section-title__wrapper_2 .rr-arrow__btn {
     transform: translateY(0px);
   }
+}
+.projects-section .section-title__wrapper_2 .rr-arrow__btn:hover {
+  color: var(--rr-theme-primary);
+}
+.projects-section .section-title__wrapper_2 .rr-arrow__btn:hover::before {
+  background-color: var(--rr-theme-primary);
+}
+.projects-section .section-title__wrapper_2 .rr-arrow__btn:hover::after {
+  background-color: var(--rr-theme-primary);
+}
+.projects-section .section-title__wrapper_2 .rr-arrow__btn:hover svg [fill="#C0C0C0"] {
+  fill: var(--rr-theme-primary);
 }
 .projects-section .margin-top {
   margin-top: 200px;
@@ -9405,6 +9435,14 @@ START: Slider CSS
   .work-process__btn {
     margin-top: 30px;
     margin-bottom: 50px;
+  }
+}
+.work-process__left {
+  margin-left: 135px;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .work-process__left {
+    margin-left: 0;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {

@@ -755,7 +755,7 @@
         gsap.timeline({
             scrollTrigger: {
                 trigger: '.title-slide-section-text-animation',
-                start: '-650 0%',
+                start: '-750 0%',
                 end: 'bottom 0%',
                 scrub: true,
                 invalidateOnRefresh: true,
@@ -1134,7 +1134,10 @@
                 delay: 1,
                 reverseDirection: false,
                 disableOnInteraction: false
-            }
+            },
+            touchReleaseOnEdges: true,
+            simulateTouch: false,
+            allowTouchMove: false,
         });
     });
 
@@ -1150,7 +1153,10 @@
                 delay: 1,
                 reverseDirection: true,
                 disableOnInteraction: false
-            }
+            },
+            touchReleaseOnEdges: true,
+            simulateTouch: false,
+            allowTouchMove: false,
         });
     });
 

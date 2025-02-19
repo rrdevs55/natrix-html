@@ -107,10 +107,34 @@
             }
 
             .rr-arrow__btn {
+                color: var(--rr-text-body);
                 transform: translateY(60px);
+
+                &::before {
+                    background-color: var(--rr-text-body);
+                }
+
+                &::after {
+                    background-color: var(--rr-text-body);
+                }
 
                 @media #{$xs} {
                     transform: translateY(0px);
+                }
+
+                &:hover {
+                    color: var(--rr-theme-primary);
+
+                    &::before {
+                        background-color: var(--rr-theme-primary);
+                    }
+
+                    &::after {
+                        background-color: var(--rr-theme-primary);
+                    }
+                    svg [fill="#C0C0C0"] {
+                        fill: var(--rr-theme-primary);
+                    }
                 }
             }
         }

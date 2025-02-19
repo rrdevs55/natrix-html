@@ -83,6 +83,16 @@
                 margin-bottom: 15px;
             }
         }
+
+        .rr-arrow__btn {
+            &::before {
+                bottom: -4px;
+            }
+
+            &::after {
+                bottom: -4px;
+            }
+        }
     }
 
     .section-title {
@@ -139,6 +149,8 @@
             font-style: italic;
             font-size: 120px;
             line-height: 1;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
             color: var(--rr-common-white);
             font-family: var(--rr-ff-heading);
 
@@ -399,7 +411,7 @@
             font-weight: 400;
             font-size: 20px;
             line-height: 30px;
-            margin-left: 60px;
+            margin-left: 20px;
             color: var(--rr-common-white);
             font-family: var(--rr-ff-body);
         }
