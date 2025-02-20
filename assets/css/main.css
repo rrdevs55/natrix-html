@@ -8376,6 +8376,25 @@ body .ui-tooltip {
   }
 }
 
+.thumb-bg-section-5 .thumb-bg-section-2__wrapper {
+  height: 774px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .thumb-bg-section-5 .thumb-bg-section-2__wrapper {
+    height: 550px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .thumb-bg-section-5 .thumb-bg-section-2__wrapper {
+    height: 450px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .thumb-bg-section-5 .thumb-bg-section-2__wrapper {
+    height: 350px;
+  }
+}
+
 /*----------------------------------------*/
 /*  8.12 home1
 /*----------------------------------------*/
