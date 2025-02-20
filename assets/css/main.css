@@ -9282,6 +9282,11 @@ body .ui-tooltip {
   margin: 0 0 0 auto;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
+@media (max-width: 575px) {
+  .services-details__sidebar {
+    padding: 30px 25px;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .services-details__sidebar {
     max-width: 100%;
@@ -9300,6 +9305,11 @@ body .ui-tooltip {
 @media only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .services-details__sidebar__title br {
     display: none;
+  }
+}
+@media (max-width: 575px) {
+  .services-details__sidebar__title {
+    font-size: 28px;
   }
 }
 .services-details__sidebar__dec {

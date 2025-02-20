@@ -190,6 +190,10 @@
         margin: 0 0 0 auto;
         border: 1px solid rgb(255 255 255 / 5%);
 
+        @media #{$xs} {
+            padding: 30px 25px;
+        }
+
         @media #{$md,$sm,$xs} {
             max-width: 100%;
             margin: 0;
@@ -208,6 +212,10 @@
                 br {
                     display: none;
                 }
+            }
+
+            @media #{$xs} {
+                font-size: 28px;
             }
         }
 
