@@ -6,3 +6,138 @@
 // Breadcrumb style
 
 
+.breadcrumb-section {
+    &__title {
+        font-weight: 500;
+        font-size: 120px;
+        line-height: 120px;
+        margin-bottom: 0;
+        display: inline-block;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-heading);
+
+        @media #{$xl} {
+            font-size: 118px;
+        }
+
+        @media #{$lg,$md} {
+            font-size: 90px;
+            line-height: 100px;
+        }
+
+        @media #{$sm} {
+            font-size: 65px;
+            line-height: 65px;
+        }
+
+        @media #{$xs} {
+            font-size: 40px;
+            line-height: 50px;
+        }
+    }
+
+    &__dec {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        margin-bottom: 0;
+        display: inline-block;
+        transform: translateY(15px);
+        color: var(--rr-text-body-2);
+        font-family: var(--rr-ff-body);
+
+        @media #{$xs} {
+            br {
+                display: none;
+            }
+        }
+
+        &-2 {
+            transform: translateY(0);
+        }
+    }
+
+    &__down {
+        a {
+            width: 44px;
+            height: 91px;
+            border: 1px solid rgb(255 255 255 / 5%);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 500px;
+        }
+    }
+
+    &__thumb {
+        &__wrap {
+            img {
+                width: inherit;
+
+                @media #{$md} {
+                    width: 27%;
+                }
+
+                &.image_1 {
+                    position: absolute;
+                    right: 0;
+                    bottom: 35px;
+
+                    @media #{$md} {
+                        bottom: 0px;
+                    }
+                }
+
+                &.image_2 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 45px;
+
+                    @media #{$lg} {
+                        bottom: -50px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.margin-space {
+    margin-top: 38px;
+    margin-bottom: 70px;
+}
+
+
+.breadcrumb-section-2 {
+    .breadcrumb-section {
+        &__wrap {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: start;
+            justify-content: space-between;
+        }
+
+        &__title {
+            font-size: 100px;
+            line-height: 100px;
+
+            @media #{$sm} {
+                font-size: 80px;
+                line-height: 90px;
+            }
+            @media #{$xs} {
+                font-size: 40px;
+                line-height: 50px;
+            }
+
+            @media #{$md,$sm,$xs} {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__dec {
+            margin-bottom: 40px;
+        }
+    }
+}

@@ -443,63 +443,7 @@
 
 
 
-
-
-
-// inner-page start --------------------------
-
-
-.about-breadcrumb {
-    &__title {
-        font-weight: 500;
-        font-size: 120px;
-        line-height: 120px;
-        margin-bottom: 0;
-        display: inline-block;
-        color: var(--rr-common-white);
-        font-family: var(--rr-ff-heading);
-
-        @media #{$xl} {
-            font-size: 118px;
-        }
-
-        @media #{$lg,$md} {
-            font-size: 90px;
-            line-height: 100px;
-        }
-
-        @media #{$sm} {
-            font-size: 65px;
-            line-height: 65px;
-        }
-
-        @media #{$xs} {
-            font-size: 40px;
-            line-height: 50px;
-        }
-
-        P {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 27px;
-            margin-bottom: 0;
-            display: inline-block;
-            transform: translateY(15px);
-            color: var(--rr-text-body-2);
-            font-family: var(--rr-ff-body);
-
-            @media #{$xs} {
-                br {
-                    display: none;
-                }
-            }
-        }
-
-    }
-
-}
-
-
+// About - 4 ------------------------
 .about-big-text h4 {
     font-weight: 500;
     font-size: 150px;

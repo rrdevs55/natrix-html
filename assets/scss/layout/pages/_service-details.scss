@@ -1,1 +1,28 @@
 @use "../../utils" as *;
+
+
+
+
+
+
+
+
+
+
+.thumb-bg-section-4 {
+    .thumb-bg-section-2 {
+        &__wrapper {
+            height: 635px;
+
+            @media #{$lg} {
+                height: 550px;
+            }
+            @media #{$md} {
+                height: 450px;
+            }
+            @media #{$sm,$xs} {
+                height: 350px;
+            }
+        }
+    }
+}

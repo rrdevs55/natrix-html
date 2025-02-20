@@ -66,6 +66,17 @@
 		padding-bottom: 70px;
 	}
 }
+.section-space-bottom-80 {
+	padding-bottom: 80px;
+
+	@media #{$md} {
+		padding-bottom: 50px;
+	}
+
+	@media #{$sm,$xs} {
+		padding-bottom: 40px;
+	}
+}
 
 .section-space-top-180 {
 	padding-top: 180px;
