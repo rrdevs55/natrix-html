@@ -1018,7 +1018,7 @@
 
 
 
-    if ($(".progress-ring__circle").length > 0 && window.innerWidth > 768) {
+    if ($(".progress-ring__circle").length > 0 && window.innerWidth > 68) {
         document.addEventListener("DOMContentLoaded", () => {
             
             const circle = document.querySelector(".progress-ring__circle");

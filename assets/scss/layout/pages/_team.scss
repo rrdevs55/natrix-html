@@ -42,7 +42,7 @@
         color: var(--rr-text-body);
         font-family: var(--rr-ff-body);
 
-        @media #{$md,$sm,$xs} {
+        @media #{$lg,$md,$sm,$xs} {
             br {
                 display: none;
             }

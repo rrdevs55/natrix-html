@@ -5852,13 +5852,13 @@ body .ui-tooltip {
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .banner-section-space {
-    padding-top: 170px;
+    padding-top: 160px;
     padding-bottom: 80px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .banner-section-space {
-    padding-top: 160px;
+    padding-top: 150px;
     padding-bottom: 70px;
   }
 }
@@ -8253,7 +8253,7 @@ body .ui-tooltip {
   color: var(--rr-text-body);
   font-family: var(--rr-ff-body);
 }
-@media only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .team-section__dec br {
     display: none;
   }
@@ -9612,7 +9612,7 @@ body .ui-tooltip {
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .projects-section__wrapper {
-    padding-top: 0;
+    padding-top: 50px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
@@ -9982,6 +9982,11 @@ START: Slider CSS
 .work-process__left {
   margin-left: 135px;
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .work-process__left {
+    margin-left: 60px;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .work-process__left {
     margin-left: 0;
@@ -10049,7 +10054,7 @@ START: Slider CSS
   line-height: 27px;
   font-family: var(--rr-ff-body);
 }
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .work-process__dec br {
     display: none;
   }
@@ -10063,6 +10068,11 @@ START: Slider CSS
   justify-content: center;
   border-radius: 500px;
   border: 2px solid rgba(217, 217, 217, 0.1);
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .work-process__step {
+    margin: 0 auto;
+  }
 }
 .work-process__step .progress-ring {
   width: 274px;

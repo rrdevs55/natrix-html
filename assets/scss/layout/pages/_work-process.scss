@@ -20,9 +20,14 @@
     &__left {
         margin-left: 135px;
 
+        @media #{$lg} {
+            margin-left: 60px;
+        }
+
         @media #{$md,$sm,$xs} {
             margin-left: 0;
         }
+
         @media #{$sm,$xs} {
             margin-bottom: 30px;
         }
@@ -90,7 +95,7 @@
         line-height: 27px;
         font-family: var(--rr-ff-body);
 
-        @media #{$md} {
+        @media #{$lg,$md,$sm,$xs} {
             br {
                 display: none;
             }
@@ -106,6 +111,10 @@
         justify-content: center;
         border-radius: 500px;
         border: 2px solid rgb(217 217 217 / 10%);
+
+        @media #{$sm,$xs} {
+            margin: 0 auto;
+        }
 
         .progress-ring {
             width: 274px;
