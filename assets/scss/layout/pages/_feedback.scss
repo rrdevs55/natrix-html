@@ -35,7 +35,7 @@
         max-width: 500px;
 
         @media #{$xs} {
-            padding: 25px;
+            padding: 20px;
         }
     }
 
@@ -106,9 +106,10 @@
 
         .swiper-slide {
             max-width: 500px;
+
             @media #{$md,$sm,$xs} {
-                    width: auto;
-                }
+                width: inherit;
+            }
         }
     }
 
@@ -133,8 +134,13 @@
             border: 1px solid rgb(37, 37, 37);
         }
     }
-    .swiper-wrapper{
+
+    .swiper-wrapper {
         margin: 0 auto;
         margin-left: 40px;
+
+        @media #{$md,$sm,$xs} {
+            margin-left: 0;
+        }
     }
 }

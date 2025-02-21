@@ -582,11 +582,11 @@
         padding-bottom: 0px;
 
         @media #{$md} {
-            padding-top: 170px;
+            padding-top: 160px;
         }
 
         @media #{$sm,$xs} {
-            padding-top: 160px;
+            padding-top: 150px;
         }
     }
 }

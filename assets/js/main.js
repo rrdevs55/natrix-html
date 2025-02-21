@@ -1180,7 +1180,7 @@
                 slidesPerView: 2,
             },
             992: {
-                sliderPerView: 3,
+                slidesPerView: 3,
             },
             1200: {
                 slidesPerView: 4,
@@ -1212,7 +1212,7 @@
                 centeredSlides: false,
             },
             992: {
-                sliderPerView: 2,
+                slidesPerView: 2,
             },
             1200: {
                 slidesPerView: 3,

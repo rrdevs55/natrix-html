@@ -92,6 +92,14 @@
         }
     }
 
+    &__content {
+        margin-bottom: 40px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
     &__title {
         font-size: 20px;
         font-weight: 500;
@@ -239,6 +247,7 @@
 // footer-3 -----------------------------------------
 .cta-section {
     background-color: var(--rr-body-primary-2);
+
     &__wrapper {
         display: flex;
         align-items: start;
@@ -316,6 +325,7 @@
                 }
             }
         }
+
         &__dec {
             margin-top: 45px;
             margin-bottom: 43px;

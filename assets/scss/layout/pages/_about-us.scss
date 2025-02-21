@@ -328,6 +328,14 @@
     .section-title__wrapper {
         margin-bottom: 105px;
 
+        @media #{$md} {
+            margin-bottom: 50px;
+        }
+
+        @media #{$sm,$xs} {
+            margin-bottom: 40px;
+        }
+
         .section__title {
             span {
                 background: #fff;
