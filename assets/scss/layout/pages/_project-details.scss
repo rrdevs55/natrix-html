@@ -1,2 +1,35 @@
 @use "../../utils" as *;
 // faizan project-details css start 
+
+
+
+
+.title-slide-section-2 {
+    .title-slide-section {
+        &__item {
+            h3 {
+                font-size: 250px;
+                background: linear-gradient(0deg, #121212 -8.33%, #FFFFFF 138.51%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+
+                @media #{$xl} {
+                    font-size: 120px;
+                }
+
+                @media #{$lg,$md} {
+                    font-size: 100px;
+                }
+
+                @media #{$sm} {
+                    font-size: 70px;
+                }
+
+                @media #{$xs} {
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+}

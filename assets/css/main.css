@@ -10229,6 +10229,34 @@ body .ui-tooltip {
   cursor: none;
 }
 
+.title-slide-section-2 .title-slide-section__item h3 {
+  font-size: 250px;
+  background: linear-gradient(0deg, #121212 -8.33%, #FFFFFF 138.51%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .title-slide-section-2 .title-slide-section__item h3 {
+    font-size: 120px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 992px) {
+  .title-slide-section-2 .title-slide-section__item h3 {
+    font-size: 100px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .title-slide-section-2 .title-slide-section__item h3 {
+    font-size: 70px;
+  }
+}
+@media (max-width: 575px) {
+  .title-slide-section-2 .title-slide-section__item h3 {
+    font-size: 50px;
+  }
+}
+
 /**----------------------------------------
 START: Slider CSS
 ----------------------------------------*/

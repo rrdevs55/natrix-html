@@ -853,7 +853,6 @@
                     start: "top 95%",
                     end: "bottom bottom",
                     scrub: false,
-                    markers: true,
                     toggleActions: "play none none reverse",
                     onEnter: function () {
                         gsap.to(element, {
