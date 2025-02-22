@@ -850,9 +850,10 @@
 
                 ScrollTrigger.create({
                     trigger: element,
-                    start: "top 90%",
-                    end: "bottom 5%",
+                    start: "top 95%",
+                    end: "bottom bottom",
                     scrub: false,
+                    markers: true,
                     toggleActions: "play none none reverse",
                     onEnter: function () {
                         gsap.to(element, {
@@ -940,7 +941,7 @@
 
 
 
-    if ($(".img-custom-anim-img").length > 0 && window.innerWidth > 768) {
+    if ($(".img-custom-anim-img").length > 0 && window.innerWidth > 68) {
         gsap.utils.toArray(".img-custom-anim-img").forEach((img) => {
             gsap.set(img, { opacity: 0, x: -50, clipPath: "inset(0 100% 0 0)" });
 

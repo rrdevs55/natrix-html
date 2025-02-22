@@ -206,6 +206,7 @@
             min-width: 350px;
             padding: 30px 20px;
         }
+
         @media #{$xs} {
             min-width: 280px;
             padding: 30px 20px;
@@ -278,6 +279,11 @@
         line-height: 70px;
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading);
+
+        @media #{$lg,$xs} {
+            font-size: 40px;
+            line-height: 50px;
+        }
     }
 
     &__dec {
@@ -287,6 +293,12 @@
         margin-bottom: 40px;
         color: var(--rr-text-body-2);
         font-family: var(--rr-ff-body);
+
+        @media #{$sm,$xs} {
+            br {
+                display: none;
+            }
+        }
     }
 
     &__capsule {
@@ -297,6 +309,21 @@
             width: 325px;
             height: 650px;
             margin-top: -500px;
+
+            @media #{$lg} {
+                width: 250px;
+            }
+
+            @media #{$md,$sm,$xs} {
+                margin: 0 auto;
+                margin-top: -500px;
+                margin-bottom: 30px;
+                overflow: hidden;
+            }
+
+            @media #{$xs} {
+                width: 310px;
+            }
         }
 
         &__item {
@@ -333,6 +360,11 @@
         padding-top: 44px;
         overflow: hidden;
 
+        @media #{$md,$sm,$xs} {
+            display: block;
+            text-align: center;
+        }
+
         &:first-of-type {
             border-top: 1px solid #252525;
         }
@@ -349,6 +381,12 @@
             margin-bottom: 35px;
             color: var(--rr-text-body-2);
             font-family: var(--rr-ff-body);
+
+            @media #{$md,$sm,$xs} {
+                br {
+                    display: none;
+                }
+            }
         }
 
         .rr-arrow__btn {
