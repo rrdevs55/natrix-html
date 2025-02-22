@@ -15,15 +15,19 @@
                 background-clip: text;
 
                 @media #{$xl} {
+                    font-size: 140px;
+                }
+
+                @media #{$lg} {
                     font-size: 120px;
                 }
 
-                @media #{$lg,$md} {
-                    font-size: 100px;
+                @media #{$md} {
+                    font-size: 95px;
                 }
 
                 @media #{$sm} {
-                    font-size: 70px;
+                    font-size: 72px;
                 }
 
                 @media #{$xs} {

@@ -10238,17 +10238,22 @@ body .ui-tooltip {
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .title-slide-section-2 .title-slide-section__item h3 {
+    font-size: 140px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .title-slide-section-2 .title-slide-section__item h3 {
     font-size: 120px;
   }
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) and (max-width: 992px) {
   .title-slide-section-2 .title-slide-section__item h3 {
-    font-size: 100px;
+    font-size: 95px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .title-slide-section-2 .title-slide-section__item h3 {
-    font-size: 70px;
+    font-size: 72px;
   }
 }
 @media (max-width: 575px) {
