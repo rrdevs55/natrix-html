@@ -163,6 +163,9 @@
                         line-height: 28px;
                         color: var(--rr-common-white);
                         font-family: var(--rr-ff-heading);
+                        &:hover{
+                            color: var(--rr-theme-primary-3);
+                        }
                     }
                 }
             }
