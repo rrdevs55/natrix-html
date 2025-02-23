@@ -976,6 +976,10 @@ input[type=number]::-webkit-inner-spin-button {
   }
 }
 
+.text_start {
+  text-align: start;
+}
+
 .text_center {
   text-align: center;
 }
@@ -7071,6 +7075,204 @@ body .ui-tooltip {
 /*----------------------------------------*/
 /*  5.1 blog-details
 /*----------------------------------------*/
+.blog-section-3 {
+  background-color: var(--rr-body-primary);
+}
+.blog-section-3 .blog-section-2__wrapper {
+  margin-right: 80px;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .blog-section-3 .blog-section-2__wrapper {
+    margin-right: 0px;
+  }
+}
+.blog-section-3 .blog-section-2__sidebar {
+  margin-left: -30px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .blog-section-3 .blog-section-2__sidebar {
+    margin-left: -55px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .blog-section-3 .blog-section-2__sidebar {
+    margin-left: -80px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .blog-section-3 .blog-section-2__sidebar {
+    margin-left: 0px;
+    margin-top: 40px;
+  }
+}
+.blog-section-3 .blog-section-2__sidebar__search form {
+  position: relative;
+}
+.blog-section-3 .blog-section-2__sidebar__search input {
+  background: inherit;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.blog-section-3 .blog-section-2__sidebar__search input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--rr-text-body-2);
+  font-family: var(--rr-ff-body);
+}
+.blog-section-3 .blog-section-2__sidebar__search input::-moz-placeholder { /* Firefox 19+ */
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--rr-text-body-2);
+  font-family: var(--rr-ff-body);
+}
+.blog-section-3 .blog-section-2__sidebar__search input:-moz-placeholder { /* Firefox 4-18 */
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--rr-text-body-2);
+  font-family: var(--rr-ff-body);
+}
+.blog-section-3 .blog-section-2__sidebar__search input:-ms-input-placeholder { /* IE 10+  Edge*/
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--rr-text-body-2);
+  font-family: var(--rr-ff-body);
+}
+.blog-section-3 .blog-section-2__sidebar__search input::placeholder { /* MODERN BROWSER */
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--rr-text-body-2);
+  font-family: var(--rr-ff-body);
+}
+.blog-section-3 .blog-section-2__sidebar__search .search-icon {
+  right: 0;
+  top: 0;
+  position: absolute;
+  color: var(--rr-common-white);
+}
+.blog-section-3 .blog-section-2__sidebar__search .search-icon i {
+  font-weight: 500;
+}
+.blog-section-3 .blog-section-2__sidebar__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  position: relative;
+  padding-bottom: 6px;
+  margin-bottom: 40px;
+  display: inline-block;
+  color: var(--rr-common-white);
+  font-family: var(--rr-ff-heading);
+}
+.blog-section-3 .blog-section-2__sidebar__title::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.blog-section-3 .blog-section-2__sidebar__posts__item {
+  display: flex;
+  align-items: center;
+  column-gap: 18px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+@media (max-width: 575px) {
+  .blog-section-3 .blog-section-2__sidebar__posts__item {
+    column-gap: 10px;
+  }
+}
+.blog-section-3 .blog-section-2__sidebar__posts__item:last-of-type {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  border-bottom: none;
+}
+.blog-section-3 .blog-section-2__sidebar__posts__thumb {
+  min-width: 79px;
+  height: 88px;
+}
+.blog-section-3 .blog-section-2__sidebar__posts__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blog-section-3 .blog-section-2__sidebar__posts__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--rr-common-white);
+  font-family: var(--rr-ff-heading);
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), (max-width: 575px) {
+  .blog-section-3 .blog-section-2__sidebar__posts__title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.blog-section-3 .blog-section-2__sidebar__posts__title a:hover {
+  color: var(--rr-theme-primary-3);
+}
+.blog-section-3 .blog-section-2__sidebar__posts__meta {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--rr-text-body-2);
+  font-family: var(--rr-ff-body);
+}
+.blog-section-3 .blog-section-2__sidebar__categories__list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+.blog-section-3 .blog-section-2__sidebar__categories__list li:last-of-type {
+  margin-bottom: 0;
+}
+.blog-section-3 .blog-section-2__sidebar__categories__list li span {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--rr-text-body-2);
+  font-family: var(--rr-ff-body);
+}
+.blog-section-3 .blog-section-2__sidebar__tags__list li {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  display: inline-block;
+  border-radius: 100px;
+  padding: 9px 19.2px;
+  margin-right: 6px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  color: var(--rr-text-body-2);
+  font-family: var(--rr-ff-body);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.blog-section-3 .blog-section-2__sidebar__tags__list li:hover {
+  color: var(--rr-common-black);
+  border-color: var(--rr-theme-primary-3);
+  background-color: var(--rr-theme-primary-3);
+}
+
+.space-bottom {
+  margin-bottom: 55px;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .space-bottom {
+    margin-bottom: 40px;
+  }
+}
+
 /*----------------------------------------*/
 /*  5.1 blog-list
 /*----------------------------------------*/

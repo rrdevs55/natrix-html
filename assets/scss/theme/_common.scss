@@ -5,45 +5,50 @@
 ---------------------------------*/
 
 .fix {
-    overflow:hidden
+	overflow: hidden
 }
-.clear{
-    clear: both;
+
+.clear {
+	clear: both;
 }
 
 .f-left {
 	float: left
 }
+
 .f-right {
 	float: right
 }
 
-.z-index-1{
+.z-index-1 {
 	z-index: 1;
 }
 
-.p-l-0{
+.p-l-0 {
 	padding-left: 0 !important;
 }
 
-.z-index-11{
+.z-index-11 {
 	z-index: 11;
 }
 
-.overflow-y-visible{
+.overflow-y-visible {
 	overflow-x: hidden;
 	overflow-y: visible;
 }
-.p-relative{
+
+.p-relative {
 	position: relative;
 }
-.p-absolute{
+
+.p-absolute {
 	position: absolute;
 }
 
-.include-bg{
+.include-bg {
 	@include background();
 }
+
 .valign {
 	@include flexbox();
 	-webkit-box-align: center;
@@ -76,6 +81,7 @@
 	visibility: hidden;
 	@extend %rs-transition-3;
 }
+
 .body__overlay {
 	background-color: var(--rr-common-heading);
 	height: 100%;
@@ -88,6 +94,7 @@
 	visibility: hidden;
 	@extend %rs-transition-3;
 }
+
 .body__overlay.opened {
 	opacity: 0.7;
 	visibility: visible;
@@ -101,27 +108,34 @@
 		line-height: 0;
 		width: 100%;
 		max-width: 1280px;
+
 		@media #{$xxl} {
 			max-width: 1000px;
 		}
+
 		@media #{$xl} {
 			max-width: 850px;
 		}
+
 		@media #{$lg} {
 			max-width: 820px;
 		}
+
 		@media #{$md} {
 			max-width: 750px;
 		}
 	}
 }
+
 .mfp-close {
 	-webkit-transform: rotate(0deg);
 	-ms-transform: rotate(0deg);
 	transform: rotate(0deg);
-	&:hover{
+
+	&:hover {
 		color: var(--rr-common-white);
 	}
+
 	&::after {
 		position: absolute;
 		content: "\f00d";
@@ -132,47 +146,64 @@
 		font-weight: 200;
 		right: -20px;
 		margin-top: -25px;
+
 		@media #{$xs, $sm, $md} {
 			right: 15px;
 			margin-top: -30px;
 		}
 	}
 }
+
+.text_start {
+	text-align: start;
+}
+
 .text_center {
 	text-align: center;
 }
+
 .text_end {
 	text-align: end;
 }
-.z-index-1{
+
+.z-index-1 {
 	z-index: 1;
 }
-.bg-cover{
+
+.bg-cover {
 	background-size: cover;
 }
-.mb-5{
+
+.mb-5 {
 	margin-bottom: 5px;
 }
-.mb-10{
+
+.mb-10 {
 	margin-bottom: 10px;
 }
-.mb-minus-30{
+
+.mb-minus-30 {
 	margin-bottom: -30px;
 }
-.mb-minus-40{
+
+.mb-minus-40 {
 	margin-bottom: -40px;
 }
-.row-reverse{
+
+.row-reverse {
 	flex-direction: row-reverse;
 }
-.sidebar-responsive{
+
+.sidebar-responsive {
 	@media #{$lg} {
 		margin-top: 30px;
 	}
 }
-.mb-minus-80{
+
+.mb-minus-80 {
 	margin-bottom: -80px;
 }
-section{
-    margin-top: -2px;
+
+section {
+	margin-top: -2px;
 }
