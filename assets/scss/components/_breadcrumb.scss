@@ -126,6 +126,7 @@
                 font-size: 80px;
                 line-height: 90px;
             }
+
             @media #{$xs} {
                 font-size: 40px;
                 line-height: 50px;
@@ -138,6 +139,35 @@
 
         &__dec {
             margin-bottom: 40px;
+        }
+    }
+}
+
+
+.breadcrumb-section-3 {
+    .breadcrumb-section {
+        &__title {
+            font-size: 100px;
+            line-height: 110px;
+
+            @media #{$xl} {
+                font-size: 90px;
+                line-height: 100px;
+            }
+            @media #{$lg,$md} {
+                font-size: 80px;
+                line-height: 90px;
+            }
+
+            @media #{$sm} {
+                font-size: 65px;
+                line-height: 65px;
+            }
+
+            @media #{$xs} {
+                font-size: 40px;
+                line-height: 50px;
+            }
         }
     }
 }
