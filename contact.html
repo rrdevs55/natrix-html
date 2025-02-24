@@ -280,41 +280,44 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="contact-section__form">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="contact-section__form__input">
-                                                    <input type="text" placeholder="Name">
+                                        <form id="contact-form" action="mail.php" method="post">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="contact-section__form__input">
+                                                        <input name="name" type="text" placeholder="Name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="contact-section__form__input">
+                                                        <input name="email" type="email" placeholder="Email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="contact-section__form__input">
+                                                        <input name="phone" type="text" placeholder="Phone">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="contact-section__form__input">
+                                                        <input name="subject" type="text" placeholder="Subject">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="contact-section__form__input">
+                                                        <textarea name="message" id="message" placeholder="Write your message"></textarea>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6">
-                                                <div class="contact-section__form__input">
-                                                    <input type="email" placeholder="Email">
-                                                </div>
+                                            <div class="contact-section__checkbox">
+                                                <input type="checkbox" class="form-check-input" id="agree">
+                                                <label class="form-check-label" for="agree">I accept the Terms</label>
                                             </div>
-                                            <div class="col-sm-6">
-                                                <div class="contact-section__form__input">
-                                                    <input type="text" placeholder="Phone">
-                                                </div>
+                                            <div class="contact-section__btn">
+                                                <button type="submit" class="rr-btn rr-btn-3 hover-anim fade-top">Submit now
+                                                    <span class="hover-bg"></span></button>
                                             </div>
-                                            <div class="col-sm-6">
-                                                <div class="contact-section__form__input">
-                                                    <input type="text" placeholder="Subject">
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="contact-section__form__input">
-                                                    <textarea name="message1" id="message1" placeholder="Write your message"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="contact-section__checkbox">
-                                            <input type="checkbox" class="form-check-input" id="agree">
-                                            <label class="form-check-label" for="agree">I accept the Terms</label>
-                                        </div>
-                                        <div class="contact-section__btn">
-                                            <button type="submit" class="rr-btn rr-btn-3 hover-anim fade-top">Submit now
-                                                <span class="hover-bg"></span></button>
-                                        </div>
+                                            <p class="ajax-response"></p>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

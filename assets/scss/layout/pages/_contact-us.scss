@@ -186,6 +186,17 @@
                 background: transparent;
                 border-bottom: 1px solid rgb(255 255 255 / 5%);
             }
+
+            input,
+            textarea {
+                @include rs-placeholder {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 1;
+                    color: var(--rr-text-body-2);
+                    font-family: var(--rr-ff-body);
+                }
+            }
         }
     }
 
@@ -227,5 +238,20 @@
         .rr-btn-3 {
             padding: 18.5px 34px;
         }
+    }
+}
+
+.ajax-response {
+    margin-top: 20px;
+    &.error {
+        font-size: 16px;
+        color: rgb(255, 0, 0);
+        font-family: var(--rr-ff-body);
+    }
+
+    &.success {
+        font-size: 16px;
+        font-family: var(--rr-ff-body);
+        color: var(--rr-theme-primary-3);
     }
 }

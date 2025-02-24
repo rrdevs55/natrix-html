@@ -9045,6 +9045,46 @@ body .ui-tooltip {
   background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
+.contact-section__form__input input::-webkit-input-placeholder,
+.contact-section__form__input textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--rr-text-body-2);
+  font-family: var(--rr-ff-body);
+}
+.contact-section__form__input input::-moz-placeholder,
+.contact-section__form__input textarea::-moz-placeholder { /* Firefox 19+ */
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--rr-text-body-2);
+  font-family: var(--rr-ff-body);
+}
+.contact-section__form__input input:-moz-placeholder,
+.contact-section__form__input textarea:-moz-placeholder { /* Firefox 4-18 */
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--rr-text-body-2);
+  font-family: var(--rr-ff-body);
+}
+.contact-section__form__input input:-ms-input-placeholder,
+.contact-section__form__input textarea:-ms-input-placeholder { /* IE 10+  Edge*/
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--rr-text-body-2);
+  font-family: var(--rr-ff-body);
+}
+.contact-section__form__input input::placeholder,
+.contact-section__form__input textarea::placeholder { /* MODERN BROWSER */
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--rr-text-body-2);
+  font-family: var(--rr-ff-body);
+}
 .contact-section__checkbox .form-check-input {
   width: 18px;
   height: 18px;
@@ -9075,6 +9115,20 @@ body .ui-tooltip {
 }
 .contact-section__btn .rr-btn-3 {
   padding: 18.5px 34px;
+}
+
+.ajax-response {
+  margin-top: 20px;
+}
+.ajax-response.error {
+  font-size: 16px;
+  color: rgb(255, 0, 0);
+  font-family: var(--rr-ff-body);
+}
+.ajax-response.success {
+  font-size: 16px;
+  font-family: var(--rr-ff-body);
+  color: var(--rr-theme-primary-3);
 }
 
 /*----------------------------------------*/
