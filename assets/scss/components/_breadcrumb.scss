@@ -34,6 +34,32 @@
             font-size: 40px;
             line-height: 50px;
         }
+
+        >span {
+            display: inline-block;
+            transform: translateY(80px);
+            margin-top: -54px;
+
+            @media #{$md,$sm,$xs} {
+                transform: translateY(0px);
+                margin-top: 0px;
+            }
+
+            .breadcrumb-section {
+                &__dec {
+                    display: block;
+                    transform: translateY(0);
+
+                    @media #{$md,$sm,$xs} {
+                        transform: translateY(15px);
+                        margin-bottom: 20px;
+                    }
+                    @media #{$sm,$xs} {
+                        margin-bottom: 35px;
+                    }
+                }
+            }
+        }
     }
 
     &__dec {
@@ -154,6 +180,7 @@
                 font-size: 90px;
                 line-height: 100px;
             }
+
             @media #{$lg,$md} {
                 font-size: 80px;
                 line-height: 90px;

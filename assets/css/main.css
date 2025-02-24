@@ -2092,6 +2092,32 @@ section {
     line-height: 50px;
   }
 }
+.breadcrumb-section__title > span {
+  display: inline-block;
+  transform: translateY(80px);
+  margin-top: -54px;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .breadcrumb-section__title > span {
+    transform: translateY(0px);
+    margin-top: 0px;
+  }
+}
+.breadcrumb-section__title > span .breadcrumb-section__dec {
+  display: block;
+  transform: translateY(0);
+}
+@media only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .breadcrumb-section__title > span .breadcrumb-section__dec {
+    transform: translateY(15px);
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .breadcrumb-section__title > span .breadcrumb-section__dec {
+    margin-bottom: 35px;
+  }
+}
 .breadcrumb-section__dec {
   font-weight: 400;
   font-size: 18px;
@@ -5527,6 +5553,9 @@ body .ui-tooltip {
 .rr-header__action ul li {
   margin-right: 30px;
 }
+.rr-header__btn-wrap {
+  line-height: 1;
+}
 .rr-header__btn-wrap .rr-arrow__btn {
   font-size: 16px;
   font-weight: 600;
@@ -8308,6 +8337,47 @@ body .ui-tooltip {
 /*----------------------------------------*/
 /* 8.1 404
 /*----------------------------------------*/
+.error-section__wrapper {
+  text-align: center;
+}
+.error-section__title {
+  font-weight: 500;
+  font-size: 65px;
+  line-height: 70px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  color: var(--rr-common-white);
+  font-family: var(--rr-ff-heading);
+}
+@media (max-width: 575px) {
+  .error-section__title {
+    font-size: 40px;
+    line-height: 45px;
+    margin-top: 50px;
+  }
+}
+.error-section__dec {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 32px;
+  color: var(--rr-text-body-2);
+  font-family: var(--rr-ff-body);
+}
+@media (max-width: 575px) {
+  .error-section__dec br {
+    display: none;
+  }
+}
+.error-section__thumb img {
+  width: inherit;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .error-section__thumb img {
+    width: 100%;
+  }
+}
+
 .about-section__thumb {
   text-align: end;
   margin-right: 80px;
@@ -8930,6 +9000,60 @@ body .ui-tooltip {
 .faq-section__btn span a:hover {
   background-size: 0 1px;
   color: var(--rr-theme-primary-3);
+}
+
+.faq-section__wrapper.faq-section__details {
+  padding-top: 150px;
+  padding-left: 110px;
+  margin-left: 0;
+  margin-top: -220px;
+  background: #121212;
+  margin-right: -315px;
+  padding-right: 315px;
+  position: relative;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 992px) {
+  .faq-section__wrapper.faq-section__details {
+    padding-top: 100px;
+    padding-left: 70px;
+    margin-top: -100px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .faq-section__wrapper.faq-section__details {
+    padding-top: 80px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .faq-section__wrapper.faq-section__details {
+    padding-top: 0px;
+    padding-left: 0px;
+    margin-top: 70px;
+  }
+}
+
+.thumb-bg-section-11 .thumb-bg-section-2__wrapper {
+  height: 820px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .thumb-bg-section-11 .thumb-bg-section-2__wrapper {
+    height: 650px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .thumb-bg-section-11 .thumb-bg-section-2__wrapper {
+    height: 550px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .thumb-bg-section-11 .thumb-bg-section-2__wrapper {
+    height: 450px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .thumb-bg-section-11 .thumb-bg-section-2__wrapper {
+    height: 350px;
+  }
 }
 
 .team-section__content {
@@ -10375,7 +10499,7 @@ body .ui-tooltip {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-  margin-top: 16px;
+  padding-top: 16px;
   color: var(--rr-text-body-2);
   font-family: var(--rr-ff-body);
 }

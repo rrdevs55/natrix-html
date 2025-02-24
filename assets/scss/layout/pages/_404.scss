@@ -5,3 +5,49 @@
 /*----------------------------------------*/
 
 
+.error-section {
+    &__wrapper {
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 65px;
+        line-height: 70px;
+        margin-top: 70px;
+        margin-bottom: 20px;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-heading);
+
+        @media #{$xs} {
+            font-size: 40px;
+            line-height: 45px;
+            margin-top: 50px;
+        }
+    }
+
+    &__dec {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        margin-bottom: 32px;
+        color: var(--rr-text-body-2);
+        font-family: var(--rr-ff-body);
+
+        @media #{$xs} {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__thumb {
+        img {
+            width: inherit;
+
+            @media #{$md,$sm,$xs} {
+                width: 100%;
+            }
+        }
+    }
+}

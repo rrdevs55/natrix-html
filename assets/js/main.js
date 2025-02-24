@@ -737,8 +737,8 @@
                 scrollTrigger: {
                     trigger: '.faq-section',
                     scrub: 1,
-                    start: 'top 10%',
-                    end: "bottom 25%",
+                    start: 'top 5%',
+                    end: "bottom 40%",
                     pin: '.faq-section-panel-pin',
                     markers: false,
                     toggleActions: 'play reverse play reverse',
