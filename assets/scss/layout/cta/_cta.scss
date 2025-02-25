@@ -3,3 +3,54 @@
 /*----------------------------------------*/
 /*  7.1 cta
 /*----------------------------------------*/
+
+
+
+.cta-section {
+    background-color: var(--rr-body-primary-2);
+
+    &__wrapper {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-bottom: 72px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 65px;
+        line-height: 70px;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-heading);
+
+        @media #{$md,$sm,$xs} {
+            margin-bottom: 20px;
+        }
+
+        @media #{$xs} {
+            font-size: 40px;
+            line-height: 40px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__dec {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        margin-bottom: 40px;
+        color: var(--rr-text-body);
+        font-family: var(--rr-ff-body);
+
+        @media #{$xs} {
+            br {
+                display: none;
+            }
+        }
+    }
+}

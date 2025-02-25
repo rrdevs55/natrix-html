@@ -3,3 +3,44 @@
 /*----------------------------------------*/
 /*  8.1 brand
 /*----------------------------------------*/
+
+
+.brand-slide-section {
+    .brand-slide__active {
+        .swiper-wrapper {
+            display: flex;
+            column-gap: 95px;
+            align-items: center;
+            justify-content: space-between;
+            transition-timing-function: linear;
+
+            @media #{$sm} {
+                column-gap: 50px;
+            }
+
+            @media #{$xs} {
+                column-gap: 30px;
+            }
+
+            .swiper-slide {
+                width: auto;
+            }
+        }
+    }
+
+    &__wrapper {
+        .title {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            text-align: center;
+            margin-bottom: 70px;
+            color: var(--rr-text-body);
+            font-family: var(--rr-ff-body);
+
+            @media #{$sm,$xs} {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

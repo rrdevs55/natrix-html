@@ -18,29 +18,6 @@
         Preloader activation
         ========================================*/
 
-
-    function resourcesHubMasonry() {
-        var $grid = $('.resources-hub__masonry');
-        $grid.masonry({
-            itemSelector: '.col-item',
-            columnWidth: '.col-lg-4',
-            horizontalOrder: false,
-            isAnimated: true,
-            // percentPosition: true,
-        });
-
-        $grid.masonry('reloadItems');
-        $grid.masonry('layout');
-
-        // layout Masonry after each image loads
-        $grid.imagesLoaded().progress(function () {
-            $grid.masonry('layout');
-        });
-    }
-
-    resourcesHubMasonry();
-
-
     $(window).on('load', function (event) {
         $('#preloader').delay(1000).fadeOut(500);
 
@@ -201,15 +178,6 @@
     });
 
 
-    $('.grid').isotope({
-        itemSelector: '.grid-item',
-        percentPosition: true,
-        masonry: {
-            columnWidth: 1
-
-        }
-    })
-
     // Easy Pie Chart
     const piechart = document.querySelectorAll(".piechart");
     piechart.forEach(function (el) {
@@ -257,10 +225,6 @@
     $('.take-appointment-3__form-input-select select, .lan-select select, .nice-select-select select').niceSelect();
     $("#datepicker").datepicker({
         dateFormat: "mm/dd/yy"
-    });
-
-    $('#getting-started').countdown('2025/01/01', function (event) {
-        $(this).html(event.strftime(' <div><span>%D</span></div>  <div><span>%H</span></div> <div><span>%M</span></div> <div><span>%S</span></div>'));
     });
 
 
@@ -391,23 +355,6 @@
     });
 
 
-    // // natrix isotope js blog10
-    // var $grid = $('.grid').isotope({
-    //     // options
-    // });
-    // // filter items on button click
-    // $('.blog10__filter').on('click', 'button', function () {
-    //     var filterValue = $(this).attr('data-filter');
-    //     $grid.isotope({ filter: filterValue })
-    // });
-
-    // $('.blog10__filter button').on('click', function (event) {
-    //     $(this).siblings('.active').removeClass('active');
-    //     $(this).addClass('active');
-    //     event.preventDefault();
-    // });
-
-
 
     // jarallax js 
     $('.jarallax').jarallax({
@@ -415,8 +362,6 @@
     }); 
 
 
-
-    //////// counter h2 end /////////
 
     /////////////////////////////// Hero animation ////////////////////////////////////
 
@@ -694,71 +639,6 @@
     }
 
 
-
-    // if ($('.rr_fadeIn_anim').length > 0) {
-    //     let splitTitleLines = gsap.utils.toArray(".rr_fadeIn_anim");
-    //     splitTitleLines.forEach(splitTextLine => {
-    //         const tl = gsap.timeline({
-    //             scrollTrigger: {
-    //                 trigger: splitTextLine,
-    //                 start: 'top 90%',
-    //                 end: 'bottom 5%',
-    //                 scrub: false,
-    //                 markers: true,
-    //                 toggleActions: "play reverse play reverse",
-    //             }
-    //         });
-
-    //         const itemSplitted = new SplitText(splitTextLine, {
-    //             type: "words, lines"
-    //         });
-    //         gsap.set(splitTextLine, {
-    //             perspective: 400
-    //         });
-    //         itemSplitted.split({
-    //             type: "lines"
-    //         })
-    //         tl.from(itemSplitted.lines, {
-    //             duration: 0.8,
-    //             delay: 0.3,
-    //             opacity: 0,
-    //             rotationX: -80,
-    //             force3D: true,
-    //             transformOrigin: "top center -50",
-    //             stagger: 0.1
-    //         });
-    //     });
-    // }
-
-    //split-text animation
-    // let animation = document.querySelectorAll(".animation");
-
-    // animation.forEach(animation => {
-    //     let split = new SplitText(animation.querySelector(".rr_title_animation"), { type: "chars, words" }),
-    //         tl = gsap.timeline({
-    //             scrollTrigger: {
-    //                 trigger: animation,
-    //                 start: "top bottom",
-    //                 toggleActions: "play none none reverse",
-    //                 onEnter: () => {
-    //                     tl.timeScale(2.3);
-    //                 },
-
-    //                 onLeaveBack: () => {
-    //                     tl.timeScale(2.3).reverse();
-    //                 },
-    //             }
-    //         });
-    //     tl.to(animation.querySelector(".sup_animation"), { opacity: 1, x: -50, ease: "back" })
-    //         .from(split.chars, {
-    //             opacity: 0,
-    //             y: 50,
-    //             rotation: 1,
-    //             duration: 2,
-    //             ease: "back",
-    //             stagger: 0.05
-    //         });
-    // });
     if (document.querySelectorAll(".animation").length > 0) { 
         let animation = document.querySelectorAll(".animation");
 
@@ -1077,14 +957,6 @@
             },
         });
     }
-
-
-
-
-
- 
-
-
 
 
     
