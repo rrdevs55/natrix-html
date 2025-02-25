@@ -106,8 +106,23 @@
 
 
 
+.title-slider-custom {
+    &.title-slider-3 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .title-slider-3 {
+        &__active {
+            transform: rotate(0deg);
+        }
 
+        &__active-2 {
+            transform: rotate(0deg);
+            position: inherit;
 
+        }
+    }
+}
 
 
 
@@ -121,12 +136,15 @@
             @media #{$xl} {
                 height: 650px;
             }
+
             @media #{$lg} {
                 height: 600px;
             }
+
             @media #{$md} {
                 height: 500px;
             }
+
             @media #{$sm,$xs} {
                 height: 400px;
             }

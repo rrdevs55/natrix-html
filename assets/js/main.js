@@ -18,12 +18,6 @@
         Preloader activation
         ========================================*/
 
-    handleQuantityButtons();
-
-    $(document.body).on('updated_cart_totals', function () {
-        handleQuantityButtons();
-    });
-
 
     function resourcesHubMasonry() {
         var $grid = $('.resources-hub__masonry');
@@ -76,33 +70,6 @@
 
 
     /////////////////////////////////////////////////////
-
-    //return img gsap
-    // gsap.registerPlugin(ScrollTrigger);
-
-    // let revealContainers = document.querySelectorAll(".return");
-
-    // revealContainers.forEach((container) => {
-    //     let image = container.querySelector("img");
-    //     let tl = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: container,
-    //             toggleActions: "restart none none reset"
-    //         }
-    //     });
-
-    //     tl.set(container, { autoAlpha: 1 });
-    //     tl.from(container, 1.5, {
-    //         xPercent: -100,
-    //         ease: Power2.out
-    //     });
-    //     tl.from(image, 1.5, {
-    //         xPercent: 100,
-    //         scale: 1.3,
-    //         delay: -1.5,
-    //         ease: Power2.out
-    //     });
-    // });
 
     //GSAP smooth animation
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
@@ -189,35 +156,6 @@
         }
     });
 
-    /*** pricing table */
-    const pricingMonthlyBtn = $("#monthly-btn"),
-        pricingYearlyBtn = $("#yearly-btn"),
-        pricingValues = $(".pricing-card-price h2");
-
-    if (pricingMonthlyBtn[0] && pricingYearlyBtn[0] && pricingValues.length > 0) {
-        pricingMonthlyBtn[0].addEventListener("click", function () {
-            updatePricingValues("monthly");
-            pricingYearlyBtn[0].classList.remove("active");
-            pricingMonthlyBtn[0].classList.add("active");
-        });
-
-        pricingYearlyBtn[0].addEventListener("click", function () {
-            updatePricingValues("yearly");
-            pricingMonthlyBtn[0].classList.remove("active");
-            pricingYearlyBtn[0].classList.add("active");
-        });
-    }
-
-    function updatePricingValues(option) {
-        pricingValues.each(function () {
-            const pricingValue = $(this);
-            const yearlyValue = pricingValue.attr("data-yearly");
-            const monthlyValue = pricingValue.attr("data-monthly");
-
-            const newValue = option === "monthly" ? monthlyValue : yearlyValue;
-            pricingValue.html(newValue);
-        });
-    }
 
     /*======================================
       MagnificPopup image view
@@ -251,42 +189,6 @@
         wow.init();
     }
 
-    // /*======================================
-    //   Button scroll up js
-    //   ========================================*/
-
-    // /*======================================
-    // One Page Scroll Js
-    // ========================================*/
-    // /*** Scroll Nav */
-    // var link = $('.mean-nav ul li a');
-
-    // link.on('click', function (e) {
-    //     var target = $($(this).attr('href'));
-    //     $('html, body').animate({
-    //         scrollTop: target.offset().top - 76
-    //     }, 600);
-    //     $(this).parent().addClass('active');
-    //     e.preventDefault();
-    // });
-
-    // $(window).on('scroll', function () {
-    //     scrNav();
-    // });
-
-    // function scrNav() {
-    //     var sTop = $(window).scrollTop();
-    //     $('section').each(function () {
-    //         var id = $(this).attr('id'),
-    //             offset = $(this).offset().top - 1,
-    //             height = $(this).height();
-    //         if (sTop >= offset && sTop < offset + height) {
-    //             link.parent().removeClass('active');
-    //             $('.main-menu').find('[href="#' + id + '"]').parent().addClass('active');
-    //         }
-    //     });
-    // }
-    // scrNav();
 
     /*======================================
     Smoth animatio Js
@@ -308,23 +210,6 @@
         }
     })
 
-
-    //count
-    function handleQuantityButtons() {
-        $('.count-wrap .minus').click(function () {
-            var input = $(this).closest('.count-wrap').find('input.qty');
-            var currentValue = parseInt(input.val());
-            if (currentValue > 1) {
-                input.val(currentValue - 1).change();
-            }
-        });
-
-        $('.count-wrap .plus').click(function () {
-            var input = $(this).closest('.count-wrap').find('input.qty');
-            var currentValue = parseInt(input.val());
-            input.val(currentValue + 1).change();
-        });
-    }
     // Easy Pie Chart
     const piechart = document.querySelectorAll(".piechart");
     piechart.forEach(function (el) {
@@ -378,24 +263,6 @@
         $(this).html(event.strftime(' <div><span>%D</span></div>  <div><span>%H</span></div> <div><span>%M</span></div> <div><span>%S</span></div>'));
     });
 
-
-    /*** lastNobullet */
-    function lastNobullet() {
-        var lastElement = false;
-        $(".footer__copyright-menu ul li, .last_item_not_horizental_bar .col-lg-4").each(function () {
-            if (lastElement && lastElement.offset().top != $(this).offset().top) {
-                $(lastElement).addClass("no_bullet");
-            } else {
-                $(lastElement).removeClass("no_bullet");
-            }
-            lastElement = $(this);
-        }).last().addClass("no_bullet");
-    };
-    lastNobullet();
-
-    $(window).resize(function () {
-        lastNobullet();
-    });
 
     $('#contact__form').submit(function (event) {
         event.preventDefault();
@@ -524,37 +391,28 @@
     });
 
 
-    // faizen isotope js blog10
-    var $grid = $('.grid').isotope({
-        // options
-    });
-    // filter items on button click
-    $('.blog10__filter').on('click', 'button', function () {
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue })
-    });
+    // // natrix isotope js blog10
+    // var $grid = $('.grid').isotope({
+    //     // options
+    // });
+    // // filter items on button click
+    // $('.blog10__filter').on('click', 'button', function () {
+    //     var filterValue = $(this).attr('data-filter');
+    //     $grid.isotope({ filter: filterValue })
+    // });
 
-    $('.blog10__filter button').on('click', function (event) {
-        $(this).siblings('.active').removeClass('active');
-        $(this).addClass('active');
-        event.preventDefault();
-    });
+    // $('.blog10__filter button').on('click', function (event) {
+    //     $(this).siblings('.active').removeClass('active');
+    //     $(this).addClass('active');
+    //     event.preventDefault();
+    // });
 
 
 
     // jarallax js 
     $('.jarallax').jarallax({
         speed: 0.2,
-    });
-
-
-    // counter js 
-    jQuery(document).ready(function ($) {
-        $('.counter').counterUp({
-            delay: 10,
-            time: 1200
-        });
-    });
+    }); 
 
 
 
@@ -562,71 +420,34 @@
 
     /////////////////////////////// Hero animation ////////////////////////////////////
 
-    // GSAP এবং ScrollTrigger সক্রিয় করতে
-    gsap.registerPlugin(ScrollTrigger);
+    // // GSAP ScrollTrigger 
+    // gsap.registerPlugin(ScrollTrigger);
 
-    // ভিডিও এলিমেন্ট সিলেক্ট করা
-    const titleVideo = document.querySelector('.title-video');
+    // const titleVideo = document.querySelector('.title-video');
 
-    // ScrollTrigger এর জন্য matchMedia ব্যবহার করা
-    ScrollTrigger.matchMedia({
-        // ১২০০ পিক্সেলের উপরের ডিভাইসের জন্য
-        "(min-width: 1200px)": function () {
-            // GSAP অ্যানিমেশন
-            gsap.to(titleVideo, {
-                scrollTrigger: {
-                    trigger: '.brand',
-                    start: 'top 50%',
-                    end: 'top 20%',
-                    scrub: true,
-                    toggleActions: 'play reverse play reverse'
-                },
-                x: '100%',
-                y: '750px',
-                scale: 4,
-                width: '500px',
-                height: '200px',
-                borderRadius: '0px',
-                ease: 'power1.out',
-            });
-        },
+    // ScrollTrigger.matchMedia({
+    //     "(min-width: 1200px)": function () {
+    //         gsap.to(titleVideo, {
+    //             scrollTrigger: {
+    //                 trigger: '.brand',
+    //                 start: 'top 50%',
+    //                 end: 'top 20%',
+    //                 scrub: true,
+    //                 toggleActions: 'play reverse play reverse'
+    //             },
+    //             x: '100%',
+    //             y: '750px',
+    //             scale: 4,
+    //             width: '500px',
+    //             height: '200px',
+    //             borderRadius: '0px',
+    //             ease: 'power1.out',
+    //         });
+    //     },
 
-        // ১২০০ পিক্সেলের নিচের ডিভাইসের জন্য (কোনো অ্যানিমেশন হবে না)
-        "(max-width: 1199px)": function () {
-            // এখানে আপনি অ্যানিমেশন নিষ্ক্রিয় রাখতে কিছু না করলেও হবে।
-        },
-    });
-
-
-
-
-
-    // Scroll-triggered border and background color change
-    // gsap.timeline({
-    //     scrollTrigger: {
-    //         trigger: '.tp-portfolio-top-text-border',
-    //         start: 'top center',
-    //         end: 'bottom center',
-    //         scrub: true
-    //     }
-    // })
-    // .to('.tp-portfolio-top-text-border', {
-    //     borderColor: '#ff0000',
-    //     duration: 0.5
-    // })
-    // .to('.tp-portfolio-top-text-border-icon', {
-    //     backgroundColor: '#151515',
-    //     duration: 0.5
-    // }, '<');
-
-  
-
-
-
-
-
-
-
+    //     "(max-width: 1199px)": function () {
+    //     },
+    // });
 
 
 
@@ -748,8 +569,7 @@
     }
 
 
-
-    if (window.innerWidth > 768) {
+    if (document.querySelectorAll(".title-slide-section-text").length > 0 && window.innerWidth > 768) { 
         gsap.set('.title-slide-section-text', { x: '0%' });
 
         gsap.timeline({
@@ -787,24 +607,26 @@
 
     document.addEventListener("DOMContentLoaded", () => {
         const mainImage = document.getElementById("main-image");
-        const textItems = document.querySelectorAll(".services-section__item");
 
-        textItems.forEach(item => {
-            item.addEventListener("mouseover", () => {
-                const newImage = item.getAttribute("data-image");
-                mainImage.style.opacity = "0";
+        if (document.querySelectorAll(".services-section__item").length > 0) {
+            const textItems = document.querySelectorAll(".services-section__item");
 
-                setTimeout(() => {
-                    mainImage.src = newImage;
-                    mainImage.style.opacity = "1";
-                }, 500);
+            textItems.forEach(item => {
+                item.addEventListener("mouseover", () => {
+                    const newImage = item.getAttribute("data-image");
+                    mainImage.style.opacity = "0";
+
+                    setTimeout(() => {
+                        mainImage.src = newImage;
+                        mainImage.style.opacity = "1";
+                    }, 500);
+                });
             });
-        });
+        }
     });
 
 
-
-    if ($('.rr-char-animation').length > 0 && window.innerWidth > 768) {
+    if (document.querySelectorAll(".rr-char-animation").length > 0 && window.innerWidth > 768) { 
         let char_come = gsap.utils.toArray(".rr-char-animation");
         char_come.forEach(splitTextLine => {
             const tl = gsap.timeline({
@@ -828,14 +650,15 @@
                 delay: 0.1,
                 x: 100,
                 autoAlpha: 0,
-                stagger: 0.05
+                stagger: 0.05,
+                ease: "power3.out"
             });
         });
     }
 
 
 
-    if ($(".fade-wrapper").length > 0 && window.innerWidth > 768) {
+    if (document.querySelectorAll(".fade-wrapper").length > 0) { 
         $(".fade-wrapper").each(function () {
             var section = $(this);
             var fadeItems = section.find(".fade-top");
@@ -872,75 +695,105 @@
 
 
 
-    if ($('.rr_fadeIn_anim').length > 0) {
-        let splitTitleLines = gsap.utils.toArray(".rr_fadeIn_anim");
-        splitTitleLines.forEach(splitTextLine => {
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: splitTextLine,
-                    start: 'top 90%',
-                    end: 'bottom 5%',
-                    scrub: false,
-                    markers: true,
-                    toggleActions: "play reverse play reverse",
-                }
-            });
+    // if ($('.rr_fadeIn_anim').length > 0) {
+    //     let splitTitleLines = gsap.utils.toArray(".rr_fadeIn_anim");
+    //     splitTitleLines.forEach(splitTextLine => {
+    //         const tl = gsap.timeline({
+    //             scrollTrigger: {
+    //                 trigger: splitTextLine,
+    //                 start: 'top 90%',
+    //                 end: 'bottom 5%',
+    //                 scrub: false,
+    //                 markers: true,
+    //                 toggleActions: "play reverse play reverse",
+    //             }
+    //         });
 
-            const itemSplitted = new SplitText(splitTextLine, {
-                type: "words, lines"
-            });
-            gsap.set(splitTextLine, {
-                perspective: 400
-            });
-            itemSplitted.split({
-                type: "lines"
-            })
-            tl.from(itemSplitted.lines, {
-                duration: 0.8,
-                delay: 0.3,
-                opacity: 0,
-                rotationX: -80,
-                force3D: true,
-                transformOrigin: "top center -50",
-                stagger: 0.1
-            });
+    //         const itemSplitted = new SplitText(splitTextLine, {
+    //             type: "words, lines"
+    //         });
+    //         gsap.set(splitTextLine, {
+    //             perspective: 400
+    //         });
+    //         itemSplitted.split({
+    //             type: "lines"
+    //         })
+    //         tl.from(itemSplitted.lines, {
+    //             duration: 0.8,
+    //             delay: 0.3,
+    //             opacity: 0,
+    //             rotationX: -80,
+    //             force3D: true,
+    //             transformOrigin: "top center -50",
+    //             stagger: 0.1
+    //         });
+    //     });
+    // }
+
+    //split-text animation
+    // let animation = document.querySelectorAll(".animation");
+
+    // animation.forEach(animation => {
+    //     let split = new SplitText(animation.querySelector(".rr_title_animation"), { type: "chars, words" }),
+    //         tl = gsap.timeline({
+    //             scrollTrigger: {
+    //                 trigger: animation,
+    //                 start: "top bottom",
+    //                 toggleActions: "play none none reverse",
+    //                 onEnter: () => {
+    //                     tl.timeScale(2.3);
+    //                 },
+
+    //                 onLeaveBack: () => {
+    //                     tl.timeScale(2.3).reverse();
+    //                 },
+    //             }
+    //         });
+    //     tl.to(animation.querySelector(".sup_animation"), { opacity: 1, x: -50, ease: "back" })
+    //         .from(split.chars, {
+    //             opacity: 0,
+    //             y: 50,
+    //             rotation: 1,
+    //             duration: 2,
+    //             ease: "back",
+    //             stagger: 0.05
+    //         });
+    // });
+    if (document.querySelectorAll(".animation").length > 0) { 
+        let animation = document.querySelectorAll(".animation");
+
+        animation.forEach(animation => {
+            let split = new SplitText(animation.querySelector(".rr_title_animation"), { type: "chars, words" }),
+                tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: animation,
+                        start: "top bottom",
+                        toggleActions: "play none none reverse",
+                        onEnter: () => {
+                            tl.timeScale(2.3);
+                        },
+                        onLeaveBack: () => {
+                            tl.timeScale(2.3).reverse();
+                        },
+                    }
+                });
+
+            tl.to(animation.querySelector(".sup_animation"), { opacity: 1, x: -50, ease: "back" })
+                .from(split.chars, {
+                    opacity: 0,
+                    y: 50,
+                    rotation: 1,
+                    duration: 2,
+                    ease: "back",
+                    stagger: 0.05
+                });
         });
     }
 
-    //split-text animation
-    let animation = document.querySelectorAll(".animation");
-
-    animation.forEach(animation => {
-        let split = new SplitText(animation.querySelector(".rr_title_animation"), { type: "chars, words" }),
-            tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: animation,
-                    start: "top bottom",
-                    toggleActions: "play none none reverse",
-                    onEnter: () => {
-                        tl.timeScale(2.3);
-                    },
-
-                    onLeaveBack: () => {
-                        tl.timeScale(2.3).reverse();
-                    },
-                }
-            });
-        tl.to(animation.querySelector(".sup_animation"), { opacity: 1, x: -50, ease: "back" })
-            .from(split.chars, {
-                opacity: 0,
-                y: 50,
-                rotation: 1,
-                duration: 2,
-                ease: "back",
-                stagger: 0.05
-            });
-    });
     //split-text animation end
 
 
-
-    if ($(".img-custom-anim-img").length > 0 && window.innerWidth > 68) {
+    if (document.querySelectorAll(".img-custom-anim-img").length > 0) { 
         gsap.utils.toArray(".img-custom-anim-img").forEach((img) => {
             gsap.set(img, { opacity: 0, x: -50, clipPath: "inset(0 100% 0 0)" });
 
@@ -949,7 +802,7 @@
                 start: "top 95%",
                 end: "bottom 5%",
                 toggleActions: "play none none reverse",
-                markers: true,
+                markers: false,
                 onEnter: () => {
                     gsap.to(img, {
                         opacity: 1,
@@ -972,53 +825,56 @@
     }
 
 
+    if (document.querySelectorAll(".panels-container").length > 0) { 
+        const panelsContainer = document.querySelector(".panels-container");
+        const panels = gsap.utils.toArray(".panel");
+        let totalPanelsWidth = panels.reduce((acc, panel) => acc + panel.offsetWidth, 0);
 
-    const panelsContainer = document.querySelector(".panels-container");
-    const panels = gsap.utils.toArray(".panel");
-    let totalPanelsWidth = panels.reduce((acc, panel) => acc + panel.offsetWidth, 0);
+        gsap.set(panelsContainer, { width: totalPanelsWidth });
 
-    gsap.set(panelsContainer, { width: totalPanelsWidth });
-
-    gsap.to(panelsContainer, {
-        x: -(totalPanelsWidth - window.innerWidth),
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".panels",
-            pin: true,
-            pinSpacing: true, 
-            scrub: true, 
-            start: "-33% top",
-            end: "+=" + (totalPanelsWidth - window.innerWidth + 500), 
-            anticipatePin: 3,
-            markers: false,
-            toggleActions: "play none none reverse",
-        }
-    });
+        gsap.to(panelsContainer, {
+            x: -(totalPanelsWidth - window.innerWidth),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".panels",
+                pin: true,
+                pinSpacing: true,
+                scrub: true,
+                start: "-33% top",
+                end: "+=" + (totalPanelsWidth - window.innerWidth + 500),
+                anticipatePin: 3,
+                markers: false,
+                toggleActions: "play none none reverse",
+            }
+        });
+    }
 
 
 
     // hover reveal start
-    const hoveritem = document.querySelectorAll(".rr-hover-reveal-item");
+    if (document.querySelectorAll(".rr-hover-reveal-item").length > 0) { 
+        const hoveritem = document.querySelectorAll(".rr-hover-reveal-item");
 
-    function moveImage(e, hoveritem, index) {
-        const item = hoveritem.getBoundingClientRect();
-        const x = e.clientX - item.x;
-        const y = e.clientY - item.y;
-        if (hoveritem.children[index]) {
-            hoveritem.children[index].style.transform = `translate(${x}px, ${y}px)`;
+        function moveImage(e, hoveritem, index) {
+            const item = hoveritem.getBoundingClientRect();
+            const x = e.clientX - item.x;
+            const y = e.clientY - item.y;
+            if (hoveritem.children[index]) {
+                hoveritem.children[index].style.transform = `translate(${x}px, ${y}px)`;
+            }
         }
-    }
-    hoveritem.forEach((item, i) => {
-        item.addEventListener("mousemove", (e) => {
-            setInterval(moveImage(e, item, 1), 50);
+        hoveritem.forEach((item, i) => {
+            item.addEventListener("mousemove", (e) => {
+                setInterval(moveImage(e, item, 1), 50);
+            });
         });
-    });
+    }
     // hover reveal end
 
 
 
 
-    if ($(".progress-ring__circle").length > 0 && window.innerWidth > 68) {
+    if (document.querySelectorAll(".progress-ring__circle").length > 0) { 
         document.addEventListener("DOMContentLoaded", () => {
             
             const circle = document.querySelector(".progress-ring__circle");
@@ -1072,156 +928,156 @@
 
 
 
-
-    var testimonial = new Swiper(".testimonial-slide__active", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        centeredSlides: false,
-        autoplay: true,
-        centerMode: true,
-        speed: 1000,
-    });
-
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const swiper = new Swiper(".brand-slide__active", {
-            slidesPerView: 'auto',
+    if (document.querySelector(".testimonial-slide__active")) { 
+        var testimonial = new Swiper(".testimonial-slide__active", {
+            slidesPerView: 1,
             spaceBetween: 30,
-            centeredSlides: true,
-            speed: 3000,
             loop: true,
-            freeMode: true,
-            autoplay: {
-                delay: 1,
-                reverseDirection: false,
-                disableOnInteraction: false
-            },
-            touchReleaseOnEdges: true,  
-            simulateTouch: false,       
-            allowTouchMove: false,       
+            centeredSlides: false,
+            autoplay: true,
+            centerMode: true,
+            speed: 1000,
         });
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const swiper = new Swiper(".title-slide__active", {
-            slidesPerView: 'auto',
-            spaceBetween: 40,
-            centeredSlides: true,
-            speed: 25000,
-            loop: true,
-            freeMode: true,
-            autoplay: {
-                delay: 1,
-                reverseDirection: false,
-                disableOnInteraction: false,
-            },
-            touchReleaseOnEdges: true,
-            simulateTouch: false,
-            allowTouchMove: false,
-        });
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const swiper = new Swiper(".title-slider-3__active", {
-            slidesPerView: 'auto',
-            spaceBetween: 0,
-            centeredSlides: true,
-            speed: 25000,
-            loop: true,
-            freeMode: true,
-            autoplay: {
-                delay: 1,
-                reverseDirection: false,
-                disableOnInteraction: false
-            },
-            touchReleaseOnEdges: true,
-            simulateTouch: false,
-            allowTouchMove: false,
-        });
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const swiper = new Swiper(".title-slider-3__active-2", {
-            slidesPerView: 'auto',
-            spaceBetween: 0,
-            centeredSlides: true,
-            speed: 25000,
-            loop: true,
-            freeMode: true,
-            autoplay: {
-                delay: 1,
-                reverseDirection: true,
-                disableOnInteraction: false
-            },
-            touchReleaseOnEdges: true,
-            simulateTouch: false,
-            allowTouchMove: false,
-        });
-    });
+    }
 
 
-    var swiperProject = new Swiper(".project-section-2__active", {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        loop: true,
-        centeredSlides: false,
-        autoplay: true,
-        centerMode: true,
-        speed: 400,
-        pagination: {
-            el: ".project-section-2__pagination",
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-            },
-            767: {
-                slidesPerView: 2,
-            },
-            992: {
-                slidesPerView: 3,
-            },
-            1200: {
-                slidesPerView: 4,
-            },
-        },
-    });
-
-    var swiperfeedback = new Swiper(".feedback-section__active", {
-        slidesPerView: 4,
-        spaceBetween: 50,
-        loop: true,
-        centeredSlides: true,
-        autoplay: true,
-        centerMode: false,
-        speed: 400,
-        navigation: {
-            nextEl: ".feedback-section__button__next",
-            prevEl: ".feedback-section__button__prev",
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
+    if (document.querySelector(".brand-slide__active")) { 
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper(".brand-slide__active", {
+                slidesPerView: 'auto',
                 spaceBetween: 30,
-                centeredSlides: false,
+                centeredSlides: true,
+                speed: 3000,
+                loop: true,
+                freeMode: false,
+                allowTouchMove: false,
+                autoplay: {
+                    delay: 1,
+                },
+            });
+        });
+    }
+
+    if (document.querySelector(".title-slide__active")) { 
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper(".title-slide__active", {
+                slidesPerView: 'auto',
+                spaceBetween: 40,
+                centeredSlides: true,
+                speed: 25000,
+                loop: true,
+                freeMode: false,
+                allowTouchMove: false,
+                autoplay: {
+                    delay: 1,
+                },
+            });
+        });
+    }
+
+    if (document.querySelector(".title-slider-3__active")) { 
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper(".title-slider-3__active", {
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+                centeredSlides: true,
+                speed: 25000,
+                loop: true,
+                freeMode: false,
+                allowTouchMove: false,
+                autoplay: {
+                    delay: 1,
+                },
+            });
+        });
+    }
+
+    if (document.querySelector(".title-slider-3__active-2")) { 
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper(".title-slider-3__active-2", {
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+                centeredSlides: true,
+                speed: 25000,
+                loop: true,
+                freeMode: false,
+                allowTouchMove: false,
+                autoplay: {
+                    delay: 1,
+                    reverseDirection: true,
+                },
+            });
+        });
+    }
+
+
+    if (document.querySelector(".project-section-2__active")) { 
+        var swiperProject = new Swiper(".project-section-2__active", {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            loop: true,
+            centeredSlides: false,
+            autoplay: true,
+            centerMode: true,
+            speed: 400,
+            pagination: {
+                el: ".project-section-2__pagination",
             },
-            767: {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                centeredSlides: false,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                767: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                },
+                1200: {
+                    slidesPerView: 4,
+                },
             },
-            992: {
-                slidesPerView: 2,
+        });
+    }
+
+
+    if (document.querySelector(".feedback-section__active")) { 
+        var swiperfeedback = new Swiper(".feedback-section__active", {
+            slidesPerView: 4,
+            spaceBetween: 50,
+            loop: true,
+            centeredSlides: true,
+            autoplay: true,
+            centerMode: false,
+            speed: 400,
+            navigation: {
+                nextEl: ".feedback-section__button__next",
+                prevEl: ".feedback-section__button__prev",
             },
-            1200: {
-                slidesPerView: 3,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    centeredSlides: false,
+                },
+                767: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    centeredSlides: false,
+                },
+                992: {
+                    slidesPerView: 2,
+                },
+                1200: {
+                    slidesPerView: 3,
+                },
+                1700: {
+                    slidesPerView: 4,
+                },
             },
-            1700: {
-                slidesPerView: 4,
-            },
-        },
-    });
+        });
+    }
+
 
 
 

@@ -1137,6 +1137,20 @@ section {
   }
 }
 
+.section-space-top-80 {
+  padding-top: 80px;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .section-space-top-80 {
+    padding-top: 50px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .section-space-top-80 {
+    padding-top: 40px;
+  }
+}
+
 .section-space-top-180 {
   padding-top: 180px;
 }
@@ -7145,6 +7159,29 @@ body .ui-tooltip {
     margin-right: 0px;
   }
 }
+.blog-section-3__page__number {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+.blog-section-3__page__number .page {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--rr-common-white);
+  font-family: var(--rr-ff-heading);
+}
+.blog-section-3__page__number .active,
+.blog-section-3__page__number .next-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
 
 .blog-section-2__sidebar {
   margin-left: -30px;
@@ -7767,6 +7804,23 @@ body .ui-tooltip {
   }
 }
 
+.SkillInLeft {
+  animation: SkillInLeft 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+  opacity: 0;
+}
+
+@keyframes SkillInLeft {
+  0% {
+    transform: translateX(0);
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
 .thumb-bg-section-8 .thumb-bg-section-2__wrapper {
   height: 700px;
 }
@@ -7896,6 +7950,14 @@ body .ui-tooltip {
     margin-bottom: 30px;
   }
 }
+@media (max-width: 575px) {
+  .footer-section__content {
+    margin-bottom: 40px;
+  }
+  .footer-section__content:last-of-type {
+    margin-bottom: 0;
+  }
+}
 .footer-section__title {
   font-size: 20px;
   font-weight: 500;
@@ -7940,7 +8002,7 @@ body .ui-tooltip {
   font-family: var(--rr-ff-heading);
   color: var(--rr-text-body);
   background: linear-gradient(var(--rr-text-body) 0%, var(--rr-text-body) 100%);
-  background-size: 100% 0.5px;
+  background-size: 100% 1px;
   background-repeat: no-repeat;
   background-position: left 100%;
   transition: all 0.3s ease-in-out;
@@ -10074,6 +10136,18 @@ body .ui-tooltip {
 }
 .title-slider-3 .swiper-wrapper .swiper-slide {
   width: auto;
+}
+
+.title-slider-custom.title-slider-3 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.title-slider-custom .title-slider-3__active {
+  transform: rotate(0deg);
+}
+.title-slider-custom .title-slider-3__active-2 {
+  transform: rotate(0deg);
+  position: inherit;
 }
 
 .thumb-bg-section-3 .thumb-bg-section-2__wrapper {
