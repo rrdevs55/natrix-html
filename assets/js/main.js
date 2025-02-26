@@ -125,13 +125,13 @@
       Sticky Header Js
       ========================================*/
 
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 250) {
-            $("#header-sticky").addClass("rs-sticky");
-        } else {
-            $("#header-sticky").removeClass("rs-sticky");
-        }
-    });
+    // $(window).scroll(function () {
+    //     if ($(this).scrollTop() > 250) {
+    //         $("#header-sticky").addClass("rs-sticky");
+    //     } else {
+    //         $("#header-sticky").removeClass("rs-sticky");
+    //     }
+    // });
 
 
     /*======================================
@@ -212,6 +212,12 @@
     // Popup Search Box
     $(".search-open-btn").on("click", function () {
         $(".search__popup").addClass("search-opened");
+    });
+
+    $(window).scroll(function () {
+        if ($("body").scrollTop() > 0 || $("html").scrollTop() > 0) {
+            $(".search__popup").removeClass("search-opened");
+        }
     });
 
     $(".search-close-btn").on("click", function () {
@@ -533,7 +539,7 @@
 
 
 
-    if (document.querySelectorAll(".funfact-area-2").length > 0) {
+    if (document.querySelectorAll(".funfact-area-2").length > 0 && window.innerWidth > 768) {
         gsap.to(".funfact-area-2 .thumb img", {
             scale: "1",
             scrollTrigger: {
@@ -871,21 +877,19 @@
         });
     }
 
-    if (document.querySelector(".title-slider-3__active-2")) { 
-        document.addEventListener("DOMContentLoaded", function () {
-            const swiper = new Swiper(".title-slider-3__active-2", {
-                slidesPerView: 'auto',
-                spaceBetween: 20,
-                centeredSlides: true,
-                speed: 25000,
-                loop: true,
-                freeMode: false,
-                allowTouchMove: false,
-                autoplay: {
-                    delay: 1,
-                    reverseDirection: true,
-                },
-            });
+    // text slider 
+    if ('.title-slider-3__active-2') {
+        var text_slider = new Swiper(".title-slider-3__active-2", {
+            slidesPerView: 'auto',
+            loop: true,
+            autoplay: true,
+            spaceBetween: 20,
+            speed: 20000,
+            allowTouchMove: false,
+            autoplay: {
+                delay: 1,
+                reverseDirection: true,
+            },
         });
     }
 

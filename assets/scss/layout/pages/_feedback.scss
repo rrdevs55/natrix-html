@@ -31,7 +31,7 @@
     &__item {
         background: #161616;
         border: 1px solid #252525;
-        padding: 50px;
+        padding: 48px;
         max-width: 500px;
 
         @media #{$xs} {
@@ -137,10 +137,5 @@
 
     .swiper-wrapper {
         margin: 0 auto;
-        margin-left: 40px;
-
-        @media #{$md,$sm,$xs} {
-            margin-left: 0;
-        }
     }
 }

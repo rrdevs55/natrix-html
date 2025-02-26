@@ -60,6 +60,14 @@
             font-size: 22px;
             line-height: 30px;
 
+            &.collapsed {
+                color: var(--rr-text-body-2);
+
+                &::after {
+                    color: var(--rr-common-white);
+                }
+            }
+
             @media #{$xs} {
                 font-size: 20px;
             }
@@ -90,6 +98,7 @@
                 background-image: inherit;
                 background-repeat: no-repeat;
                 background-size: inherit;
+                color: var(--rr-text-body);
                 font-family: var(--rr-ff-fontawesome);
 
                 @media #{$xs} {
@@ -106,7 +115,7 @@
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 27px;
-                color: var(--rr-text-body);
+                color: var(--rr-text-body-2);
                 font-family: var(--rr-ff-body);
             }
         }

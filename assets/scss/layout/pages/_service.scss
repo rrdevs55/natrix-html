@@ -7,6 +7,10 @@
 .services-section {
     background: #161616;
 
+    @media #{$xs} {
+        padding-top: 0;
+    }
+
     .section-title {
         &__wrapper {
             margin-bottom: 0;
@@ -90,6 +94,10 @@
         @media #{$xs} {
             font-size: 30px;
             line-height: 35px;
+
+            br {
+                display: none;
+            }
         }
 
         span {
@@ -199,6 +207,7 @@
     &__item {
         min-width: 455px;
         padding: 70px 60px;
+        position: relative;
         border: 1px solid rgb(255 255 255 / 5%);
         transition: all 7s linear;
 
@@ -220,6 +229,15 @@
         //     margin-right: 50px;
         // }
 
+        &:hover {
+            .services-section-2 {
+                &__btn {
+                    opacity: 1;
+                    top: 80px;
+                    visibility: visible;
+                }
+            }
+        }
     }
 
     &__number {
@@ -242,6 +260,11 @@
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading);
 
+        @media #{$xs} {
+            margin-top: 40px;
+            margin-bottom: 45px;
+        }
+
         a:hover {
             color: var(--rr-theme-primary-2);
         }
@@ -260,10 +283,16 @@
     .panels-container {
         width: fit-content;
     }
+
+    &__btn {
+        position: absolute;
+        top: 100px;
+        right: 60px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
 }
-
-
-
 
 
 
@@ -353,7 +382,7 @@
 
     &__item {
         display: flex;
-        align-items: center;
+        align-items: start;
         justify-content: space-between;
         border-bottom: 1px solid #252525;
         padding-bottom: 42px;

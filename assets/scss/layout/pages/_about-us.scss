@@ -107,6 +107,21 @@
             @media #{$lg,$md,$sm,$xs} {
                 margin-left: 0;
             }
+
+            .section {
+                &__title {
+                    @media #{$xs} {
+                        font-size: 28px;
+                        line-height: 37px;
+                    }
+
+                    span {
+                        @media #{$xs} {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -140,8 +155,8 @@
         }
 
         @media #{$xs} {
-            width: 290px;
-            height: 290px;
+            width: 230px;
+            height: 230px;
         }
 
         h4 {
@@ -158,6 +173,10 @@
             .odometer.odometer-theme-default {
                 font-family: var(--rr-ff-heading);
                 line-height: 1;
+            }
+
+            @media #{$xs} {
+                font-size: 70px;
             }
         }
 
@@ -183,7 +202,7 @@
                 margin-bottom: 38px;
 
                 .section__title {
-                    @media #{$lg} {
+                    @media #{$xl,$lg} {
                         font-size: 60px;
 
                         br {

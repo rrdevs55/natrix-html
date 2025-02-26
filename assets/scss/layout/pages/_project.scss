@@ -239,6 +239,15 @@
 
     &__btn {
         margin-top: 10px;
+        .rr-arrow__btn-2{
+            color: var(--rr-text-body);
+            &::before{
+                background-color: var(--rr-text-body);
+            }
+            &::after{
+                background-color: var(--rr-text-body);
+            }
+        }
     }
 
     &__thumb {
@@ -254,7 +263,7 @@
         font-size: 30px;
         line-height: 28px;
         margin-bottom: 5px;
-        color: var(--rr-common-white);
+        color: var(--rr-text-body);
         font-family: var(--rr-ff-heading);
 
         @media #{$xxl} {
@@ -274,7 +283,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 1;
-        color: var(--rr-common-white);
+        color: var(--rr-text-body);
         font-family: var(--rr-ff-body);
     }
 

@@ -116,6 +116,17 @@
         }
     }
 
+    &__thumb {
+        overflow: hidden;
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+
     &__name {
         font-weight: 500;
         font-size: 24px;
@@ -145,29 +156,37 @@
     }
 
     .title-slide-section {
+        @media #{$xs} {
+            padding-bottom: 40px;
+        }
+
         &__item {
             h3 {
                 font-weight: 500;
                 font-size: 250px;
                 line-height: 1;
-                margin-right: -120%;
+                margin-right: -150%;
                 color: var(--rr-common-white);
                 font-family: var(--rr-ff-heading);
 
                 @media #{$xl} {
                     font-size: 140px;
                 }
+
                 @media #{$lg} {
                     font-size: 120px;
                 }
+
                 @media #{$md} {
                     font-size: 95px;
                 }
+
                 @media #{$sm} {
                     font-size: 72px;
                 }
+
                 @media #{$xs} {
-                    font-size: 40px;
+                    font-size: 37px;
                 }
             }
         }

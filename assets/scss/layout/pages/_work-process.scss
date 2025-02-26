@@ -38,6 +38,10 @@
         padding-left: 110px;
         border-left: 1px solid rgb(217 217 217 / 10%);
 
+        @media #{$lg} {
+            padding-left: 80px;
+        }
+
         @media #{$md} {
             padding-left: 50px;
         }

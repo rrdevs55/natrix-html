@@ -95,7 +95,7 @@
         color: var(--rr-text-body);
         font-family: var(--rr-ff-body);
 
-        @media #{$xs} {
+        @media #{$sm,$xs} {
             br {
                 display: none;
             }
@@ -110,6 +110,10 @@
             content: "";
             width: 40px;
             display: inline-block;
+
+            @media #{$sm,$xs} {
+                display: none;
+            }
         }
     }
 
@@ -135,9 +139,24 @@
             color: #C0C0C0;
             display: flex;
             align-items: center;
+            font-size: 13px;
 
             &:hover {
                 color: var(--rr-theme-primary);
+            }
+        }
+    }
+
+    &__btn {
+        .rr-arrow {
+            &__btn {
+                &::before {
+                    bottom: -4px;
+                }
+
+                &::after {
+                    bottom: -4px;
+                }
             }
         }
     }

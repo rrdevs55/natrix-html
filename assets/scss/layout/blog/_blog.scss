@@ -68,7 +68,7 @@
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading);
 
-        @media #{$xl,$lg,$xs} {
+        @media #{$xl,$lg,$md,$xs} {
             br {
                 display: none;
             }
@@ -186,6 +186,7 @@
 // blog-2  ----------------------------------
 .blog-section-2 {
     background-color: var(--rr-body-primary-2);
+
     &__top {
         display: flex;
         align-items: end;
@@ -199,6 +200,12 @@
         .section-title {
             &__wrapper {
                 margin-bottom: 0;
+            }
+        }
+
+        &__content {
+            .rr-arrow__btn-2 {
+                color: var(--rr-text-body-2);
             }
         }
     }
@@ -252,6 +259,7 @@
             font-size: 20px;
             line-height: 26px;
         }
+
         @media #{$xs} {
             font-size: 23px;
             line-height: 30px;

@@ -43,7 +43,7 @@
     }
 
     &.white-btn {
-        padding: 18.3px 27.9px;
+        padding: 18.3px 32.6px;
         background: var(--rr-common-white);
 
         span {
@@ -95,7 +95,7 @@
     }
 
     &.transparent-btn {
-        color: #FFF;
+        color: var(--rr-common-white);
         padding: 17.5px 45px;
         border-radius: 500px;
         background-color: transparent;
@@ -111,6 +111,7 @@
 
         &-2 {
             padding: 17.5px 35.8px;
+            color: var(--rr-text-body-2);
         }
 
         &-3 {

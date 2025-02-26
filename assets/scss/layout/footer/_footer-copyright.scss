@@ -81,6 +81,9 @@
                 @media #{$sm,$xs} {
                     margin: 0 15px;
                 }
+                &:last-of-type{
+                    margin-right: 0;
+                }
 
                 a:hover {
                     color: var(--rr-theme-primary-2);
