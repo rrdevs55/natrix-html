@@ -591,12 +591,11 @@
             itemSplitted.split({ type: "chars, words" });
 
             tl.from(itemSplitted.chars, {
-                duration: 0.3,
+                duration: 0.4,
                 delay: 0.1,
                 x: 100,
                 autoAlpha: 0,
                 stagger: 0.05,
-                ease: "power3.out"
             });
         });
     }
