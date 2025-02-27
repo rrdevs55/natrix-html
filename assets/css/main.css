@@ -5835,7 +5835,7 @@ body .ui-tooltip {
   color: #C0C0C0;
   display: flex;
   align-items: center;
-  font-size: 13px;
+  font-size: 14px;
 }
 .banner-section__social a:hover {
   color: var(--rr-theme-primary);
@@ -9758,6 +9758,9 @@ body .ui-tooltip {
   }
 }
 
+.funfact-area-2 {
+  margin-top: -1px;
+}
 .funfact-area-2 .thumb {
   text-align: end;
 }
@@ -11818,6 +11821,7 @@ body .ui-tooltip {
 .work-process__item {
   padding-bottom: 44px;
   margin-bottom: 50px;
+  display: inline-block;
   border-bottom: 1px solid rgba(217, 217, 217, 0.1);
 }
 .work-process__item:last-of-type {
