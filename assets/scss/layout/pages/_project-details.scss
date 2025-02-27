@@ -38,6 +38,21 @@
     }
 }
 
+.project-inner-space {
+    padding-top: 245px;
+
+    @media #{$xxl,$xl} {
+        padding-top: 200px;
+    }
+
+    @media #{$md} {
+        padding-top: 160px;
+    }
+
+    @media #{$sm,$xs} {
+        padding-top: 150px;
+    }
+}
 
 
 .project-details-space-top {
@@ -139,7 +154,7 @@
 
     &__info {
         display: flex;
-        align-items: center;
+        align-items: start;
         justify-content: space-between;
 
         @media #{$sm,$xs} {

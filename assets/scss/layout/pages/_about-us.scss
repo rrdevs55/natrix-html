@@ -394,7 +394,7 @@
             }
 
             @media #{$xs} {
-                font-size: 32px;
+                font-size: 31px;
                 line-height: 42px;
             }
 
@@ -497,11 +497,16 @@
 .about-section-inner {
     .section-title {
         &__wrapper {
-            margin-bottom: 65px;
+            margin-bottom: 85px;
 
             @media #{$xs} {
                 margin-bottom: 40px;
             }
+        }
+    }
+    .about-section-3{
+        &__btn{
+            margin-bottom: 0;
         }
     }
 

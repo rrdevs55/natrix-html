@@ -555,26 +555,31 @@
     }
 
 
+    //  hover-active
+    let rightItems = document.querySelectorAll('.services-section__content .services-section__item');
+    let leftItems = document.querySelectorAll('.services-section__thumb .service-image');
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const mainImage = document.getElementById("main-image");
-
-        if (document.querySelectorAll(".services-section__item").length > 0) {
-            const textItems = document.querySelectorAll(".services-section__item");
-
-            textItems.forEach(item => {
-                item.addEventListener("mouseover", () => {
-                    const newImage = item.getAttribute("data-image");
-                    mainImage.style.opacity = "0";
-
-                    setTimeout(() => {
-                        mainImage.src = newImage;
-                        mainImage.style.opacity = "1";
-                    }, 500);
-                });
-            });
-        }
+    rightItems.forEach((rightItem, index) => {
+        rightItem.addEventListener('mouseenter', function () {
+            handleHover(rightItem, leftItems[index]);
+        });
     });
+
+    function handleHover(rightItem, leftItem) {
+        rightItems.forEach(item => {
+            item.classList.remove('active');
+            item.classList.add('services-section__item');
+        });
+        leftItems.forEach(item => {
+            item.classList.remove('active');
+            item.classList.add('service-image');
+        });
+        rightItem.classList.add('active');
+        leftItem.classList.add('active');
+    }
+
+
+
 
 
     if (document.querySelectorAll(".rr-char-animation").length > 0 && window.innerWidth > 768) { 
@@ -888,7 +893,6 @@
             allowTouchMove: false,
             autoplay: {
                 delay: 1,
-                reverseDirection: true,
             },
         });
     }

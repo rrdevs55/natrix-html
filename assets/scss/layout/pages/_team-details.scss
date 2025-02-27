@@ -198,7 +198,7 @@
             font-family: var(--rr-ff-heading);
         }
 
-        li {
+        span a {
             font-weight: 600;
             font-size: 14px;
             line-height: 1;
@@ -209,6 +209,11 @@
             color: var(--rr-text-body-2);
             font-family: var(--rr-ff-heading);
             border: 1px solid rgb(255 255 255 / 5%);
+
+            &:hover{
+                color: var(--rr-common-black);
+                background-color: var(--rr-theme-primary-3);
+            }
 
             @media #{$xs} {
                 margin-bottom: 5px;

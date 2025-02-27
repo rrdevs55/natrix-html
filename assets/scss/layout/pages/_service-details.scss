@@ -70,7 +70,7 @@
         font-weight: 500;
         font-size: 65px;
         line-height: 1;
-        margin-bottom: 33px;
+        margin-bottom: 15px;
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading);
 
@@ -154,7 +154,7 @@
                     transform: translateY(6px);
 
                     @media #{$sm,$xs} {
-                        transform: translateY(0px);
+                        transform: translateY(-5px);
                     }
                 }
             }

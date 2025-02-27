@@ -149,6 +149,13 @@
 }
 
 
+.faq-section {
+    &__details {
+        &__hidden {
+            overflow-x: clip;
+        }
+    }
+}
 
 .faq-section {
     &__wrapper {

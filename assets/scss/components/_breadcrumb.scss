@@ -31,11 +31,11 @@
         }
 
         @media #{$xs} {
-            font-size: 40px;
-            line-height: 50px;
+            font-size: 35px;
+            line-height: 45px;
         }
 
-        >span {
+        cite{
             display: inline-block;
             transform: translateY(80px);
             margin-top: -54px;
@@ -54,6 +54,7 @@
                         transform: translateY(15px);
                         margin-bottom: 20px;
                     }
+
                     @media #{$sm,$xs} {
                         margin-bottom: 35px;
                     }
@@ -133,6 +134,11 @@
 .margin-space {
     margin-top: 38px;
     margin-bottom: 70px;
+
+    @media #{$xs} {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
 }
 
 
