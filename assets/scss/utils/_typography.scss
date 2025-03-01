@@ -66,37 +66,6 @@ $font-family: (
 );
 
 
-// :root {
-//     --font_heading: "HK Grotesk";
-//     --font_body: "Oak Sans";
-//     --font_awesome: 'Font Awesome 6 Pro';
-// }
-
-
-
-// Font Family Classes
-// .font {
-//     &-heading {
-//         &-instrumentsans-medium {
-//             @include heading (var(--font_body), 500, 0.90);
-//         }
-
-//         &-sequelsans-romanbody {
-//             @include heading (var(--font_sequelsansromanbody), 310, 0.90);
-//         }
-
-//         &-thunder-regular {
-//             @include heading (var(--font_thunder), 400, 0.85);
-//         }
-
-//         &-bdogrotesk-regular {
-//             @include heading (var(--font_bdogrotesk), 400, 0.95);
-//         }
-
-//     }
-// }
-
-
 
 // font weight
 $font-scale: (
