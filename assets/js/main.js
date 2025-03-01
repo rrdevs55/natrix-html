@@ -5,12 +5,12 @@
 
     /*-----------------------------------------------------------------------------------
 
-        Template Name: Artificial Intelligence Startup HTML5 Template
+        Template Name: Natrix - Digital Agency HTML Template
         Author: RRDevs
         Support: https://support.rrdevs.net
-        Description: Artificial Intelligence Startup HTML5 Template
+        Description: Natrix - Digital Agency HTML Template
         Version: 1.0
-        Developer: Soukhin khan (https://github.com/Soukhinkhan)
+        Developer: Mamun khan (https://github.com/mk-mamun-khan)
 
     -----------------------------------------------------------------------------------
 
@@ -120,18 +120,6 @@
         $(".offcanvas__area").removeClass("opened");
         $(".body-overlay").removeClass("opened");
     });
-
-    /*======================================
-      Sticky Header Js
-      ========================================*/
-
-    // $(window).scroll(function () {
-    //     if ($(this).scrollTop() > 250) {
-    //         $("#header-sticky").addClass("rs-sticky");
-    //     } else {
-    //         $("#header-sticky").removeClass("rs-sticky");
-    //     }
-    // });
 
 
     /*======================================
@@ -369,39 +357,6 @@
 
 
 
-    /////////////////////////////// Hero animation ////////////////////////////////////
-
-    // // GSAP ScrollTrigger 
-    // gsap.registerPlugin(ScrollTrigger);
-
-    // const titleVideo = document.querySelector('.title-video');
-
-    // ScrollTrigger.matchMedia({
-    //     "(min-width: 1200px)": function () {
-    //         gsap.to(titleVideo, {
-    //             scrollTrigger: {
-    //                 trigger: '.brand',
-    //                 start: 'top 50%',
-    //                 end: 'top 20%',
-    //                 scrub: true,
-    //                 toggleActions: 'play reverse play reverse'
-    //             },
-    //             x: '100%',
-    //             y: '750px',
-    //             scale: 4,
-    //             width: '500px',
-    //             height: '200px',
-    //             borderRadius: '0px',
-    //             ease: 'power1.out',
-    //         });
-    //     },
-
-    //     "(max-width: 1199px)": function () {
-    //     },
-    // });
-
-
-
     // Natrix js ----------------------------------
 
     // Register GSAP and ScrollTrigger plugins
@@ -443,21 +398,21 @@
                 trigger: ".projects-section__area",
                 start: "top center-=450",
                 end: "bottom 120%",
-                pin: ".section-title__wrapper_2",
+                pin: ".section-title__wrapper_2_anim",
                 markers: false,
                 pinSpacing: false,
                 scrub: 1,
             },
         });
 
-        projectText.set(".section-title__wrapper_2", {
+        projectText.set(".section-title__wrapper_2_anim", {
             scale: 1,
         });
-        projectText.to(".section-title__wrapper_2", {
+        projectText.to(".section-title__wrapper_2_anim", {
             scale: 1.2,
             duration: 2,
         });
-        projectText.to(".section-title__wrapper_2", {
+        projectText.to(".section-title__wrapper_2_anim", {
             scale: 1.2,
             duration: 2,
         }, "+=2");

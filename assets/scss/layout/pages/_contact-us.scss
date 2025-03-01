@@ -176,6 +176,11 @@
                 margin-bottom: 60px;
                 background: transparent;
                 border-bottom: 1px solid rgb(255 255 255 / 5%);
+
+                &:focus {
+                    -webkit-transition: background-color 0s 600000s, color 0s 600000s !important;
+                    transition: background-color 0s 600000s, color 0s 600000s !important;
+                }
             }
 
             textarea {
@@ -243,6 +248,7 @@
 
 .ajax-response {
     margin-top: 20px;
+
     &.error {
         font-size: 16px;
         color: rgb(255, 0, 0);

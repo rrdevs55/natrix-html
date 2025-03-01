@@ -224,27 +224,4 @@
             }
         }
     }
-
-    &__social {
-        display: flex;
-        align-items: center;
-        column-gap: 24px;
-
-        a {
-            color: var(--rr-text-body-2);
-            transform: translateX(-9px);
-
-            &:hover {
-                color: var(--rr-common-white);
-            }
-        }
-
-        span {
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 28px;
-            color: var(--rr-common-white);
-            font-family: var(--rr-ff-heading);
-        }
-    }
 }

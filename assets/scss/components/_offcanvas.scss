@@ -47,22 +47,6 @@
         }
     }
 
-    &__logo {
-        a {
-            img {
-                width: 160px;
-
-                @media #{$xs} {
-                    width: 150px;
-                }
-
-                @media #{$xs} {
-                    width: 130px;
-                }
-            }
-        }
-    }
-
     &__content {
         padding-bottom: 45px;
     }

@@ -45,6 +45,11 @@
                 color: var(--rr-text-body);
                 font-family: var(--rr-ff-body);
             }
+
+            &:focus {
+                -webkit-transition: background-color 0s 600000s, color 0s 600000s !important;
+                transition: background-color 0s 600000s, color 0s 600000s !important;
+            }
         }
 
         button {
@@ -90,6 +95,7 @@
 
         @media #{$xs} {
             margin-bottom: 30px;
+            display: block;
         }
     }
 
@@ -274,6 +280,11 @@
 
                 @include rs-placeholder {
                     color: var(--rr-common-white);
+                }
+
+                &:focus {
+                    -webkit-transition: background-color 0s 600000s, color 0s 600000s !important;
+                    transition: background-color 0s 600000s, color 0s 600000s !important;
                 }
             }
 
