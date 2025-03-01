@@ -58,7 +58,7 @@
         });
 
         let smoother = ScrollSmoother.create({
-            smooth: 2,
+            smooth: 0.5,
             effects: true,
             smoothTouch: false,
             normalizeScroll: false,
@@ -210,15 +210,6 @@
 
     $(".search-close-btn").on("click", function () {
         $(".search__popup").removeClass("search-opened");
-    });
-
-
-
-
-    // $('.lan-select select, .nice-select-select select').niceSelect();
-    $('.take-appointment-3__form-input-select select, .lan-select select, .nice-select-select select').niceSelect();
-    $("#datepicker").datepicker({
-        dateFormat: "mm/dd/yy"
     });
 
 
