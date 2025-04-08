@@ -475,10 +475,6 @@
 
 
 
-
-
-
-
 // banner-3-----------------------------------
 .banner-section-3 {
     position: relative;
@@ -589,4 +585,60 @@
             padding-top: 150px;
         }
     }
+}
+
+
+
+
+
+
+
+.banner-section-5-space {
+    padding-top: 160px;
+    padding-bottom: 180px;
+}
+h1.banner-section-5__title {
+    font-weight: 400;
+    font-size: 180px;
+    line-height: 180px;
+    color: var(--rr-text-body-2);
+    font-family: var(--rr-ff-heading-3);
+}
+
+.banner-section-5__video {
+    width: 799px;
+    height: 455px;
+
+    .banner-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+}
+
+.banner-section-5__text {
+    margin-left: 115px;
+}
+
+p.banner-section-5__dec {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--rr-text-body-2);
+    font-family: var(--rr-ff-body);
+
+    span {
+        margin-left: 45px;
+    }
+}
+
+.banner-section-5__btn {
+    margin-top: 45px;
+    margin-bottom: 50px;
+}
+.banner-section-5__shape {
+    position: absolute;
+    left: 54%;
+    top: 425px;
 }

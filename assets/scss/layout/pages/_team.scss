@@ -102,9 +102,6 @@
 
 
 
-
-
-
 // team--2 ------------
 
 .team-section-2 {
@@ -172,6 +169,7 @@
                 @media #{$xxl} {
                     font-size: 215px;
                 }
+
                 @media #{$xl} {
                     font-size: 140px;
                 }
@@ -193,5 +191,82 @@
                 }
             }
         }
+    }
+}
+
+
+
+
+
+
+.team-section-5 {
+    &__wrapper {
+        margin-left: 100px;
+        margin-right: -310px;
+    }
+    .section-title{
+        &__wrapper-5{
+            margin-left: 20px;
+        }
+    }
+
+    &__dec {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        margin-left: 190px;
+        margin-top: 42px;
+        position: relative;
+        color: var(--rr-text-body-2);
+        font-family: var(--rr-ff-body);
+
+        &::before {
+            content: "";
+            width: 107px;
+            height: 1px;
+            left: 0;
+            top: 50%;
+            position: absolute;
+            transform: translate(-137px, -50%);
+            background-color: var(--rr-common-white);
+        }
+    }
+
+    &__item {
+        max-width: 383px;
+    }
+
+    &__thumb {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        margin-top: 27px;
+    }
+
+    &__name {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 5px;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-heading-3);
+        a:hover{
+            color: var(--rr-theme-primary-5);
+        }
+    }
+
+    &__position {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: var(--rr-text-body-2);
+        font-family: var(--rr-ff-body);
     }
 }

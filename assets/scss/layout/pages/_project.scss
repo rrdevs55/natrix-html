@@ -132,6 +132,7 @@
                     &::after {
                         background-color: var(--rr-theme-primary);
                     }
+
                     svg [fill="#C0C0C0"] {
                         fill: var(--rr-theme-primary);
                     }
@@ -239,12 +240,15 @@
 
     &__btn {
         margin-top: 10px;
-        .rr-arrow__btn-2{
+
+        .rr-arrow__btn-2 {
             color: var(--rr-text-body);
-            &::before{
+
+            &::before {
                 background-color: var(--rr-text-body);
             }
-            &::after{
+
+            &::after {
                 background-color: var(--rr-text-body);
             }
         }
@@ -405,10 +409,88 @@
             height: 100%;
             object-fit: cover;
         }
-        &:hover{
-            img{
+
+        &:hover {
+            img {
                 cursor: none;
             }
         }
+    }
+}
+
+
+
+
+
+
+
+
+
+h2.project-section-5__text {
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 80px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: var(--rr-common-white);
+    font-family: var(--rr-ff-heading-3);
+}
+.project-section-5__wrapper {
+    margin-left: 115px;
+}
+.project-section-5__item {
+    padding-bottom: 58px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid rgb(255 255 255 / 5%);
+}
+.project-section-5__content {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.project-section-5__date {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--rr-text-body-2);
+    font-family: var(--rr-ff-body);
+}
+
+h3.project-section-5__title {
+    font-weight: 400;
+    font-size: 30px;
+    margin-top: 4px;
+    line-height: 35px;
+    text-transform: uppercase;
+    color: var(--rr-common-white);
+    font-family: var(--rr-ff-heading-3);
+
+    a:hover {
+        color: var(--rr-theme-primary-5);
+    }
+}
+
+ul.project-section-5__tag {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+
+
+    li {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1;
+        border-radius: 100px;
+        padding: 6.5px 18.4px;
+        display: inline-block;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-body);
+        border: 1px solid var(--rr-common-white);
     }
 }

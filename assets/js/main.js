@@ -912,6 +912,47 @@
     }
 
 
+
+    // Update 
+
+    if (document.querySelector(".team-section-5__active")) { 
+        var swiperfeedback = new Swiper(".team-section-5__active", {
+            slidesPerView: 5,
+            spaceBetween: 50,
+            loop: true,
+            centeredSlides: true,
+            autoplay: true,
+            centerMode: false,
+            speed: 400,
+            navigation: {
+                nextEl: ".feedback-section__button__next",
+                prevEl: ".feedback-section__button__prev",
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    centeredSlides: false,
+                },
+                767: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    centeredSlides: false,
+                },
+                992: {
+                    slidesPerView: 2,
+                },
+                1200: {
+                    slidesPerView: 3,
+                },
+                1700: {
+                    slidesPerView: 5,
+                },
+            },
+        });
+    }
+
+
     
 
 

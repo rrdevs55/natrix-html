@@ -57,10 +57,33 @@
     font-weight: 300;
 }
 
+// home 4 font 
+@font-face {
+    font-family: "Founders_Grotesk";
+    src: url("../fonts/FoundersGrotesk-Regular.otf");
+    font-weight: 400;
+}
+
+// home 4 font 
+@font-face {
+    font-family: "Founders_Grotesk";
+    src: url("../fonts/FoundersGrotesk-Light.otf");
+    font-weight: 300;
+}
+
+// home 5 font 
+@font-face {
+    font-family: "Antonio-Regular";
+    src: url("../fonts/Antonio-Regular.ttf");
+    font-weight: 400;
+}
+
 // font family
 $font-family: (
     ff: ("body": "Oak Sans",
         "heading": "HK Grotesk",
+        "heading-2": "Founders_Grotesk",
+        "heading-3": "Antonio-Regular",
         "fontawesome": '"Font Awesome 6 Pro"',
     )
 );

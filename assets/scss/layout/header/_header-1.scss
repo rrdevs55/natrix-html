@@ -350,3 +350,49 @@
         }
     }
 }
+
+
+
+
+.rr-header-5 {
+    padding-top: 38px;
+    border-bottom: none;
+
+    .rr-header__wrapper {
+        margin: 0px;
+    }
+}
+
+.rr-header__center__dec {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--rr-common-white);
+    font-family: var(--rr-ff-body);
+}
+
+.rr-header__menu ul {
+    list-style: none;
+
+    li {
+        line-height: 1;
+        margin-bottom: 14px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        a {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1;
+            color: var(--rr-text-body-2);
+            font-family: var(--rr-ff-body);
+
+            &.active,
+            &:hover {
+                color: var(--rr-common-white);
+            }
+        }
+    }
+}

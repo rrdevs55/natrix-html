@@ -144,6 +144,24 @@
 
 
 
+.section-title{
+    &__wrapper{
+        &-5{
+            .section{
+                &__title {
+                    font-weight: 400;
+                    font-size: 80px;
+                    line-height: 80px;
+                    color: var(--rr-common-white);
+                    font-family: var(--rr-ff-heading-3);
+                    }
+            }
+        }
+    }
+}
+
+
+
 .section-top {
     &__area-title {
         left: 0;
