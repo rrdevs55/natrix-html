@@ -182,3 +182,197 @@
         }
     }
 }
+
+
+
+
+
+
+
+
+.testimonial-section-5__big-text h2 {
+    font-weight: 400;
+    font-size: 369px;
+    line-height: 0.72;
+    margin-bottom: 0;
+    color: var(--rr-common-white);
+    font-family: var(--rr-ff-heading-3);
+}
+
+.testimonial-section-5__big-text {
+    position: absolute;
+    top: 160px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.testimonial-section-5 {
+    &__item {
+        max-width: 430px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 5px;
+        background-color: rgb(31, 34, 39);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    &__panel-2 {
+        top: 30px;
+    }
+
+    &__panel-3 {
+        top: 60px;
+    }
+
+    &__contect {
+        padding: 0 40px;
+        padding-top: 43px;
+    }
+
+    &__review {
+        h3 {
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 1;
+            margin-bottom: 4px;
+            color: var(--rr-common-white);
+            font-family: var(--rr-ff-heading-3);
+
+            i {
+                font-size: 17px;
+                margin-left: 2px;
+                color: var(--rr-theme-primary-5);
+            }
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1;
+            color: var(--rr-text-body-2);
+            font-family: var(--rr-ff-body);
+        }
+    }
+
+    &__dec {
+        font-weight: 500;
+        font-style: italic;
+        font-size: 24px;
+        line-height: 35px;
+        margin-top: 42px;
+        margin-bottom: 50px;
+        text-align: start;
+        color: var(--rr-text-body-2);
+        font-family: var(--rr-ff-body);
+    }
+
+    &__author {
+        display: flex;
+        column-gap: 25px;
+        margin-top: 80px;
+        align-items: center;
+        padding: 21px 40px;
+        background: var(--rr-theme-primary-5);
+    }
+
+    &__thumb {
+        width: 68px;
+        height: 68px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 500px;
+        }
+    }
+
+    &__name {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 1;
+        margin-bottom: 6px;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-heading-3);
+    }
+
+    &__position {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        text-transform: capitalize;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-body);
+    }
+
+
+
+
+    &__rating {
+        display: inline-block;
+        padding: 36px 39.8px;
+        border-radius: 500px;
+        margin-top: 140px;
+        border: 1px solid rgb(255 255 255 / 10%);
+
+        &__thunb {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 49.84px;
+                height: 49.84px;
+                margin-left: -15px;
+                border-radius: 500px;
+                border: 1.5px solid var(--rr-common-white);
+
+                &:first-of-type {
+                    margin-left: 0;
+                    position: relative;
+                }
+
+                &:nth-child(3) {
+                    position: relative;
+                }
+            }
+        }
+
+        &__star {
+            display: flex;
+            align-items: center;
+            column-gap: 3px;
+
+            i {
+                font-size: 15px;
+                color: var(--rr-theme-primary-5);
+            }
+
+            span {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 1;
+                margin-left: 10px;
+                color: var(--rr-common-white);
+                font-family: var(--rr-ff-heading-3);
+            }
+        }
+
+        &__author {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+        }
+
+        &__text {
+            p {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1;
+                margin-top: 12px;
+                color: var(--rr-text-body-2);
+                font-family: var(--rr-ff-body);
+            }
+        }
+    }
+}

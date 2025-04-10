@@ -54,3 +54,39 @@
         }
     }
 }
+
+
+
+
+.cta-section-5 {
+    &__content {
+        max-width: 1300px;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 40px;
+        margin-bottom: -275px;
+        position: relative;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 120px;
+        line-height: 120px;
+        display: inline-block;
+        text-align: center;
+        transform: translateY(-17px);
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-heading-3);
+
+        .rr-btn-group {
+            display: inline-flex;
+            margin-bottom: -25px;
+            transform: translateY(-45px);
+
+            >*:nth-child(2) {
+                padding: 18.5px 32.4px;
+                display: inline-block;
+            }
+        }
+    }
+}
