@@ -5,7 +5,7 @@
 /*----------------------------------------*/
 
 
-
+// cta-section-1
 .cta-section {
     background-color: var(--rr-body-primary-2);
 
@@ -57,7 +57,7 @@
 
 
 
-
+// cta-section-5
 .cta-section-5 {
     &__content {
         max-width: 1300px;
@@ -66,27 +66,95 @@
         padding-bottom: 40px;
         margin-bottom: -275px;
         position: relative;
+        z-index: 1;
+
+        @media #{$xl} {
+            max-width: 1000px;
+            margin-bottom: -200px;
+        }
+
+        @media #{$lg,$md,$sm} {
+            max-width: 850px;
+            margin-bottom: -150px;
+        }
+        @media #{$xs} {
+            margin-bottom: 0px;
+        }
     }
 
     &__title {
         font-weight: 400;
         font-size: 120px;
-        line-height: 120px;
+        line-height: 1;
         display: inline-block;
         text-align: center;
         transform: translateY(-17px);
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading-3);
 
+        @media #{$xl} {
+            font-size: 100px;
+        }
+
+        @media #{$lg,$md} {
+            font-size: 70px;
+            transform: translateY(-10px);
+        }
+        @media #{$sm} {
+            font-size: 65px;
+            transform: translateY(-8px);
+        }
+        @media #{$xs} {
+            font-size: 38px;
+            transform: translateY(-5px);
+            br{
+                display: none;
+            }
+        }
+
         .rr-btn-group {
             display: inline-flex;
             margin-bottom: -25px;
             transform: translateY(-45px);
 
+            @media #{$lg,$md} {
+                transform: translateY(-25px);
+            }
+            @media #{$sm} {
+                transform: translateY(-22px);
+            }
+            @media #{$xs} {
+                display: none;
+            }
+
             >*:nth-child(2) {
                 padding: 18.5px 32.4px;
                 display: inline-block;
             }
+        }
+    }
+
+    &__thumb {
+        width: 100%;
+        height: 670px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media #{$xl} {
+            height: 500px;
+        }
+        @media #{$lg} {
+            height: 450px;
+        }
+        @media #{$md} {
+            height: 400px;
+        }
+        @media #{$sm} {
+            height: 350px;
+        }
+        @media #{$xs} {
+            height: 300px;
         }
     }
 }

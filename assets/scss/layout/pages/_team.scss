@@ -103,7 +103,6 @@
 
 
 // team--2 ------------
-
 .team-section-2 {
     &__info {
         margin-top: 25px;
@@ -196,18 +195,28 @@
 
 
 
-
-
-
+// team-section-5 --------
 .team-section-5 {
     &__wrapper {
         margin-left: 100px;
         margin-right: -310px;
-    }
-    .section-title{
-        &__wrapper-5{
-            margin-left: 20px;
+
+        @media #{$lg} {
+            margin-left: 60px;
         }
+
+        @media #{$md} {
+            margin-left: 50px;
+        }
+
+        @media #{$sm,$xs} {
+            margin: 10px;
+        }
+    }
+
+    &__top {
+        max-width: 808px;
+        margin: 0 auto;
     }
 
     &__dec {
@@ -220,6 +229,22 @@
         color: var(--rr-text-body-2);
         font-family: var(--rr-ff-body);
 
+        @media #{$md} {
+            margin-top: 20px;
+        }
+
+        @media #{$sm} {
+            margin-left: 100px;
+            margin-top: 20px;
+        }
+        @media #{$xs} {
+            margin-left: 0px;
+            margin-top: 20px;
+            br{
+                display: none;
+            }
+        }
+
         &::before {
             content: "";
             width: 107px;
@@ -229,11 +254,23 @@
             position: absolute;
             transform: translate(-137px, -50%);
             background-color: var(--rr-common-white);
+
+            @media #{$sm} {
+                width: 70px;
+                transform: translate(-75px, -50%);
+            }
+            @media #{$xs} {
+                display: none;
+            }
         }
     }
 
     &__item {
         max-width: 383px;
+
+        @media #{$xs} {
+            margin: 0 auto;
+        }
     }
 
     &__thumb {
@@ -257,7 +294,8 @@
         margin-bottom: 5px;
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading-3);
-        a:hover{
+
+        a:hover {
             color: var(--rr-theme-primary-5);
         }
     }

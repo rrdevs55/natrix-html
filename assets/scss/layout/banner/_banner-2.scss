@@ -456,8 +456,6 @@
     }
 }
 
-
-
 @keyframes animationglob {
 
     0% {
@@ -470,8 +468,6 @@
         transform: rotate(360deg);
     }
 }
-
-
 
 
 
@@ -589,56 +585,142 @@
 
 
 
-
-
-
-
+// Banner - 5 ----------------------------------
 .banner-section-5-space {
     padding-top: 160px;
     padding-bottom: 180px;
-}
-h1.banner-section-5__title {
-    font-weight: 400;
-    font-size: 180px;
-    line-height: 180px;
-    color: var(--rr-text-body-2);
-    font-family: var(--rr-ff-heading-3);
-}
 
-.banner-section-5__video {
-    width: 799px;
-    height: 455px;
-
-    .banner-video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 5px;
+    @media #{$md} {
+        padding-top: 130px;
+        padding-bottom: 80px;
+    }
+    @media #{$sm,$xs} {
+        padding-top: 130px;
+        padding-bottom: 70px;
     }
 }
+.banner-section-5 {
+    &__title {
+        font-weight: 400;
+        font-size: 180px;
+        line-height: 180px;
+        color: var(--rr-text-body-2);
+        font-family: var(--rr-ff-heading-3);
 
-.banner-section-5__text {
-    margin-left: 115px;
-}
+        @media #{$xl} {
+            font-size: 150px;
+            line-height: 150px;
+        }
 
-p.banner-section-5__dec {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-    color: var(--rr-text-body-2);
-    font-family: var(--rr-ff-body);
+        @media #{$lg,$md} {
+            font-size: 120px;
+            line-height: 120px;
+        }
 
-    span {
-        margin-left: 45px;
+        @media #{$sm} {
+            font-size: 70px;
+            line-height: 75px;
+        }
+
+        @media #{$xs} {
+            font-size: 45px;
+            line-height: 50px;
+        }
+
+        @media #{$md,$sm,$xs} {
+            br {
+                display: none;
+            }
+        }
     }
-}
 
-.banner-section-5__btn {
-    margin-top: 45px;
-    margin-bottom: 50px;
-}
-.banner-section-5__shape {
-    position: absolute;
-    left: 54%;
-    top: 425px;
+    &__video {
+        width: 799px;
+        height: 455px;
+
+        @media #{$xxxl,$xxl,$xl,$lg,$md,$sm,$xs} {
+            width: 100%;
+            height: 400px;
+        }
+
+        @media #{$xxl} {
+            height: 350px;
+        }
+
+        @media #{$xl} {
+            height: 300px;
+        }
+
+        @media #{$lg} {
+            height: 250px;
+        }
+
+        @media #{$sm,$xs} {
+            height: 100%;
+        }
+
+        .banner-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    }
+
+    &__text {
+        margin-left: 115px;
+
+        @media #{$xl,$lg} {
+            margin-left: 70px;
+        }
+
+        @media #{$md,$sm,$xs} {
+            margin-left: 0;
+        }
+    }
+
+    &__dec {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: var(--rr-text-body-2);
+        font-family: var(--rr-ff-body);
+
+        span {
+            margin-left: 45px;
+
+            @media #{$md,$sm,$xs} {
+                margin-left: 0;
+            }
+        }
+
+        @media #{$md,$sm,$xs} {
+            margin-top: 30px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 45px;
+        margin-bottom: 50px;
+
+        @media #{$md,$sm,$xs} {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__shape {
+        position: absolute;
+        left: 54%;
+        top: 425px;
+
+        @media #{$lg} {
+            left: 48%;
+            top: 270px;
+        }
+    }
 }

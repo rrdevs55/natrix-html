@@ -420,13 +420,14 @@
 
 
 
-
-
-
-
-
 // project-5 ----------------------
 .project-section-5 {
+    &__wrap {
+        @media #{$sm,$xs} {
+            text-align: start;
+        }
+    }
+
     &__text {
         font-weight: 400;
         font-size: 80px;
@@ -435,6 +436,21 @@
         text-transform: uppercase;
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading-3);
+
+        @media #{$md,$sm} {
+            font-size: 60px;
+            line-height: 60px;
+        }
+        @media #{$xs} {
+            font-size: 45px;
+            line-height: 45px;
+        }
+
+        @media #{$sm,$xs} {
+            br {
+                display: none;
+            }
+        }
     }
 
     &__progress {
@@ -442,6 +458,11 @@
         margin: 0 auto;
         margin-top: 30px;
         position: relative;
+
+        @media #{$sm,$xs} {
+            margin: 30px 0;
+            margin-bottom: 60px;
+        }
     }
 
     &__numbers {
@@ -468,6 +489,10 @@
 
     &__wrapper {
         margin-left: 115px;
+
+        @media #{$xl,$lg,$md,$sm,$xs} {
+            margin-left: 0;
+        }
     }
 
     &__item {
@@ -480,11 +505,23 @@
             padding-bottom: 0;
             border-bottom: none;
         }
+
+        @media #{$md,$sm} {
+            padding-bottom: 45px;
+            margin-bottom: 45px;
+        }
+        @media #{$xs} {
+            padding-bottom: 35px;
+            margin-bottom: 35px;
+        }
     }
 
     &__thumb {
         img {
             cursor: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
 
             .mt-cursor {
                 display: none;
@@ -517,6 +554,18 @@
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading-3);
 
+        @media #{$lg,$sm,$xs} {
+            font-size: 25px;
+            line-height: 30px;
+        }
+
+        @media #{$md} {
+            margin-bottom: 25px;
+        }
+        @media #{$xs} {
+            margin-bottom: 20px;
+        }
+
         a:hover {
             color: var(--rr-theme-primary-5);
         }
@@ -530,6 +579,10 @@
         margin-bottom: 5px;
         flex-wrap: wrap;
 
+        @media #{$lg,$sm,$xs} {
+            column-gap: 5px;
+        }
+
 
         li {
             font-weight: 500;
@@ -541,12 +594,26 @@
             color: var(--rr-common-white);
             font-family: var(--rr-ff-body);
             border: 1px solid var(--rr-common-white);
+
+            @media #{$lg,$sm} {
+                padding: 6.5px 11.4px;
+            }
+            @media #{$xs} {
+                padding: 5.5px 5.4px;
+            }
         }
     }
 
     &__btn {
         margin-top: 75px;
         margin-left: 12px;
+
+        @media #{$md} {
+            margin-top: 50px;
+        }
+        @media #{$sm,$xs} {
+            margin-top: 40px;
+        }
 
         .rr-btn-group {
             >*:nth-child(1) {
@@ -571,7 +638,9 @@
         }
     }
 }
+
 #project-section-5 {
+
     &__current,
     &__total {
         font-weight: 400;
@@ -585,79 +654,5 @@
         right: 0;
         bottom: -30px;
         position: absolute;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-.slider-container {
-    position: relative;
-    width: 300px;
-    height: 400px;
-    overflow: hidden;
-    border: 2px solid #ddd;
-    background-color: white;
-}
-
-.slider-item {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    color: #333;
-    background-color: #ffcc00;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.slider-item:nth-child(1) {
-    animation: slide 10s infinite;
-}
-
-.slider-item:nth-child(2) {
-    animation: slide 10s infinite 2s;
-}
-
-.slider-item:nth-child(3) {
-    animation: slide 10s infinite 4s;
-}
-
-.slider-item:nth-child(4) {
-    animation: slide 10s infinite 6s;
-}
-
-.slider-item:nth-child(5) {
-    animation: slide 10s infinite 8s;
-}
-
-@keyframes slide {
-    0% {
-        top: -100%;
-        opacity: 0;
-    }
-
-    20% {
-        top: 0;
-        opacity: 1;
-    }
-
-    80% {
-        top: 0;
-        opacity: 1;
-    }
-
-    100% {
-        top: 100%;
-        opacity: 0;
     }
 }

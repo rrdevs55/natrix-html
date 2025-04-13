@@ -2,7 +2,7 @@
 
 
 
-
+// testimonial-section 1----------
 .testimonial-section {
     .section-title {
         &__wrapper {
@@ -185,29 +185,49 @@
 
 
 
-
-
-
-
-
-.testimonial-section-5__big-text h2 {
-    font-weight: 400;
-    font-size: 369px;
-    line-height: 0.72;
-    margin-bottom: 0;
-    color: var(--rr-common-white);
-    font-family: var(--rr-ff-heading-3);
-}
-
-.testimonial-section-5__big-text {
-    position: absolute;
-    top: 160px;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
-
+// testimonial-section-5 ----------
 .testimonial-section-5 {
+    &__big-text {
+        position: absolute;
+        top: 160px;
+        left: 0;
+        right: 0;
+        text-align: center;
+
+        @media #{$lg,$md} {
+            top: 220px;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 369px;
+            line-height: 0.72;
+            margin-bottom: 0;
+            color: var(--rr-common-white);
+            font-family: var(--rr-ff-heading-3);
+
+            @media #{$xxxl} {
+                font-size: 330px;
+            }
+
+            @media #{$xxl} {
+                font-size: 280px;
+            }
+
+            @media #{$xl} {
+                font-size: 240px;
+            }
+
+            @media #{$lg} {
+                font-size: 200px;
+            }
+
+            @media #{$md} {
+                font-size: 160px;
+            }
+        }
+    }
+
     &__item {
         max-width: 430px;
         margin: 0 auto;
@@ -215,6 +235,15 @@
         border-radius: 5px;
         background-color: rgb(31, 34, 39);
         border: 2px solid rgba(255, 255, 255, 0.1);
+
+        @media #{$sm,$xs} {
+            margin: 0 auto;
+            margin-bottom: 30px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__panel-2 {
@@ -228,6 +257,10 @@
     &__contect {
         padding: 0 40px;
         padding-top: 43px;
+
+        @media #{$xs} {
+            padding: 20px;
+        }
     }
 
     &__review {
@@ -265,6 +298,14 @@
         text-align: start;
         color: var(--rr-text-body-2);
         font-family: var(--rr-ff-body);
+
+        @media #{$xs} {
+            font-style: normal;
+            font-size: 18px;
+            line-height: 28px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
     }
 
     &__author {
@@ -274,6 +315,12 @@
         align-items: center;
         padding: 21px 40px;
         background: var(--rr-theme-primary-5);
+
+        @media #{$xs} {
+            column-gap: 15px;
+            margin-top: 30px;
+            padding: 10px 15px;
+        }
     }
 
     &__thumb {
@@ -316,9 +363,22 @@
         margin-top: 140px;
         border: 1px solid rgb(255 255 255 / 10%);
 
+        @media #{$sm} {
+            margin-top: 40px;
+        }
+
+        @media #{$xs} {
+            margin-top: 30px;
+            padding: 20px 39.8px;
+        }
+
         &__thunb {
             display: flex;
             align-items: center;
+
+            @media #{$xs} {
+                margin-bottom: 10px;
+            }
 
             img {
                 width: 49.84px;
@@ -362,6 +422,11 @@
             display: flex;
             align-items: center;
             column-gap: 20px;
+
+            @media #{$xs} {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
 
         &__text {

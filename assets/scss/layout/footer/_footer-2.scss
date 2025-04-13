@@ -4,7 +4,7 @@
 /*  6.2 footer-2
 /*----------------------------------------*/
 
-
+// footer-section-2
 .footer-section-2 {
     &__title {
         font-weight: 500;
@@ -82,22 +82,34 @@
 }
 
 
-
-
-
-
-
+// footer-section-5
 .footer-section-5 {
     &__wrapper {
         display: flex;
         align-items: start;
         justify-content: space-between;
+
+        @media #{$sm} {
+            flex-wrap: wrap;
+        }
+
+        @media #{$xs} {
+            display: block;
+        }
     }
 
     &__left {
         display: flex;
         align-items: start;
         column-gap: 90px;
+
+        @media #{$md} {
+            column-gap: 30px;
+        }
+
+        @media #{$xs} {
+            display: block;
+        }
     }
 
     &__title {
@@ -110,6 +122,14 @@
     }
 
     &__info {
+        @media #{$xs} {
+            margin-bottom: 30px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
         a {
             font-weight: 300;
             font-size: 18px;
@@ -137,6 +157,27 @@
         padding-bottom: 15px;
         justify-content: space-between;
         border-bottom: 1px solid rgb(255 255 255 / 10%);
+
+        @media #{$xl} {
+            width: 600px;
+        }
+
+        @media #{$lg} {
+            width: 410px;
+        }
+
+        @media #{$md} {
+            width: 300px;
+        }
+
+        @media #{$sm,$xs} {
+            width: 470px;
+            margin-top: 40px;
+        }
+
+        @media #{$xs} {
+            width: 100%;
+        }
 
         &:last-of-type {
             margin-bottom: 0;
@@ -169,12 +210,24 @@
     &__area {
         background-color: #1F2227;
         padding: 33.5px 0;
+
+        @media #{$xs} {
+            padding: 20px 0;
+        }
     }
 
     &__wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media #{$md,$sm,$xs} {
+            flex-wrap: wrap;
+        }
+
+        @media #{$sm,$xs} {
+            justify-content: center;
+        }
     }
 
     &__dec {
@@ -194,6 +247,15 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+
+        @media #{$sm,$xs} {
+            margin: 15px 0;
+            justify-content: center;
+        }
+
+        @media #{$xs} {
+            gap: 10px;
+        }
 
         a {
             font-weight: 500;
@@ -228,6 +290,3 @@
         }
     }
 }
-
-
-

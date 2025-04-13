@@ -595,36 +595,70 @@
     }
 
 
-    if (document.querySelectorAll(".animation").length > 0) {
-        let animation = document.querySelectorAll(".animation");
+    // if (document.querySelectorAll(".animation").length > 0) {
+    //     let animation = document.querySelectorAll(".animation");
 
-        animation.forEach(animation => {
-            let split = new SplitText(animation.querySelector(".rr_title_animation"), { type: "chars, words" }),
-                tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: animation,
-                        start: "top bottom",
-                        toggleActions: "play none none reverse",
-                        onEnter: () => {
-                            tl.timeScale(2.3);
-                        },
-                        onLeaveBack: () => {
-                            tl.timeScale(2.3).reverse();
-                        },
-                    }
-                });
+    //     animation.forEach(animation => {
+    //         let split = new SplitText(animation.querySelector(".rr_title_animation"), { type: "chars, words" }),
+    //             tl = gsap.timeline({
+    //                 scrollTrigger: {
+    //                     trigger: animation,
+    //                     start: "top bottom",
+    //                     toggleActions: "play none none reverse",
+    //                     onEnter: () => {
+    //                         tl.timeScale(2.3);
+    //                     },
+    //                     onLeaveBack: () => {
+    //                         tl.timeScale(2.3).reverse();
+    //                     },
+    //                 }
+    //             });
 
-            tl.to(animation.querySelector(".sup_animation"), { opacity: 1, x: -50, ease: "back" })
-                .from(split.chars, {
-                    opacity: 0,
-                    y: 50,
-                    rotation: 1,
-                    duration: 2,
-                    ease: "back",
-                    stagger: 0.05
-                });
+    //         tl.to(animation.querySelector(".sup_animation"), { opacity: 1, x: -50, ease: "back" })
+    //             .from(split.chars, {
+    //                 opacity: 0,
+    //                 y: 50,
+    //                 rotation: 1,
+    //                 duration: 2,
+    //                 ease: "back",
+    //                 stagger: 0.05
+    //             });
+    //     });
+    // }
+
+
+
+    if (document.querySelectorAll(".rr_title_animation").length > 0) {
+        let elements = document.querySelectorAll(".rr_title_animation");
+
+        elements.forEach(el => {
+            let split = new SplitText(el, { type: "chars, words" });
+
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top bottom",
+                    toggleActions: "play none none reverse",
+                    onEnter: () => {
+                        tl.timeScale(2.3);
+                    },
+                    onLeaveBack: () => {
+                        tl.timeScale(2.3).reverse();
+                    },
+                }
+            });
+
+            tl.from(split.chars, {
+                opacity: 0,
+                y: 50,
+                rotation: 1,
+                duration: 2,
+                ease: "back",
+                stagger: 0.05
+            });
         });
     }
+
 
     //split-text animation end
 
@@ -934,16 +968,23 @@
                     spaceBetween: 30,
                     centeredSlides: false,
                 },
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                    centeredSlides: false,
+                },
                 767: {
-                    slidesPerView: 1,
+                    slidesPerView: 3,
                     spaceBetween: 30,
                     centeredSlides: false,
                 },
                 992: {
-                    slidesPerView: 2,
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                    centeredSlides: false,
                 },
                 1200: {
-                    slidesPerView: 3,
+                    slidesPerView: 5,
                 },
                 1700: {
                     slidesPerView: 5,
@@ -997,7 +1038,7 @@
 
     
 
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 767) {
         let testiPanels = document.querySelectorAll('.testimonial-section-5__panel');
 
         testiPanels.forEach((section) => {
@@ -1037,73 +1078,95 @@
         });
     }
 
+    if (document.querySelectorAll(".service-section-5-anim-text").length > 0 && window.innerWidth > 768) {
+        gsap.set('.service-section-5-anim-text', { x: '25%' });
 
-
-
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: '.service-section-5-text-animation',
+                start: '-800 0%',
+                end: 'bottom 0%',
+                scrub: true,
+                invalidateOnRefresh: true,
+                markers: false,
+                toggleActions: 'play reverse play reverse',
+            }
+        }).to('.service-section-5-anim-text', { x: '-11%' });
+    }
 
     
-    // const slider = document.querySelector(".testimonial-section-5__active");
-    // const slides = slider?.children;
-    // let index = 0;
-    // let autoPlay;
+    if (document.querySelector(".title-slider-5__active")) {
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper(".title-slider-5__active", {
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+                centeredSlides: true,
+                speed: 25000,
+                loop: true,
+                freeMode: false,
+                allowTouchMove: false,
+                autoplay: {
+                    delay: 1,
+                },
+            });
+        });
+    }
 
-    // const updateSlides = () => {
-    //     Array.from(slides).forEach((slide, i) => {
-    //         slide.className = "testimonial-section-5__item";
-    //         if (i === index) slide.classList.add("rr-slide-active");
-    //         else if (i === (index + 1) % slides.length) slide.classList.add("rr-slide-next");
-    //         else if (i === (index + 2) % slides.length) slide.classList.add("rr-slide-next-2");
-    //     });
-    // };
+    if (document.querySelector(".brand-section-5__active")) {
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper(".brand-section-5__active", {
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+                centeredSlides: true,
+                speed: 2000,
+                loop: true,
+                freeMode: false,
+                allowTouchMove: false,
+                autoplay: {
+                    delay: 1,
+                },
+            });
+        });
+    }
 
-    // const nextSlide = () => {
-    //     index = (index + 1) % slides.length;
-    //     updateSlides();
-    // };
-
-    // const prevSlide = () => {
-    //     index = (index - 1 + slides.length) % slides.length;
-    //     updateSlides();
-    // };
-
-    // if (slider) {
-    //     updateSlides();
-    //     autoPlay = setInterval(nextSlide, 5000);
-
-    //     document.querySelector(".next-btn").addEventListener("click", () => {
-    //         clearInterval(autoPlay);
-    //         nextSlide();
-    //         autoPlay = setInterval(nextSlide, 5000);
-    //     });
-
-    //     document.querySelector(".prev-btn").addEventListener("click", () => {
-    //         clearInterval(autoPlay);
-    //         prevSlide();
-    //         autoPlay = setInterval(nextSlide, 5000);
-    //     });
-
-    //     // Drag support (mouse + touch)
-    //     let startY = 0;
-    //     slider.addEventListener("mousedown", e => startY = e.clientY);
-    //     slider.addEventListener("mouseup", e => {
-    //         let diff = e.clientY - startY;
-    //         if (Math.abs(diff) > 50) {
-    //             clearInterval(autoPlay);
-    //             diff < 0 ? nextSlide() : prevSlide();
-    //             autoPlay = setInterval(nextSlide, 5000);
-    //         }
-    //     });
-
-    //     slider.addEventListener("touchstart", e => startY = e.touches[0].clientY);
-    //     slider.addEventListener("touchend", e => {
-    //         let diff = e.changedTouches[0].clientY - startY;
-    //         if (Math.abs(diff) > 50) {
-    //             clearInterval(autoPlay);
-    //             diff < 0 ? nextSlide() : prevSlide();
-    //             autoPlay = setInterval(nextSlide, 5000);
-    //         }
-    //     });
-    // }
+    if (document.querySelector(".service-section-5__active")) {
+        var swiperfeedback = new Swiper(".service-section-5__active", {
+            slidesPerView: 3,
+            spaceBetween: 50,
+            loop: true,
+            centeredSlides: false,
+            autoplay: true,
+            centerMode: true,
+            speed: 400,
+            pagination: {
+                el: ".service-section-5__pagination",
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                },
+                767: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 30,
+                },
+                992: {
+                    slidesPerView: 1.8,
+                    spaceBetween: 30,
+                },
+                1200: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 30,
+                },
+                1400: {
+                    slidesPerView: 2.5,
+                },
+                1700: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    }
 
 
 

@@ -103,12 +103,12 @@
 }
 
 
-
 .title-slider-custom {
     &.title-slider-3 {
         padding-top: 0;
         padding-bottom: 0;
     }
+
     .title-slider-3 {
         &__active {
             transform: rotate(0deg);
@@ -121,9 +121,6 @@
         }
     }
 }
-
-
-
 
 
 .thumb-bg-section-3 {
@@ -145,6 +142,106 @@
 
             @media #{$sm,$xs} {
                 height: 400px;
+            }
+        }
+    }
+}
+
+
+
+
+.title-slider-5 {
+    &__active {
+        .swiper-wrapper {
+            transition-timing-function: linear;
+
+            .swiper-slide {
+                width: auto;
+            }
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    &__item {
+        padding: 33px 0;
+        padding-top: 25px;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 1;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-heading-3);
+
+        @media #{$md,$sm,$xs} {
+            font-size: 30px;
+        }
+    }
+}
+
+
+
+
+.brand-section-5 {
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+        margin-bottom: 75px;
+        color: var(--rr-common-white);
+        font-family: var(--rr-ff-heading-3);
+
+        @media #{$sm} {
+            margin-bottom: 50px;
+        }
+
+        @media #{$xs} {
+            font-size: 25px;
+            line-height: 35px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__item {
+        width: 275px;
+        height: 133px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 500px;
+        border: 1px solid rgb(255 255 255 / 10%);
+
+        @media #{$sm} {
+            width: 240px;
+            height: 110px;
+        }
+
+        @media #{$xs} {
+            width: 210px;
+            height: 100px;
+        }
+    }
+
+    &__active {
+        .swiper-wrapper {
+            transition-timing-function: linear;
+
+            .swiper-slide {
+                width: auto;
+
+                &:nth-child(odd) {
+                    .brand-section-5__item {
+                        border-color: rgb(31, 34, 39);
+                        background-color: rgb(31, 34, 39);
+                    }
+                }
             }
         }
     }

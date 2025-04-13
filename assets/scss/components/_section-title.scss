@@ -18,7 +18,7 @@
             text-align: start;
         }
 
-       > span {
+        >span {
             font-size: 16px;
             font-weight: 500;
             line-height: 1;
@@ -65,7 +65,8 @@
                         display: none;
                     }
                 }
-                &-2{
+
+                &-2 {
                     font-weight: 500;
                 }
             }
@@ -143,23 +144,41 @@
 }
 
 
-
-.section-title{
-    &__wrapper{
-        &-5{
-            .section{
+.section-title {
+    &__wrapper {
+        &-5 {
+            .section {
                 &__title {
                     font-weight: 400;
                     font-size: 80px;
                     line-height: 80px;
+                    text-transform: uppercase;
                     color: var(--rr-common-white);
                     font-family: var(--rr-ff-heading-3);
+
+                    @media #{$md} {
+                        font-size: 60px;
+                        line-height: 70px;
                     }
+
+                    @media #{$sm} {
+                        font-size: 50px;
+                        line-height: 55px;
+                    }
+
+                    @media #{$xs} {
+                        font-size: 33px;
+                        line-height: 45px;
+
+                        br {
+                            display: none;
+                        }
+                    }
+                }
             }
         }
     }
 }
-
 
 
 .section-top {
