@@ -3,60 +3,10 @@
 /*----------------------------------------*/
 /*  5.1 blog-details
 /*----------------------------------------*/
+
+
+
 // blog-details 
-
-
-
-
-.blog-section-3 {
-    background-color: var(--rr-body-primary);
-
-    .blog-section-2 {
-        &__wrapper {
-            margin-right: 80px;
-
-            @media #{$md,$sm,$xs} {
-                margin-right: 0px;
-            }
-        }
-    }
-
-    &__page {
-        &__number {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            column-gap: 30px;
-
-            .page {
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 27px;
-                color: var(--rr-common-white);
-                font-family: var(--rr-ff-heading);
-
-            }
-
-            .active,
-            .next-btn {
-                width: 50px;
-                height: 50px;
-                border-radius: 100px;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                border: 1px solid rgba(255, 255, 255, 0.05);
-            }
-        }
-    }
-}
-
-
-
-
-
-
-
 .blog-details {
     &__list {
         ul {
@@ -511,12 +461,10 @@
 }
 
 
-
 .SkillInLeft {
     animation: SkillInLeft 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
     opacity: 0;
 }
-
 @keyframes SkillInLeft {
     0% {
         transform: translateX(0);
@@ -532,7 +480,7 @@
 }
 
 
-
+// thumb-bg-section-8
 .thumb-bg-section-8 {
     .thumb-bg-section-2 {
         &__wrapper {
