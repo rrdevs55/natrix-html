@@ -85,6 +85,11 @@
         $(this).css("background-color", $(this).attr("data-bg-color"));
     });
 
+    // data color
+    $("[data-color]").each(function () {
+        $(this).css("color", $(this).attr("data-color"));
+    });
+
     /*======================================
       Mobile Menu Js
       ========================================*/
@@ -595,39 +600,6 @@
     }
 
 
-    // if (document.querySelectorAll(".animation").length > 0) {
-    //     let animation = document.querySelectorAll(".animation");
-
-    //     animation.forEach(animation => {
-    //         let split = new SplitText(animation.querySelector(".rr_title_animation"), { type: "chars, words" }),
-    //             tl = gsap.timeline({
-    //                 scrollTrigger: {
-    //                     trigger: animation,
-    //                     start: "top bottom",
-    //                     toggleActions: "play none none reverse",
-    //                     onEnter: () => {
-    //                         tl.timeScale(2.3);
-    //                     },
-    //                     onLeaveBack: () => {
-    //                         tl.timeScale(2.3).reverse();
-    //                     },
-    //                 }
-    //             });
-
-    //         tl.to(animation.querySelector(".sup_animation"), { opacity: 1, x: -50, ease: "back" })
-    //             .from(split.chars, {
-    //                 opacity: 0,
-    //                 y: 50,
-    //                 rotation: 1,
-    //                 duration: 2,
-    //                 ease: "back",
-    //                 stagger: 0.05
-    //             });
-    //     });
-    // }
-
-
-
     if (document.querySelectorAll(".rr_title_animation").length > 0) {
         let elements = document.querySelectorAll(".rr_title_animation");
 
@@ -658,8 +630,6 @@
             });
         });
     }
-
-
     //split-text animation end
 
 
@@ -949,6 +919,124 @@
 
     // Update 
 
+
+    // hover reveal 4 start
+    if (document.querySelectorAll(".service-section-4__active").length > 0) {
+        const hoveritem = document.querySelectorAll(
+            ".service-section-4__active"
+        );
+
+        function moveImage(e, hoveritem, index) {
+            const item = hoveritem.getBoundingClientRect();
+            const x = e.clientX - item.x;
+            const y = e.clientY - item.y;
+            if (hoveritem.children[index]) {
+                hoveritem.children[
+                    index
+                ].style.transform = `translate(${x}px, ${y}px)`;
+            }
+        }
+        hoveritem.forEach((item, i) => {
+            item.addEventListener("mousemove", (e) => {
+                setInterval(moveImage(e, item, 1), 50);
+            });
+        });
+    }
+    // hover reveal 4 end
+
+
+    // project-4 img 
+    document.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray(".project-section-4__thumb img").forEach((img) => {
+            gsap.fromTo(img,
+                { scale: 1.2 },
+                {
+                    scale: 1,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: img,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse",
+                    }
+                });
+        });
+    });
+
+
+    // start testimonial home 4
+    var swiper = new Swiper(".testimonials-section-4__slider__active", {
+        loop: true,
+        speed: 400,
+        autoplay: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".testimonials-section-4__pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return `<span class="${className}" data-index="${index}">${index + 1}</span>`;
+            },
+        },
+        on: {
+            init: function () {
+                let activeBullet = document.querySelector(".testimonials-section-4__pagination .swiper-pagination-bullet-active");
+                if (activeBullet) {
+                    let activeIndex = parseInt(activeBullet.getAttribute("data-index")) + 1;
+                    activeBullet.innerText = `${activeIndex}/`;
+                }
+            },
+            slideChange: function () {
+                document.querySelectorAll(".testimonials-section-4__pagination span").forEach((el, idx) => {
+                    el.innerText = idx + 1;
+                });
+
+                document.querySelectorAll(".testimonials-section-4__pagination span").forEach((el) => {
+                    if (el.classList.contains("swiper-pagination-bullet-active")) {
+                        el.innerText = `${parseInt(el.getAttribute("data-index")) + 1}/`;
+                    }
+                });
+            },
+        },
+    });
+
+    // brand 4 slider 
+    var swiper = new Swiper(".brand-4__slide__active", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        freemode: true,
+        centeredSlides: true,
+        loop: true,
+        speed: 3900,
+        allowTouchMove: false,
+        autoplay: {
+            delay: 1,
+            disableOnInteraction: true,
+        },
+    });
+
+    //   footer text slide 4
+    var swiper = new Swiper(".footer-4__slide__active", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        freemode: true,
+        centeredSlides: true,
+        loop: true,
+        speed: 15000,
+        allowTouchMove: false,
+        autoplay: {
+            delay: 1,
+            disableOnInteraction: true,
+        },
+    });
+
+
+
     if (document.querySelector(".team-section-5__active")) {
         var swiperfeedback = new Swiper(".team-section-5__active", {
             slidesPerView: 5,
@@ -1035,6 +1123,7 @@
             }
         });
     }
+
 
     
 

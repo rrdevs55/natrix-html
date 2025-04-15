@@ -209,7 +209,38 @@
 
 
 
+.rr-btn-cus {
+    display: inline-block;
+    color: var(--rr-text-body-2);
 
+    &:hover {
+        span {
+            &::after {
+                width: 0%;
+            }
+        }
+    }
+
+    span {
+        position: relative;
+        display: inline-block;
+
+        &::after {
+            content: "";
+            left: 0;
+            height: 1px;
+            width: 100%;
+            bottom: 4px;
+            position: absolute;
+            transition: all 0.3s ease-in-out;
+            background-color: var(--rr-text-body-2);
+        }
+    }
+
+    img {
+        margin-right: 10px;
+    }
+}
 
 // ruhe-btn-group white
 .rr-btn-group {

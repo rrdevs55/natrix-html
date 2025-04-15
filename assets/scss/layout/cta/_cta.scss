@@ -57,6 +57,152 @@
 
 
 
+// cta section 4 =============
+.cta-section-4 {
+    &__thumb-title {
+        font-size: 30px;
+        line-height: 1.17;
+        font-weight: 400;
+        color: var(--rr-text-body-2);
+        font-family: var(--rr-ff-body);
+        max-width: 600px;
+
+        @media #{$xs} {
+            font-size: 20px;
+        }
+
+        &::before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            margin-right: 10px;
+            display: inline-block;
+            background-color: var(--rr-color-white);
+        }
+    }
+
+    &__thumb {
+        overflow: hidden;
+        margin-top: 73px;
+        border-radius: 5px;
+        display: inline-block;
+
+        img {
+            max-width: 100%;
+        }
+
+        @media #{$lg,$md,$sm,$xs} {
+            margin-top: 40px;
+        }
+    }
+
+    &__title {
+        text-align: right;
+        font-size: 80px;
+        font-weight: 400;
+        line-height: 1;
+        color: var(--rr-color-white);
+        font-family: var(--rr-ff-heading-2);
+
+        br {
+            @media #{$md,$sm,$xs} {
+                display: none;
+            }
+        }
+
+        @media #{$xxxl,$xxl} {
+            font-size: 70px;
+        }
+
+        @media #{$xl,$sm,$xs} {
+            font-size: 40px;
+        }
+
+        @media #{$lg,$md,$sm} {
+            margin-top: 70px;
+        }
+
+        @media #{$xs} {
+            text-align: center;
+            margin-top: 70px;
+        }
+    }
+
+    &__btn__wrap {
+        display: flex;
+        justify-content: end;
+
+        @media #{$xs} {
+            justify-content: center;
+        }
+    }
+
+    &__btn {
+        border: 1.5px solid var(--rr-color-white);
+        border-radius: 1000px;
+        width: 346px;
+        height: 127px;
+        display: grid;
+        place-items: center;
+        margin-top: 20px;
+
+        @media #{$xl,$lg,$sm,$xs} {
+            width: 286px;
+            height: 100px;
+        }
+
+        @media #{$xs} {
+            width: 240px;
+            height: 70px;
+        }
+
+        &:hover {
+
+            .rr-btn-cus-big {
+                span {
+                    &::after {
+                        width: 0;
+                    }
+                }
+            }
+        }
+
+        .rr-btn-cus-big {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            span {
+                font-family: var(--rr-ff-body);
+                font-weight: 500;
+                font-size: 30px;
+                line-height: .9;
+                text-decoration-skip-ink: none;
+                color: var(--rr-color-white);
+                position: relative;
+
+                @media #{$xs} {
+                    font-size: 23px;
+                }
+
+                &::after {
+                    content: "";
+                    left: 0;
+                    height: 1.5px;
+                    width: 100%;
+                    bottom: -2px;
+                    position: absolute;
+                    transition: all 0.3s ease-in-out;
+                    background-color: var(--rr-color-white);
+                }
+            }
+        }
+    }
+}
+
+
+
 // cta-section-5
 .cta-section-5 {
     &__content {

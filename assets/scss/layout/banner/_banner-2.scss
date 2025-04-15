@@ -11,6 +11,7 @@
 .banner-section-space-2 {
     padding-top: 90px;
 }
+
 .banner-section-2 {
     &__wrapper {
         margin: 0 50px;
@@ -583,6 +584,204 @@
 }
 
 
+
+// start banner 4  ============
+.banner-4__section_space {
+    padding-top: 250px;
+
+    @media #{$xxl,$lg} {
+        padding-top: 180px;
+    }
+
+    @media #{$xl} {
+        padding-top: 140px;
+    }
+
+    @media #{$md,$sm,$xs} {
+        padding-top: 0px;
+    }
+}
+
+.banner-4 {
+    &__shape {
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__title {
+        font-family: var(--rr-ff-heading-2);
+        font-weight: 400;
+        font-size: 534px;
+        line-height: 120px;
+        letter-spacing: -8px;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 99;
+        // margin-top: 200px;
+
+        @media #{$xxxl,$xxl} {
+            font-size: 430px;
+        }
+
+        @media #{$xl,$lg} {
+            font-size: 350px;
+        }
+
+        @media #{$lg} {
+            font-size: 280px;
+            margin-top: 70px;
+        }
+
+        @media #{$md} {
+            padding-top: 200px;
+            font-size: 220px;
+        }
+
+        @media #{$sm} {
+            padding-top: 140px;
+            font-size: 150px;
+        }
+
+        @media #{$xs} {
+            padding-top: 0px;
+            font-size: 130px;
+        }
+
+        @media #{$xxs} {
+            margin-top: 120px;
+            padding-top: 0px;
+            font-size: 100px;
+        }
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 18px;
+            background-color: rgb(5, 5, 5);
+            position: absolute;
+            left: 0;
+            bottom: 125px;
+
+            @media #{$md} {
+                bottom: 85px;
+            }
+
+            @media #{$sm,$xs} {
+                height: 10px;
+                bottom: 85px;
+            }
+
+            @media #{$xxs} {
+                height: 10px;
+                bottom: 70px;
+            }
+        }
+    }
+
+    &__capsol__content__wrap {
+        margin-top: 145px;
+
+        @media #{$xl,$lg} {
+            margin-top: 0;
+        }
+
+        @media #{$lg} {
+            margin-top: 115px;
+        }
+
+        @media #{$sm} {
+            margin-top: 215px;
+        }
+    }
+
+    &__capsol__content {
+        position: relative;
+        overflow: hidden;
+        pointer-events: none;
+        width: 100%;
+        height: 718px;
+        z-index: 1;
+        margin-top: -500px;
+
+        @media #{$lg} {
+            margin-top: -430px;
+        }
+        @media #{$md} {
+            margin-top: -410px;
+        }
+        @media #{$lg,$md,$sm,$xs} {
+            height: 500px;
+        }
+    }
+
+    &__item__wrapper {
+        p {
+            position: absolute;
+            display: inline-block;
+            margin-bottom: 0;
+            left: 0;
+            top: 0;
+            user-select: none;
+            pointer-events: auto;
+            transition: none;
+            z-index: 99999;
+        }
+    }
+
+    &__capsol__item {
+        display: inline-block;
+        font-weight: 500;
+        border-radius: 100px;
+        padding: 20px 40px;
+        border: 1px solid #252525;
+        color: var(--rr-text-body-2);
+        @include transform(translate(-50%, -50%) rotate(0.01rad));
+        font-size: 24px;
+        line-height: 1.12;
+        text-transform: uppercase;
+        color: var(--rr-color-white);
+
+        @media #{$xl,$lg,$md,$sm,$xs} {
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+    }
+
+    &__capsol__content__wrap {
+        .border-bottom {
+            margin-top: 10px;
+            z-index: 999;
+            position: relative;
+
+            @media #{$md,$sm} {
+                margin-bottom: 0px;
+            }
+
+            .border-line:nth-child(odd) {
+                width: 100%;
+                height: 4px;
+                background-color: var(--rr-color-white);
+                margin-top: 5px;
+            }
+
+            .border-line:nth-child(even) {
+                width: 100%;
+                height: 1px;
+                background-color: var(--rr-color-white);
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+
 // Banner - 5 ----------------------------------
 .banner-section-5-space {
     padding-top: 160px;
@@ -592,11 +791,13 @@
         padding-top: 130px;
         padding-bottom: 80px;
     }
+
     @media #{$sm,$xs} {
         padding-top: 130px;
         padding-bottom: 70px;
     }
 }
+
 .banner-section-5 {
     &__title {
         font-weight: 400;

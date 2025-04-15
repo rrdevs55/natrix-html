@@ -140,6 +140,28 @@
                 }
             }
         }
+
+        &_4 {
+            .section__title {
+                font-family: var(--rr-ff-heading-2);
+                font-weight: 400;
+                font-size: 80px;
+                line-height: 1;
+                color: #fff;
+
+                @media #{$lg,$md,$sm,$xs} {
+                    font-size: 50px;
+                }
+
+                @media #{$xs} {
+                    font-size: 45px;
+                }
+
+                @media #{$xxs} {
+                    font-size: 33px;
+                }
+            }
+        }
     }
 }
 
