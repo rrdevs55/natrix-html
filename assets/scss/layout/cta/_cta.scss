@@ -115,7 +115,7 @@
             font-size: 70px;
         }
 
-        @media #{$xl,$sm,$xs} {
+        @media #{$xl,$sm} {
             font-size: 40px;
         }
 
@@ -125,7 +125,8 @@
 
         @media #{$xs} {
             text-align: center;
-            margin-top: 70px;
+            margin-top: 30px;
+            font-size: 30px;
         }
     }
 
@@ -223,7 +224,7 @@
             max-width: 850px;
             margin-bottom: -150px;
         }
-        @media #{$xs} {
+        @media #{$md,$sm,$xs} {
             margin-bottom: 0px;
         }
     }

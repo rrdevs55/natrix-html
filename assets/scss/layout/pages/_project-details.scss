@@ -61,6 +61,16 @@
 }
 
 .project-details {
+    &__big {
+        &__thumb {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
     &__wrap {
         margin-top: -365px;
         position: relative;
@@ -322,6 +332,12 @@
             @media #{$md,$sm,$xs} {
                 margin-left: 0;
             }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 

@@ -256,6 +256,12 @@
     &__thumb {
         margin-bottom: 32px;
 
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         @media #{$xs} {
             margin-bottom: 20px;
         }
@@ -432,11 +438,16 @@
                 @media #{$xxl} {
                     font-size: 190px;
                 }
+
                 @media #{$xl} {
                     font-size: 160px;
                 }
-                @media #{$lg,$md} {
+
+                @media #{$lg} {
                     font-size: 125px;
+                }
+                @media #{$md} {
+                    font-size: 100px;
                 }
 
                 @media #{$sm,$xs} {
@@ -493,6 +504,10 @@
 
     &__text {
         margin-top: 35px;
+
+        @media #{$xs} {
+            margin-top: 25px;
+        }
     }
 
     &__caption {
@@ -514,9 +529,14 @@
         align-items: center;
         justify-content: space-between;
         gap: 30px;
+
         @media #{$lg} {
-               gap: 0;
-            }
+            gap: 0;
+        }
+
+        @media #{$xs} {
+            display: block;
+        }
     }
 
     &__title {
@@ -529,6 +549,7 @@
         @media #{$lg} {
             font-size: 22px;
         }
+
         @media #{$xs} {
             font-size: 24px;
         }
@@ -555,6 +576,7 @@
             @media #{$md} {
                 margin-top: 35px;
             }
+
             @media #{$sm,$xs} {
                 margin-top: 30px;
             }
@@ -597,6 +619,7 @@
             font-size: 60px;
             line-height: 60px;
         }
+
         @media #{$xs} {
             font-size: 45px;
             line-height: 45px;
@@ -666,6 +689,7 @@
             padding-bottom: 45px;
             margin-bottom: 45px;
         }
+
         @media #{$xs} {
             padding-bottom: 35px;
             margin-bottom: 35px;
@@ -718,6 +742,7 @@
         @media #{$md} {
             margin-bottom: 25px;
         }
+
         @media #{$xs} {
             margin-bottom: 20px;
         }
@@ -754,6 +779,7 @@
             @media #{$lg,$sm} {
                 padding: 6.5px 11.4px;
             }
+
             @media #{$xs} {
                 padding: 5.5px 5.4px;
             }
@@ -767,6 +793,7 @@
         @media #{$md} {
             margin-top: 50px;
         }
+
         @media #{$sm,$xs} {
             margin-top: 40px;
         }

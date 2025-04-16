@@ -1219,11 +1219,11 @@
     }
 
     if (document.querySelector(".service-section-5__active")) {
-        var swiperfeedback = new Swiper(".service-section-5__active", {
-            slidesPerView: 3,
+        var swiperservices = new Swiper(".service-section-5__active", {
+            slidesPerView: 3.5,
             spaceBetween: 50,
             loop: true,
-            centeredSlides: false,
+            centeredSlides: true,
             autoplay: true,
             centerMode: true,
             speed: 400,
@@ -1251,7 +1251,7 @@
                     slidesPerView: 2.5,
                 },
                 1700: {
-                    slidesPerView: 3,
+                    slidesPerView: 3.5,
                 },
             },
         });

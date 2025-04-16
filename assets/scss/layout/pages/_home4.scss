@@ -101,6 +101,7 @@
                     width: 120px;
                     height: 120px;
                }
+
                @media #{$md,$sm} {
                     width: 100px;
                     height: 100px;
@@ -170,7 +171,7 @@
 
      &__subtitle {
           margin-top: 8px;
-          line-height: 1;
+          line-height: 35px;
           font-size: 30px;
           font-weight: 500;
           color: var(--rr-color-white);
@@ -231,10 +232,13 @@
           &__count {
                p {
                     padding-left: 75px;
+                    font-size: 24px;
+                    line-height: 27px;
 
                     @media #{$xxl} {
                          padding-left: 70px;
                     }
+
                     @media #{$lg} {
                          padding-left: 0px;
                          font-size: 20px;
@@ -244,6 +248,10 @@
                     @media #{$sm,$xs} {
                          line-height: 1;
                          font-size: 20px;
+                    }
+
+                    @media #{$xs} {
+                         padding-left: 0;
                     }
                }
 
@@ -298,6 +306,7 @@
 
 // branding section 4
 .brand-4 {
+     margin-top: -1px;
      &__area {
           .swiper {
                .swiper-wrapper {

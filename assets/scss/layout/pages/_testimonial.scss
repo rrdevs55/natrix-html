@@ -536,9 +536,6 @@
         font-family: var(--rr-ff-body);
     }
 
-
-
-
     &__rating {
         display: inline-block;
         padding: 36px 39.8px;
@@ -546,6 +543,9 @@
         margin-top: 140px;
         border: 1px solid rgb(255 255 255 / 10%);
 
+        @media #{$xl,$lg,$md} {
+            margin-top: 170px;
+        }
         @media #{$sm} {
             margin-top: 40px;
         }
