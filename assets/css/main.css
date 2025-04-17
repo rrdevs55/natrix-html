@@ -10965,6 +10965,11 @@ footer {
   z-index: 91;
   position: relative;
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .service-section-4 {
+    overflow: hidden;
+  }
+}
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .service-section-4.section-space-bottom-180 {
     padding-bottom: 0;

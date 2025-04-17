@@ -459,11 +459,17 @@
 .service-section-4 {
     z-index: 91;
     position: relative;
-    &.section-space-bottom-180{
-        @media #{$xl} {
-                padding-bottom: 0;
-            }
+
+    @media #{$xl,$lg,$md,$sm,$xs} {
+        overflow: hidden;
     }
+
+    &.section-space-bottom-180 {
+        @media #{$xl} {
+            padding-bottom: 0;
+        }
+    }
+
     &__item__wrapper {
         .rr-hover-reveal-bg {
             position: absolute;
@@ -612,6 +618,7 @@
             font-size: 45px;
             max-width: 300px;
         }
+
         @media #{$xs} {
             font-size: 50px;
             max-width: 300px;
