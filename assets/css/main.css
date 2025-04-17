@@ -7465,6 +7465,7 @@ footer {
 @media (max-width: 575px) {
   .footer-4__cpyright__area h6 {
     font-size: 16px;
+    margin: 0 auto;
   }
 }
 .footer-4__cpyright__area h6 a:hover {
@@ -10412,7 +10413,12 @@ footer {
   padding-right: 30px;
   padding-bottom: 10px;
 }
-@media (max-width: 575px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .video-section-4__text__big {
+    margin-left: 40px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .video-section-4__text__big {
     margin-left: 15px;
   }
@@ -10517,6 +10523,7 @@ footer {
   line-height: 1;
   letter-spacing: 15px;
   margin-top: 13px;
+  display: flex;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .counter-section-4 .counter-section__count h4 {
@@ -10986,6 +10993,7 @@ footer {
   overflow: hidden;
   pointer-events: none;
   z-index: 999;
+  border-radius: 5px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -12102,9 +12110,13 @@ footer {
 }
 .testimonials-section-4__slider__active .testimonials-section-4__pagination .swiper-pagination-bullet {
   padding: 0px 10px;
+  opacity: 1;
+  color: var(--rr-text-body-2);
 }
-.testimonials-section-4__slider__active .testimonials-section-4__pagination .swiper-pagination-bullet-active {
+.testimonials-section-4__slider__active .testimonials-section-4__pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: transparent;
+  color: var(--rr-color-white);
+  opacity: 1;
 }
 
 .testimonial-section-5__big-text {

@@ -153,7 +153,10 @@
                padding-right: 30px;
                padding-bottom: 10px;
 
-               @media #{$xs,$md,$sm,$xs} {
+               @media #{$lg} {
+                    margin-left: 40px;
+               }
+               @media #{$md,$sm,$xs} {
                     margin-left: 15px;
                }
 
@@ -263,6 +266,7 @@
                     line-height: 1;
                     letter-spacing: 15px;
                     margin-top: 13px;
+                    display: flex;
 
                     @media #{$lg,$md} {
                          font-size: 90px;

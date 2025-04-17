@@ -310,6 +310,7 @@
             bottom: 0;
             display: block;
         }
+
         img {
             max-width: 100%;
             width: 100%;
@@ -356,11 +357,16 @@
 
                 .swiper-pagination-bullet {
                     padding: 0px 10px;
+                    opacity: 1;
+                    color: var(--rr-text-body-2);
+
+                    &.swiper-pagination-bullet-active {
+                        background-color: transparent;
+                        color: var(--rr-color-white);
+                        opacity: 1;
+                    }
                 }
 
-                .swiper-pagination-bullet-active {
-                    background-color: transparent;
-                }
             }
         }
     }
@@ -546,6 +552,7 @@
         @media #{$xl,$lg,$md} {
             margin-top: 170px;
         }
+
         @media #{$sm} {
             margin-top: 40px;
         }
