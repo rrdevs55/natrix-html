@@ -3623,6 +3623,12 @@ footer {
   transition: all 0.3s ease-in-out;
   background: var(--rr-common-black);
 }
+@media (max-width: 767px) {
+  .cb-cursor-text {
+    width: 125px;
+    height: 125px;
+  }
+}
 .cb-cursor-text .cursor-btn {
   display: inline-flex;
   align-items: center;
@@ -10531,6 +10537,11 @@ footer {
   .counter-section-4 .counter-section__count h4 {
     font-size: 60px;
     letter-spacing: 8px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .counter-section-4 .counter-section__count h4 {
+    justify-content: center;
   }
 }
 .counter-section-4 .counter-section__count h4 .odometer.odometer-auto-theme,

@@ -79,6 +79,11 @@
     transition: all 0.3s ease-in-out;
     background: var(--rr-common-black);
 
+    @media (max-width: 767px) {
+        width: 125px;
+        height: 125px;
+    }
+
     .cursor-btn {
         display: inline-flex;
         align-items: center;

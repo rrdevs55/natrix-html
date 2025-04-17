@@ -275,6 +275,9 @@
                          font-size: 60px;
                          letter-spacing: 8px;
                     }
+                    @media #{$md,$sm,$xs} {
+                         justify-content: center;
+                    }
 
                     .odometer.odometer-auto-theme,
                     .odometer.odometer-theme-default {
