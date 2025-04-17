@@ -3609,13 +3609,19 @@ footer {
 }
 
 .cb-cursor-text {
+  position: absolute;
+  top: -50px;
+  left: -50px;
   opacity: 0;
   width: 160px;
-  height: auto;
+  height: 160px;
   transform: scale(0);
-  display: inline-block;
-  background: transparent;
+  border-radius: 500px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s ease-in-out;
+  background: var(--rr-common-black);
 }
 .cb-cursor-text .cursor-btn {
   display: inline-flex;
@@ -3626,19 +3632,10 @@ footer {
   font-weight: 500;
   font-size: 18px;
   line-height: 1;
-  position: relative;
+  text-align: center;
   display: inline-block;
   color: var(--rr-color-white);
   font-family: var(--rr-ff-body);
-}
-.cb-cursor-text .cursor-btn span::before {
-  content: "";
-  height: 1px;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  background-color: var(--rr-color-white);
 }
 
 .cb-cursor.-small .cb-cursor-text {
