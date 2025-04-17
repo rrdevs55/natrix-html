@@ -264,8 +264,12 @@
                     letter-spacing: 15px;
                     margin-top: 13px;
 
-                    @media #{$lg,$md,$sm,$xs} {
+                    @media #{$lg,$md} {
                          font-size: 90px;
+                    }
+                    @media #{$sm,$xs} {
+                         font-size: 60px;
+                         letter-spacing: 8px;
                     }
 
                     .odometer.odometer-auto-theme,

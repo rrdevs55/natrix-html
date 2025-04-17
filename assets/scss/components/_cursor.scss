@@ -42,15 +42,13 @@
     -moz-transition: transform 0.3s ease-in-out, opacity 0.1s, -moz-transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out, opacity 0.1s;
     transition: transform 0.3s ease-in-out, opacity 0.1s, -webkit-transform 0.3s ease-in-out, -moz-transform 0.3s ease-in-out, -o-transform 0.3s ease-in-out;
-
-
 }
 
 @media (max-width: 767px) {
     .cb-cursor:before {
-            width: 100px;
-            height: 100px;
-        }
+        width: 100px;
+        height: 100px;
+    }
 }
 
 .cb-cursor.-text:before {
@@ -60,4 +58,55 @@
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1) rotate(-15deg);
+}
+
+
+
+
+// cursor btn 2 ________________
+.cb-cursor-text {
+    opacity: 0;
+    width: 160px;
+    height: auto;
+    transform: scale(0);
+    display: inline-block;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+
+    .cursor-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+
+        span {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1;
+            position: relative;
+            display: inline-block;
+            color: var(--rr-color-white);
+            font-family: var(--rr-ff-body);
+
+            &::before {
+                content: "";
+                height: 1px;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                background-color: var(--rr-color-white);
+            }
+        }
+    }
+}
+
+.cb-cursor.-small {
+    .cb-cursor-text {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &::before {
+        display: none;
+    }
 }
