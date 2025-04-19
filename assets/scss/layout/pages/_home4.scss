@@ -184,31 +184,6 @@
                font-size: 18px;
           }
      }
-
-     &__trans__bg {
-          left: 0;
-          width: 100%;
-          display: grid;
-          bottom: -1px;
-          height: 414px;
-          position: absolute;
-          max-width: 372px;
-          place-items: center;
-          mix-blend-mode: darken;
-
-          @media #{$xxl, $xl,$lg} {
-               height: 300px;
-               max-width: 300px;
-          }
-     }
-
-     &__trans__content {
-          mix-blend-mode: exclusion;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-     }
 }
 
 

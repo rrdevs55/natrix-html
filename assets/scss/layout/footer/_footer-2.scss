@@ -579,8 +579,8 @@
 // copyright-section-5
 .copyright-section-5 {
     &__area {
-        background-color: #1F2227;
         padding: 33.5px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
 
         @media #{$xs} {
             padding: 20px 0;

@@ -388,30 +388,23 @@
     }
 
 
-    if ($('.projects-section__area').length > 0 && window.innerWidth > 768) {
-        let projectText = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".projects-section__area",
-                start: "top center-=450",
-                end: "bottom 120%",
-                pin: ".section-title__wrapper_2_anim",
-                markers: false,
-                pinSpacing: false,
-                scrub: 1,
-            },
-        });
 
-        projectText.set(".section-title__wrapper_2_anim", {
-            scale: 1,
+    if ($('.projects-section__area').length > 0) {
+        let mm = gsap.matchMedia();
+        mm.add("(min-width: 768px)", () => {
+            return gsap.to('.section-title__wrapper_2_anim', {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: '.projects-section__area',
+                    scrub: 1,
+                    start: 'top -10%',
+                    end: "bottom 85%",
+                    pin: '.section-title__wrapper_2_anim',
+                    markers: false,
+                    toggleActions: 'play reverse play reverse',
+                }
+            });
         });
-        projectText.to(".section-title__wrapper_2_anim", {
-            scale: 1.2,
-            duration: 2,
-        });
-        projectText.to(".section-title__wrapper_2_anim", {
-            scale: 1.2,
-            duration: 2,
-        }, "+=2");
     }
 
 
@@ -494,10 +487,10 @@
         gsap.to(".funfact-area-2 .thumb img", {
             scale: "1",
             scrollTrigger: {
-                trigger: ".funfact-area-2 .thumb",
+                trigger: ".funfact-area-2",
                 start: "top top",
-                end: "100% top",
-                pin: true,
+                end: "bottom -50%",
+                pin: ".funfact-area-2",
                 scrub: 2,
                 markers: false,
                 toggleActions: 'play reverse play reverse',

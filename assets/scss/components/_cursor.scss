@@ -14,53 +14,6 @@
     transition: opacity 0.3s, color 0.4s;
 }
 
-.cb-cursor:before {
-    content: "\f061";
-    position: absolute;
-    top: -24px;
-    left: -24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 140px;
-    height: 140px;
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--rr-common-white);
-    font-family: var(--rr-ff-fontawesome);
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
-    -webkit-border-radius: 500px;
-    -moz-border-radius: 500px;
-    border-radius: 500px;
-    -webkit-transition: opacity 0.1s, -webkit-transform 0.3s ease-in-out;
-    transition: opacity 0.1s, -webkit-transform 0.3s ease-in-out;
-    -o-transition: opacity 0.1s, -o-transform 0.3s ease-in-out;
-    -moz-transition: transform 0.3s ease-in-out, opacity 0.1s, -moz-transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out, opacity 0.1s;
-    transition: transform 0.3s ease-in-out, opacity 0.1s, -webkit-transform 0.3s ease-in-out, -moz-transform 0.3s ease-in-out, -o-transform 0.3s ease-in-out;
-}
-
-@media (max-width: 767px) {
-    .cb-cursor:before {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-.cb-cursor.-text:before {
-    background: #131313;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1) rotate(-15deg);
-}
-
-
 
 
 // cursor btn 2 ________________
@@ -69,45 +22,30 @@
     top: -50px;
     left: -50px;
     opacity: 0;
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1;
     transform: scale(0);
+    align-items: center;
     border-radius: 500px;
     display: inline-flex;
-    align-items: center;
     justify-content: center;
+    color: var(--rr-color-white);
+    background: rgb(19, 19, 19);
+    font-family: var(--rr-ff-body);
     transition: all 0.3s ease-in-out;
-    background: var(--rr-common-black);
 
     @media (max-width: 767px) {
-        width: 125px;
-        height: 125px;
-    }
-
-    .cursor-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 15px;
-
-        span {
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 1;
-            text-align: center;
-            display: inline-block;
-            color: var(--rr-color-white);
-            font-family: var(--rr-ff-body);
-        }
+        width: 120px;
+        height: 120px;
     }
 }
 
-.cb-cursor.-small {
+.cb-cursor.-text {
     .cb-cursor-text {
         opacity: 1;
         transform: scale(1);
-    }
-
-    &::before {
-        display: none;
     }
 }
