@@ -695,7 +695,7 @@
                 scrollTrigger: {
                     trigger: ".project-section-2",
                     scrub: 2,
-                    start: "bottom bottom",
+                    start: "bottom 115%",
                     pin: true,
                     // markers: true,
                 }
