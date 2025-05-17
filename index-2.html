@@ -144,14 +144,10 @@
     
                 <div class="rr-header__right">
                     <div class="rr-header__action d-flex align-items-center">
-                        <div class="rr-header__btn-wrap d-none d-md-block">
-                            <a href="tel:+1-3675012376" class="rr-arrow__btn rr-arrow__btn-2">+1 - 3675 012 376</a>
-                        </div>
                         <ul class="d-none d-sm-inline-flex">
                             <li>
                                 <button id="popup-search-box" class="search-open-btn">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M13.7071 12.2929C13.3166 11.9024 12.6834 11.9024 12.2929 12.2929C11.9024 12.6834 11.9024 13.3166 12.2929 13.7071L13.7071 12.2929ZM18.2929 19.7071C18.6834 20.0976 19.3166 20.0976 19.7071 19.7071C20.0976 19.3166 20.0976 18.6834 19.7071 18.2929L18.2929 19.7071ZM8 14C4.68629 14 2 11.3137 2 8H0C0 12.4183 3.58172 16 8 16V14ZM2 8C2 4.68629 4.68629 2 8 2V0C3.58172 0 0 3.58172 0 8H2ZM8 2C11.3137 2 14 4.68629 14 8H16C16 3.58172 12.4183 0 8 0V2ZM14 8C14 11.3137 11.3137 14 8 14V16C12.4183 16 16 12.4183 16 8H14ZM12.2929 13.7071L18.2929 19.7071L19.7071 18.2929L13.7071 12.2929L12.2929 13.7071Z"
                                             fill="white"></path>
@@ -159,14 +155,11 @@
                                 </button>
                             </li>
                         </ul>
-                        <div class="header__hamburger">
-                            <div class="sidebar__toggle">
-                                <button class="bar-icon">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                            </div>
+                        <div class="rr-header__btn-wrap d-none d-lg-inline-flex mr-10">
+                            <a href="contact.html" class="rr-btn hover-anim">Explore our <span class="hover-bg"></span></a>
+                        </div>
+                        <div class="rr-header__navicon">
+                            <button class="sidebar__toggle" id="side-toggle"></button>
                         </div>
                     </div>
                 </div>
@@ -244,6 +237,7 @@
                         <img src="assets/imgs/shapes/banner-shape-04.png" alt="icon">
                     </div>
                     <div class="banner-section-2__left banner-section-space-2 d-none d-lg-block">
+                        <div class="banner-section-2__border__left"></div>
                         <div class="banner-section-2__count">
                             <h4><span class="odometer" data-count="240">0</span>+</h4>
                             <p>Completed projects and <br> deployed projects</p>
@@ -253,12 +247,11 @@
                             <span><img src="assets/imgs/shapes/banner-shape-02.png" alt="image not found"></span>
                         </div>
                         <div class="banner-section-2__left__shape">
-                            <img class="leftRight" src="assets/imgs/shapes/banner-shape-01.png" alt="image not found">
+                            <img src="assets/imgs/shapes/banner-shape-01.png" alt="image not found">
                         </div>
                     </div>
                     <div class="banner-section-2__content text_center banner-section-space-2">
-                        <h1 class="banner-section-2__title rr-char-animation">The digital natrix <br> agency for <img src="assets/imgs/shapes/banner-title-shape.png" alt="icon"> 
-                             CREATIVE <br> experiences</h1>
+                        <h1 class="banner-section-2__title rr-char-animation">Digital Natrix — Iconic <img src="assets/imgs/shapes/banner-title-shape.png" alt="icon"> Creative Experiences.</h1>
 
                         <div class="banner-section-2__review fade-top">
                             <div class="banner-section-2__review__left">
@@ -279,8 +272,9 @@
                     </div>
                     <div class="banner-section-2__right banner-section-space-2">
                         <div class="banner-section-2__right__shape d-none d-md-block">
-                            <img class=" leftRight" src="assets/imgs/shapes/banner-shape-01.png" alt="icon">
+                            <img src="assets/imgs/shapes/banner-shape-01.png" alt="icon">
                         </div>
+                        <div class="banner-section-2__border__right"></div>
                         <div class="banner-section-2__video">
                             <video id="myVideo" loop autoplay muted>
                                 <source src="https://rrdevs.net/project-video/natrix/nx-vd-01.mp4" type="video/mp4">
@@ -308,7 +302,7 @@
                             </div>
                         </div>
                         <div class="banner-section-2__social">
-                            <span>social link :</span>
+                            <span>Follow Us :</span>
                             <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
                             <a href="https://www.twitch.com/"><i class="fa-brands fa-twitter"></i></a>
                             <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
@@ -316,11 +310,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="banner-section-2__border__bottom"></div>
             </section>
 
             <!-- about-section-2 -->
             <section class="about-section-2__area about-section-2 body-bg section-space fade-wrapper fix">
-                <div class="about-section-2__shape-1 rotate360 d-none d-md-block">
+                <div class="about-section-2__shape-1 d-none d-md-block">
                     <img src="assets/imgs/shapes/about-shape-01.png" alt="image not found">
                 </div>
                 <div class="about-section-2__shape-2 upDown-top d-none d-md-block">
@@ -364,13 +359,13 @@
             </section>
 
             <!-- thumb-bg-section-2 -->
-            <div class="thumb-bg-section-2__area thumb-bg-section-2 body-bg">
-                <div class="thumb-bg-section-2__wrapper jarallax" data-background="assets/imgs/images/bg-thumb-03.png">
+            <div class="thumb-bg-section-2__area thumb-bg-section-2 body-bg fix">
+                <div class="thumb-bg-section-2__wrapper" data-background="assets/imgs/images/bg-thumb-03.png" data-speed="0.7">
                 </div>
             </div>
 
             <!-- services-section-2 -->
-            <section class="services-section-2__area services-section-2 body-bg section-space-top-180 fix fade-wrapper fix" data-background="assets/imgs/shapes/project-bg-shape.png">
+            <section class="services-section-2__area services-section-2 body-bg section-space-top-150 fix fade-wrapper fix" data-background="assets/imgs/shapes/project-bg-shape.png">
                 <div class="container">
                     <div class="services-section-2__top">
                         <div class="section-title__wrapper">
@@ -497,80 +492,105 @@
             </section>
 
             <!-- project-section-2 -->
-            <section class="project-section-2__area project-section-2 body-bg section-space fade-wrapper">
+            <section class="project-section-2__area project-section-2 body-bg section-space fade-wrapper fix">
                 <div class="container">
                     <div class="project-section-2__top">
-                        <div class="section-title__wrapper">
-                            <h2 class="section__title rr_title_animation">Selected <br>
-                            <span>(2014 — 2024)</span> project</h2>
-                        </div>
-                        <div class="project-section-2__btn fade-top">
-                            <a href="project-details.html" class="rr-arrow__btn rr-arrow__btn-2">See all works <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M5.75621 13.4803L10.2153 9.02125L0.171615 9.02125L0.171614 6.67751L10.2153 6.67751L5.75952 2.22175L7.41471 0.566562L14.6975 7.84938L7.41471 15.1322L5.75952 13.477L5.75621 13.4803Z"
-                                    fill="#C0C0C0" />
-                            </svg>
-                            </a>
+                        <div class="section-title__wrapper text_center">
+                            <h2 class="section__title rr_title_animation">Selected Projects</h2>
                         </div>
                     </div>
                 </div>
-                <div class="project-section-2__wrapper">
-                    <div class="swiper project-section-2__active">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="project-section-2__item">
-                                    <div class="project-section-2__thumb">
-                                        <a href="project-details.html">
-                                            <img src="assets/imgs/images/project-2-01.png" alt="image not found">
-                                        </a>
-                                    </div>
-                                    <div class="project-section-2__text">
-                                        <h3 class="project-section-2__title"><a href="project-details.html">Mario Testino</a></h3>
-                                        <span class="project-section-2__date">Design - 2024</span>
-                                    </div>
-                                </div>
+                <div class="project-section-2__inner">
+                    <div class="project-section-2__wrapper fix">
+                        <div class="project-section-2__item">
+                            <div class="project-section-2__thumb">
+                                <a href="project-details.html">
+                                    <img src="assets/imgs/images/project-2-01.png" alt="image not found">
+                                </a>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="project-section-2__item">
-                                    <div class="project-section-2__thumb">
-                                        <a href="project-details.html">
-                                            <img src="assets/imgs/images/project-2-02.png" alt="image not found">
-                                        </a>
-                                    </div>
-                                    <div class="project-section-2__text">
-                                        <h3 class="project-section-2__title"><a href="project-details.html">cute dog pet companion</a></h3>
-                                        <span class="project-section-2__date">Design - 2024</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="project-section-2__item">
-                                    <div class="project-section-2__thumb">
-                                        <a href="project-details.html">
-                                            <img src="assets/imgs/images/project-2-03.png" alt="image not found">
-                                        </a>
-                                    </div>
-                                    <div class="project-section-2__text">
-                                        <h3 class="project-section-2__title"><a href="project-details.html">Artistic Portrait</a></h3>
-                                        <span class="project-section-2__date">Design - 2024</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="project-section-2__item">
-                                    <div class="project-section-2__thumb">
-                                        <a href="project-details.html">
-                                            <img src="assets/imgs/images/project-2-04.png" alt="image not found">
-                                        </a>
-                                    </div>
-                                    <div class="project-section-2__text">
-                                        <h3 class="project-section-2__title"><a href="project-details.html">Branding Design</a></h3>
-                                        <span class="project-section-2__date">Design - 2024</span>
-                                    </div>
-                                </div>
+                            <div class="project-section-2__text">
+                                <h3 class="project-section-2__title"><a href="project-details.html">Mario Testino</a></h3>
+                                <span class="project-section-2__date">Design - 2024</span>
                             </div>
                         </div>
-                        <div class="project-section-2__pagination"></div>
+                        <div class="project-section-2__item">
+                            <div class="project-section-2__thumb">
+                                <a href="project-details.html">
+                                    <img src="assets/imgs/images/project-2-02.png" alt="image not found">
+                                </a>
+                            </div>
+                            <div class="project-section-2__text">
+                                <h3 class="project-section-2__title"><a href="project-details.html">cute dog pet companion</a></h3>
+                                <span class="project-section-2__date">Design - 2024</span>
+                            </div>
+                        </div>
+                        <div class="project-section-2__item">
+                            <div class="project-section-2__thumb">
+                                <a href="project-details.html">
+                                    <img src="assets/imgs/images/project-2-03.png" alt="image not found">
+                                </a>
+                            </div>
+                            <div class="project-section-2__text">
+                                <h3 class="project-section-2__title"><a href="project-details.html">Artistic Portrait</a></h3>
+                                <span class="project-section-2__date">Design - 2024</span>
+                            </div>
+                        </div>
+                        <div class="project-section-2__item">
+                            <div class="project-section-2__thumb">
+                                <a href="project-details.html">
+                                    <img src="assets/imgs/images/project-2-04.png" alt="image not found">
+                                </a>
+                            </div>
+                            <div class="project-section-2__text">
+                                <h3 class="project-section-2__title"><a href="project-details.html">Branding Design</a></h3>
+                                <span class="project-section-2__date">Design - 2024</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-section-2__item d-none d-xl-block">
+                            <div class="project-section-2__thumb">
+                                <a href="project-details.html">
+                                    <img src="assets/imgs/images/project-2-01.png" alt="image not found">
+                                </a>
+                            </div>
+                            <div class="project-section-2__text">
+                                <h3 class="project-section-2__title"><a href="project-details.html">Mario Testino</a></h3>
+                                <span class="project-section-2__date">Design - 2024</span>
+                            </div>
+                        </div>
+                        <div class="project-section-2__item d-none d-xl-block">
+                            <div class="project-section-2__thumb">
+                                <a href="project-details.html">
+                                    <img src="assets/imgs/images/project-2-02.png" alt="image not found">
+                                </a>
+                            </div>
+                            <div class="project-section-2__text">
+                                <h3 class="project-section-2__title"><a href="project-details.html">cute dog pet companion</a></h3>
+                                <span class="project-section-2__date">Design - 2024</span>
+                            </div>
+                        </div>
+                        <div class="project-section-2__item d-none d-xl-block">
+                            <div class="project-section-2__thumb">
+                                <a href="project-details.html">
+                                    <img src="assets/imgs/images/project-2-03.png" alt="image not found">
+                                </a>
+                            </div>
+                            <div class="project-section-2__text">
+                                <h3 class="project-section-2__title"><a href="project-details.html">Artistic Portrait</a></h3>
+                                <span class="project-section-2__date">Design - 2024</span>
+                            </div>
+                        </div>
+                        <div class="project-section-2__item d-none d-xl-block">
+                            <div class="project-section-2__thumb">
+                                <a href="project-details.html">
+                                    <img src="assets/imgs/images/project-2-04.png" alt="image not found">
+                                </a>
+                            </div>
+                            <div class="project-section-2__text">
+                                <h3 class="project-section-2__title"><a href="project-details.html">Branding Design</a></h3>
+                                <span class="project-section-2__date">Design - 2024</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -641,33 +661,28 @@
             </section>
 
             <!-- thumb-bg-section-2 -->
-            <div class="thumb-bg-section-2__area thumb-bg-section-2 body-bg">
-                <div class="thumb-bg-section-2__wrapper jarallax" data-background="assets/imgs/images/bg-thumb-04.png">
+            <div class="thumb-bg-section-2__area thumb-bg-section-2 body-bg fix">
+                <div class="thumb-bg-section-2__wrapper" data-background="assets/imgs/images/bg-thumb-04.png" data-speed="0.7">
                 </div>
             </div>
 
             <!-- award-section -->
-            <section class="award-section__area award-section body-bg section-space-top-180 section-space-bottom-100 fade-wrapper">
+            <section class="award-section__area award-section body-bg section-space-top-150 section-space-bottom-100 fade-wrapper">
                 <div class="container">
                     <div class="section-title__wrapper">
                         <span class="rr-char-animation">natrix awards & honor</span>
                         <h2 class="section__title rr_title_animation">We have been recognized Agency of <br> the Year for the work we do for clients around the Worldwide</h2>
                     </div>
                     <div class="row">
-                        <div class="col-lg-7">
-                            <div class="award-section__bg__thumb">
-                                <img class="img-custom-anim-img" src="assets/imgs/images/award-bg.png" alt="image not found">
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="award-section__text">
-                                <p class="award-section__dec fade-top">We are honored to be recognized for our hard <br> work for our clients, employees, and communities worldwide. We have been
-                                working with all aspects <br> of the digital world for decades.</p>
-                            </div>
-                        </div>
                         <div class="award-section__wrapper">
                             <div class="row">
-                                <div class="col-lg-9 offset-lg-3">
+                                <div class="col-lg-5">
+                                    <div class="award-section__text">
+                                        <p class="award-section__dec fade-top mb-md-20 mb-sm-20 mb-xs-20">We are honored to be recognized for our hard work for our clients, employees, and communities worldwide. We have been
+                                        working with all aspects of the digital world for decades.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
                                     <div class="award-section__wrap">
                                         <div class="award-section__item item-1 p-relative rr-hover-reveal-item active fade-top">
                                             <a href="project-details.html">
@@ -677,12 +692,11 @@
                                                             <span>fwa us award</span>
                                                         </div>
                                                         <div class="award-section__text__box">
-                                                            <h4 class="award-section__date">June 25th, 2018.</h4>
                                                             <h3 class="award-section__title">2X Creative Adward</h3>
                                                         </div>
                                                     </div>
                                                     <div class="award-section__position">
-                                                        <span>Ruuners Up</span>
+                                                        <span>2012</span>
                                                     </div>
                                                 </div>
                                             </a>
@@ -697,12 +711,11 @@
                                                             <span>CSS Winner</span>
                                                         </div>
                                                         <div class="award-section__text__box">
-                                                            <h4 class="award-section__date">August 23th, 2024.</h4>
                                                             <h3 class="award-section__title">2X Site of the year</h3>
                                                         </div>
                                                     </div>
                                                     <div class="award-section__position">
-                                                        <span>Winner</span>
+                                                        <span>2013</span>
                                                     </div>
                                                 </div>
                                             </a>
@@ -717,12 +730,11 @@
                                                             <span>Themeforest</span>
                                                         </div>
                                                         <div class="award-section__text__box">
-                                                            <h4 class="award-section__date">September 13th, 2013.</h4>
                                                             <h3 class="award-section__title">4X Design agency of the year</h3>
                                                         </div>
                                                     </div>
                                                     <div class="award-section__position">
-                                                        <span>Mentioned</span>
+                                                        <span>2018</span>
                                                     </div>
                                                 </div>
                                             </a>
@@ -737,12 +749,11 @@
                                                             <span>Behance Portfolio</span>
                                                         </div>
                                                         <div class="award-section__text__box">
-                                                            <h4 class="award-section__date">November 28th,2012</h4>
                                                             <h3 class="award-section__title">8x Best design of the day</h3>
                                                         </div>
                                                     </div>
                                                     <div class="award-section__position">
-                                                        <span>Winner</span>
+                                                        <span>2023</span>
                                                     </div>
                                                 </div>
                                             </a>
@@ -757,12 +768,11 @@
                                                             <span>Awwwards</span>
                                                         </div>
                                                         <div class="award-section__text__box">
-                                                            <h4 class="award-section__date">april 7th, 2023</h4>
                                                             <h3 class="award-section__title">Developer Award</h3>
                                                         </div>
                                                     </div>
                                                     <div class="award-section__position">
-                                                        <span>Nominee</span>
+                                                        <span>2024</span>
                                                     </div>
                                                 </div>
                                             </a>
@@ -779,10 +789,10 @@
             </section>
 
             <!-- team-section-2 -->
-            <section class="team-section-2__area team-section-2 body-bg section-space-top-160 section-space-bottom-180 fix fade-wrapper">
+            <section class="team-section-2__area team-section-2 body-bg section-space fix fade-wrapper">
                 <div class="title-slide-section title-slide-section-text-animation section-space-bottom-150 body-bg">
                     <div class="title-slide-section__item title-slide-section-text">
-                        <h3><a href="team-details.html">Our amazing team Our amazing team</a></h3>
+                        <h3>Our amazing team Our amazing team</h3>
                     </div>
                 </div>
                 <div class="container">
@@ -931,7 +941,7 @@
             </section>
 
             <!-- brand-section-2 -->
-            <section class="brand-section-2__area brand-section-2 body-bg section-space-top-180 fade-wrapper">
+            <section class="brand-section-2__area brand-section-2 body-bg section-space-top-150 fade-wrapper">
                 <div class="container">
                     <div class="brand-section-2__wrapper">
                         <h3 class="brand-section-2__title rr_title_animation">We partnar with global with <br> +150 brands</h3>
@@ -1030,7 +1040,6 @@
 <script src="assets/js/vendor/magnific-popup.min.js"></script>
 <script src="assets/js/vendor/vanilla-tilt.js"></script>
 <script src="assets/js/vendor/odometer.min.js"></script>
-<script src="assets/js/vendor/jarallax.min.js"></script>
 <script src="assets/js/vendor/jquery-ui.min.js"></script>
 <script src="assets/js/vendor/ajax-form.js"></script>
 <script src="assets/js/main.js"></script>

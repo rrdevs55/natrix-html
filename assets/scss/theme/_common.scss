@@ -207,10 +207,25 @@ body {
 .mb-minus-80 {
 	margin-bottom: -80px;
 }
+.pb-60 {
+	padding-bottom: 60px;
+}
+.mb-minus-60 {
+	margin-bottom: -60px;
+}
 
 section {
 	margin-top: -2px;
 }
 footer {
 	margin-top: -2px;
+}
+
+.text-invert>div {
+	background-image: linear-gradient(to right, var(--rr-common-white) 50%, var(--rr-text-body-2) 51%);
+	background-size: 200% 100%;
+	background-position-x: 100%;
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
 }

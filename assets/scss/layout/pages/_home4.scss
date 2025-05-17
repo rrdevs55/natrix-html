@@ -45,6 +45,7 @@
 
           @media #{$md,$sm,$xs} {
                flex-wrap: wrap;
+               margin-bottom: 40px;
           }
 
           &__dec {
@@ -209,27 +210,11 @@
      .counter-section {
           &__count {
                p {
-                    padding-left: 75px;
-                    font-size: 24px;
-                    line-height: 27px;
-
-                    @media #{$xxl} {
-                         padding-left: 70px;
-                    }
-
-                    @media #{$lg} {
-                         padding-left: 0px;
-                         font-size: 20px;
-                         line-height: 25px;
-                    }
+                    font-size: 20px;
+                    line-height: 25px;
 
                     @media #{$sm,$xs} {
                          line-height: 1;
-                         font-size: 20px;
-                    }
-
-                    @media #{$xs} {
-                         padding-left: 0;
                     }
                }
 
@@ -240,7 +225,6 @@
                     font-size: 120px;
                     line-height: 1;
                     letter-spacing: 15px;
-                    margin-top: 13px;
                     display: flex;
 
                     @media #{$lg,$md} {
@@ -253,13 +237,6 @@
                     @media #{$md,$sm,$xs} {
                          justify-content: center;
                     }
-
-                    .odometer.odometer-auto-theme,
-                    .odometer.odometer-theme-default {
-                         font-family: var(--rr-ff-heading-2);
-                         line-height: 1.1;
-                    }
-
                }
           }
      }

@@ -125,14 +125,14 @@
             line-height: 27px;
             color: var(--rr-text-body);
             font-family: var(--rr-ff-body);
-            background: linear-gradient(var(--rr-text-body) 0%, var(--rr-text-body) 100%);
-            background-size: 100% 1px;
+            background: linear-gradient(var(--rr-theme-primary) 0%, var(--rr-theme-primary) 100%);
+            background-size: 0 1px;
             background-repeat: no-repeat;
             background-position: left 100%;
             transition: all 0.3s ease-in-out;
 
             &:hover {
-                background-size: 0 1px;
+                background-size: 100% 1px;
                 color: var(--rr-theme-primary);
             }
 
@@ -156,14 +156,14 @@
             text-transform: capitalize;
             font-family: var(--rr-ff-heading);
             color: var(--rr-text-body);
-            background: linear-gradient(var(--rr-text-body) 0%, var(--rr-text-body) 100%);
-            background-size: 100% 1px;
+            background: linear-gradient(var(--rr-theme-primary) 0%, var(--rr-theme-primary) 100%);
+            background-size: 0 1px;
             background-repeat: no-repeat;
             background-position: left 100%;
             transition: all 0.3s ease-in-out;
 
             &:hover {
-                background-size: 0 1px;
+                background-size: 100% 1px;
                 color: var(--rr-theme-primary);
             }
 

@@ -4,6 +4,7 @@
 /*  		3.1 header-1
 /*----------------------------------------*/
 
+
 // rr-header
 .rr-header {
     z-index: 99;
@@ -41,14 +42,18 @@
                             display: inline-block;
                             position: relative;
                             margin: 0 23px;
+                            @media #{$lg} {
+                                margin: 0 19px;
+                            }
 
                             a {
                                 font-size: 16px;
                                 font-weight: 500;
                                 line-height: 16px;
-                                color: var(--rr-common-white);
                                 padding: 37px 0;
                                 display: inline-block;
+                                text-transform: uppercase;
+                                color: var(--rr-common-white);
                                 font-family: var(--rr-ff-body) !important;
                             }
 
@@ -56,7 +61,7 @@
                                 position: absolute;
                                 top: 105%;
                                 left: 0;
-                                width: 210px;
+                                width: 250px;
                                 background: var(--rr-common-black);
                                 padding: 15px 0;
                                 opacity: 0;
@@ -72,13 +77,14 @@
 
                                     a {
                                         display: block;
-                                        padding: 8px 20px;
+                                        padding: 9px 20px;
                                         padding-left: 0;
                                         font-size: 16px;
                                         font-weight: 500;
                                         line-height: 16px;
                                         position: relative;
                                         margin-left: -12px;
+                                        text-transform: capitalize;
                                         color: var(--rr-common-white);
                                         font-family: var(--rr-ff-body) !important;
                                         transition: all 0.3s ease-in-out;
@@ -199,6 +205,40 @@
             margin-right: 30px;
         }
     }
+
+    &__navicon {
+        line-height: 1;
+        position: relative;
+
+        .sidebar {
+            &__toggle {
+                width: 55px;
+                height: 55px;
+                cursor: pointer;
+                border-radius: 500px;
+                transition: all 0.5s;
+                border: 1px solid rgba(217, 217, 217, 0.2);
+
+                .dot {
+                    width: 4px;
+                    height: 4px;
+                    position: absolute;
+                    border-radius: 50%;
+                    background: var(--rr-common-white);
+                    transition: all 0.4s ease;
+                }
+
+                &:hover {
+                    background-color: #FFD80C;
+                    border-color: transparent;
+
+                    .dot {
+                        background-color: rgb(17, 17, 17);
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -249,7 +289,7 @@
             #popup-search-box {
                 &:hover {
                     svg [fill="white"] {
-                        fill: var(--rr-theme-primary-2);
+                        fill: var(--rr-theme-primary);
                     }
                 }
             }
@@ -348,6 +388,32 @@
         }
     }
 }
+
+
+
+.rr-header {
+    &__action {
+        &_4 {
+            .rr-btn {
+                padding: 16px 29px;
+            }
+
+            .sidebar{
+                &__toggle {
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 500px;
+                    justify-content: center;
+                    border: 1px solid rgb(255 255 255 / 20%);
+                }
+            }
+        }
+    }
+}
+
+
 
 
 // rr-header-5 

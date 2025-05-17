@@ -218,29 +218,32 @@
     }
 
     &__item {
+        z-index: 1;
+        padding: 50px;
         min-width: 455px;
-        padding: 70px 60px;
         position: relative;
-        border: 1px solid rgb(255 255 255 / 5%);
         transition: all 7s linear;
+        border: 1px solid rgb(255 255 255 / 5%);
 
         @media #{$sm} {
-            min-width: 350px;
             padding: 30px 20px;
         }
 
         @media #{$xs} {
-            min-width: 280px;
             padding: 30px 20px;
+        }
+
+        @media #{$md,$sm,$xs} {
+            min-width: 100%;
         }
 
         &:not(:first-child) {
             border-left: none;
-        }
 
-        // &:last-child{
-        //     margin-right: 50px;
-        // }
+            @media #{$md,$sm,$xs} {
+                border: 1px solid rgb(255 255 255 / 5%);
+            }
+        }
 
         &:hover {
             .services-section-2 {
@@ -268,14 +271,18 @@
         font-weight: 600;
         font-size: 30px;
         line-height: 35px;
-        margin-top: 85px;
-        margin-bottom: 95px;
+        margin-top: 40px;
+        margin-bottom: 40px;
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading);
 
-        @media #{$xs} {
-            margin-top: 40px;
-            margin-bottom: 45px;
+        @media #{$md,$sm,$xs} {
+            margin-top: 25px;
+            margin-bottom: 25px;
+
+            br {
+                display: none;
+            }
         }
 
         a:hover {
@@ -295,6 +302,17 @@
 
     .panels-container {
         width: fit-content;
+
+        @media #{$md,$sm,$xs} {
+            gap: 30px;
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media #{$sm,$xs} {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
     }
 
     &__btn {
@@ -343,6 +361,7 @@
 
     &__capsule {
         &__wrapper {
+            display: none;
             position: relative;
             overflow: hidden;
             pointer-events: none;
@@ -413,6 +432,10 @@
     &__bottom {
         text-align: center;
         margin-top: 75px;
+
+        @media #{$md,$sm,$xs} {
+           margin-top: 30px;
+        }
 
         p {
             font-weight: 400;
@@ -533,8 +556,9 @@
 
     &__caption {
         font-size: 18px;
-        line-height: 1.44;
+        line-height: 1;
         font-weight: 500;
+        text-transform: uppercase;
         color: var(--rr-text-body-2);
         font-family: var(--rr-ff-body);
     }
@@ -596,12 +620,6 @@
         }
     }
 
-    &__content {
-        display: flex;
-        align-items: start;
-        gap: 10px;
-    }
-
     &__title {
         font-size: 80px;
         font-weight: 400;
@@ -638,16 +656,6 @@
         }
     }
 
-    &__number {
-        font-size: 18px;
-        line-height: 1.5;
-        font-weight: 500;
-        color: var(--rr-text-body-2);
-        font-family: var(--rr-ff-body);
-        margin-top: -7px;
-
-    }
-
     &__descirption {
         font-size: 18px;
         line-height: 1.5;
@@ -659,14 +667,6 @@
 
         @media #{$sm,$xs} {
             margin-top: 0px;
-        }
-
-        span {
-            margin-left: 50px;
-
-            @media #{$sm,$xs} {
-                margin-left: 0px;
-            }
         }
     }
 }
@@ -814,6 +814,7 @@
             font-weight: 400;
             font-size: 40px;
             line-height: 50px;
+            text-transform: uppercase;
             transform: translateY(-8px);
             color: var(--rr-common-white);
             font-family: var(--rr-ff-heading-3);

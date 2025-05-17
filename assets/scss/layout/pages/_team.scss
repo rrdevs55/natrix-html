@@ -20,20 +20,6 @@
         }
     }
 
-    .section-title {
-        &__wrapper {
-            margin-left: 190px;
-
-            @media #{$lg} {
-                margin-left: 50px;
-            }
-
-            @media #{$md,$sm,$xs} {
-                margin-left: 0px;
-            }
-        }
-    }
-
     &__dec {
         font-size: 18px;
         font-weight: 400;
@@ -54,32 +40,6 @@
 
         @media #{$xs} {
             font-size: 17px;
-        }
-
-        a {
-            color: var(--rr-common-white);
-            position: relative;
-
-            &::before {
-                content: "";
-                width: 100%;
-                height: 1px;
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                transition: all 0.3s ease-in-out;
-                background-color: var(--rr-text-body);
-            }
-
-            &:hover {
-                color: var(--rr-theme-primary);
-
-                &::before {
-                    width: 0;
-                    left: 0;
-                    background-color: var(--rr-theme-primary);
-                }
-            }
         }
     }
 
@@ -165,14 +125,14 @@
         &__item {
             h3 {
                 font-weight: 500;
-                font-size: 250px;
+                font-size: 200px;
                 line-height: 1;
                 margin-right: -150%;
                 color: var(--rr-common-white);
                 font-family: var(--rr-ff-heading);
 
                 @media #{$xxl} {
-                    font-size: 215px;
+                    font-size: 170px;
                 }
 
                 @media #{$xl} {
@@ -204,16 +164,7 @@
 // team-section-5 --------
 .team-section-5 {
     &__wrapper {
-        margin-left: 100px;
-        margin-right: -310px;
-
-        @media #{$lg} {
-            margin-left: 60px;
-        }
-
-        @media #{$md} {
-            margin-left: 50px;
-        }
+        margin-right: -200px;
 
         @media #{$sm,$xs} {
             margin: 10px;
@@ -252,26 +203,6 @@
                 display: none;
             }
         }
-
-        &::before {
-            content: "";
-            width: 107px;
-            height: 1px;
-            left: 0;
-            top: 50%;
-            position: absolute;
-            transform: translate(-137px, -50%);
-            background-color: var(--rr-common-white);
-
-            @media #{$sm} {
-                width: 70px;
-                transform: translate(-75px, -50%);
-            }
-
-            @media #{$xs} {
-                display: none;
-            }
-        }
     }
 
     &__item {
@@ -301,6 +232,7 @@
         font-size: 30px;
         line-height: 35px;
         margin-bottom: 5px;
+        text-transform: uppercase;
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading-3);
 
@@ -311,8 +243,9 @@
 
     &__position {
         font-weight: 400;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 27px;
+        text-transform: uppercase;
         color: var(--rr-text-body-2);
         font-family: var(--rr-ff-body);
     }

@@ -9,7 +9,7 @@
     &__top {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         flex-wrap: wrap;
         column-gap: 155px;
         margin-bottom: 80px;
@@ -20,12 +20,7 @@
         }
 
         &__content {
-            padding-left: 40px;
-            border-left: 1px solid rgb(217 217 217 / 10%);
-
             @media #{$md,$sm,$xs} {
-                padding-left: 0;
-                border-left: none;
                 margin-top: 30px;
             }
         }
@@ -72,17 +67,12 @@
         }
 
         @media #{$lg} {
-            font-size: 25px;
+            font-size: 23px;
             line-height: 33px;
         }
 
         a:hover {
             color: var(--rr-theme-primary);
-        }
-
-        span {
-            font-weight: 300;
-            font-style: italic;
         }
     }
 
@@ -206,7 +196,10 @@
         color: var(--rr-common-white);
         font-family: var(--rr-ff-body);
 
-        @media #{$sm,$xs} {
+        @media #{$md} {
+            max-width: 415px;
+        }
+        @media #{$md,$sm,$xs} {
             br {
                 display: none;
             }
@@ -249,7 +242,7 @@
         }
 
         @media #{$lg} {
-            font-size: 24px;
+            font-size: 23px;
             line-height: 30px;
         }
 
@@ -312,16 +305,6 @@
 // blog-section-3
 .blog-section-3 {
     background-color: var(--rr-body-primary);
-
-    .blog-section-2 {
-        &__wrapper {
-            margin-right: 80px;
-
-            @media #{$md,$sm,$xs} {
-                margin-right: 0px;
-            }
-        }
-    }
 
     &__page {
         &__number {
@@ -484,6 +467,7 @@
         margin-top: 30px;
         margin-bottom: 17px;
         display: inline-block;
+        text-transform: uppercase;
         color: var(--rr-text-body-2);
         font-family: var(--rr-ff-body);
 
@@ -503,6 +487,7 @@
         font-size: 40px;
         line-height: 45px;
         margin-bottom: 38px;
+        text-transform: uppercase;
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading-3);
 

@@ -77,19 +77,8 @@
             padding: 15px;
         }
 
-
-        span {
-            color: transparent;
-            -webkit-text-stroke: 1px rgb(84, 84, 84);
-        }
-
         &-2 {
             color: var(--rr-common-white);
-
-            span {
-                color: transparent;
-                -webkit-text-stroke: 1px var(--rr-common-white);
-            }
         }
     }
 
@@ -174,6 +163,8 @@
         font-weight: 400;
         font-size: 50px;
         line-height: 1;
+        position: relative;
+        text-transform: uppercase;
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading-3);
 
@@ -192,6 +183,7 @@
         line-height: 40px;
         text-align: center;
         margin-bottom: 75px;
+        text-transform: uppercase;
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading-3);
 

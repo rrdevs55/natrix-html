@@ -14,7 +14,7 @@
     background: var(--rr-theme-primary);
     display: inline-block;
     padding: 18.5px 29px;
-    border-radius: 5px;
+    border-radius: 500px;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -55,7 +55,6 @@
     }
 
     &-2 {
-        border-radius: 0;
         transition: all 0.3s ease-in-out;
         color: var(--rr-common-white);
         background: var(--rr-theme-primary-2);
@@ -206,7 +205,6 @@
         }
     }
 }
-
 
 
 .rr-btn-cus {

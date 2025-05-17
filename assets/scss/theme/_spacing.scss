@@ -5,13 +5,8 @@
 ---------------------------------*/
 
 .section-space {
-	padding-top: 180px;
-	padding-bottom: 180px;
-
-	@media #{$lg} {
-		padding-top: 150px;
-		padding-bottom: 150px;
-	}
+	padding-top: 150px;
+	padding-bottom: 150px;
 
 	@media #{$md} {
 		padding-top: 80px;
@@ -108,38 +103,6 @@
 
 	@media #{$sm,$xs} {
 		padding-top: 40px;
-	}
-}
-
-.section-space-top-180 {
-	padding-top: 180px;
-
-	@media #{$lg} {
-		padding-top: 150px;
-	}
-
-	@media #{$md} {
-		padding-top: 80px;
-	}
-
-	@media #{$sm,$xs} {
-		padding-top: 70px;
-	}
-}
-
-.section-space-bottom-180 {
-	padding-bottom: 180px;
-
-	@media #{$lg} {
-		padding-bottom: 150px;
-	}
-
-	@media #{$md} {
-		padding-bottom: 80px;
-	}
-
-	@media #{$sm,$xs} {
-		padding-bottom: 70px;
 	}
 }
 

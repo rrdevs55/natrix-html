@@ -18,10 +18,11 @@
         display: flex;
         align-items: start;
         justify-content: space-between;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-top: none;
         position: relative;
         z-index: 1;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: none;
+        border-bottom: none;
 
         @media #{$xl,$lg} {
             margin: 0 20px;
@@ -34,6 +35,14 @@
 
         @media #{$sm,$xs} {
             display: block;
+        }
+    }
+    &__border{
+        &__bottom{
+            z-index: 1;
+            margin: 0 -100%;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
     }
 
@@ -56,11 +65,22 @@
         }
     }
 
-    &__count {
-        padding-top: 120px;
-        margin-top: 100px;
-        border-top: 1px solid rgb(255 255 255 / 10%);
+    &__border{
+        &__left {
+            margin-top: 100px;
+            margin-left: -100%;
+            margin-bottom: 58px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        &__right {
+            margin-top: 5px;
+            margin-right: -100%;
+            margin-bottom: 70px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
 
+    &__count {
         h4 {
             font-weight: 600;
             font-size: 65px;
@@ -119,7 +139,7 @@
 
     &__content {
         margin-top: 190px;
-        padding-top: 115px;
+        padding-top: 70px;
         width: 100%;
         border-top: 1px solid rgb(255 255 255 / 10%);
 
@@ -145,7 +165,7 @@
 
     &__title {
         font-weight: 600;
-        font-size: 80px;
+        font-size: 100px;
         line-height: 100px;
         text-align: center;
         margin-bottom: 55px;
@@ -182,18 +202,22 @@
         }
 
         @media #{$md} {
-            font-size: 45px;
-            line-height: 65px;
+            font-size: 40px;
+            line-height: 55px;
+        }
+        @media #{$sm} {
+            font-size: 50px;
+            line-height: 60px;
         }
 
         @media #{$xs} {
-            font-size: 35px;
-            line-height: 55px;
+            font-size: 30px;
+            line-height: 40px;
             margin-bottom: 30px;
         }
 
         img {
-            width: inherit;
+            width: 10%;
             animation: animationglob 10s cubic-bezier(1, 0.99, 0.03, 0.01) infinite;
 
             @media #{$lg,$xs} {
@@ -295,7 +319,6 @@
 
     &__right {
         min-width: 345px;
-        margin-top: 5px;
         text-align: center;
         border-left: 1px solid rgb(255 255 255 / 10%);
 
@@ -311,12 +334,6 @@
 
         &__shape {
             margin: 0 auto;
-            margin-bottom: 130px;
-            border-bottom: 1px solid rgb(255 255 255 / 10%);
-
-            @media #{$md} {
-                margin-bottom: 80px;
-            }
 
             img {
                 width: inherit;
@@ -432,7 +449,6 @@
 
     &__ster {
         position: absolute;
-        animation: animationglob 10s cubic-bezier(1, 0.99, 0.03, 0.01) infinite;
 
         &__shape-1 {
             top: 175px;
@@ -571,7 +587,7 @@
 
     &.banner-section-space {
         padding-top: 230px;
-        padding-bottom: 0px;
+        padding-bottom: 10px;
 
         @media #{$md} {
             padding-top: 160px;
@@ -624,7 +640,7 @@
         text-transform: uppercase;
         position: relative;
         margin-top: 200px;
-        z-index: 99;
+        z-index: 9;
 
         @media #{$xxxl,$xxl} {
             font-size: 430px;
@@ -661,29 +677,6 @@
 
         @media #{$xxs} {
             font-size: 88px;
-        }
-
-        &::after {
-            content: '';
-            width: 100%;
-            height: 18px;
-            background-color: rgb(5, 5, 5);
-            position: absolute;
-            left: 0;
-            bottom: 125px;
-
-            @media #{$md} {
-                bottom: 85px;
-            }
-
-            @media #{$sm} {
-                height: 10px;
-                bottom: 85px;
-            }
-            @media #{$xs} {
-                height: 10px;
-                bottom: 38px;
-            }
         }
     }
 
@@ -760,7 +753,6 @@
 
     &__capsol__content__wrap {
         .border-bottom {
-            margin-top: 10px;
             z-index: 9;
             position: relative;
 
@@ -768,18 +760,14 @@
                 margin-bottom: 0px;
             }
 
-            .border-line:nth-child(odd) {
-                width: 100%;
-                height: 4px;
-                background-color: var(--rr-color-white);
-                margin-top: 5px;
-            }
-
-            .border-line:nth-child(even) {
+            .border-line {
                 width: 100%;
                 height: 1px;
+                margin-bottom: 5px;
                 background-color: var(--rr-color-white);
-                margin-top: 5px;
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -792,7 +780,7 @@
     padding-bottom: 180px;
 
     @media #{$md} {
-        padding-top: 130px;
+        padding-top: 160px;
         padding-bottom: 80px;
     }
 
@@ -807,6 +795,7 @@
         font-weight: 400;
         font-size: 180px;
         line-height: 180px;
+        text-transform: uppercase;
         color: var(--rr-text-body-2);
         font-family: var(--rr-ff-heading-3);
 
@@ -926,7 +915,7 @@
         top: 425px;
 
         @media #{$lg} {
-            left: 48%;
+            left: 44%;
             top: 270px;
         }
     }

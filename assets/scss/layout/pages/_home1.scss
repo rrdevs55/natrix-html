@@ -15,12 +15,12 @@
     }
 
     &__counter {
-        background-color: #FFCD4D;
         display: inline-block;
         margin: -1px 0;
         padding: 0 50px;
         padding-top: 96px;
         padding-bottom: 80px;
+        background-color: var(--rr-body-primary);
 
 
         @media #{$lg,$md,$xs} {
@@ -71,14 +71,17 @@
         }
 
         .title {
-            font-size: 30px;
+            font-size: 25px;
             font-weight: 500;
-            line-height: 35px;
-            color: #2E2828;
+            line-height: 30px;
+            color: var(--rr-common-white);
             font-family: var(--rr-ff-body);
 
             @media #{$xs} {
                 font-size: 23px;
+                br{
+                    display: none;
+                }
             }
         }
     }
@@ -88,7 +91,7 @@
             font-size: 120px;
             font-weight: 600;
             line-height: 1;
-            color: #2E2828;
+            color: var(--rr-common-white);
             font-family: var(--rr-ff-heading);
 
             @media #{$md} {
@@ -113,12 +116,13 @@
 .title-slide-section {
     &__item {
         h3 {
-            font-size: 150px;
+            font-size: 220px;
             font-weight: 500;
             line-height: 1;
             display: flex;
             align-items: center;
             column-gap: 80px;
+            text-transform: uppercase;
             color: var(--rr-common-white);
             font-family: var(--rr-ff-heading);
 
@@ -207,9 +211,9 @@
         }
 
         p {
-            font-size: 30px;
+            font-size: 22px;
             font-weight: 400;
-            line-height: 35px;
+            line-height: 27px;
             color: var(--rr-text-body);
             font-family: var(--rr-ff-body);
 

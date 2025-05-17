@@ -58,7 +58,7 @@
         });
 
         let smoother = ScrollSmoother.create({
-            smooth: 0.5,
+            smooth: 1.5,
             effects: true,
             smoothTouch: false,
             normalizeScroll: false,
@@ -344,14 +344,7 @@
         }
     });
 
-
-
-    // jarallax js 
-    $('.jarallax').jarallax({
-        speed: 0.2,
-    });
-
-
+    
 
     // Natrix js ----------------------------------
 
@@ -388,7 +381,7 @@
     }
 
 
-
+    // projects - section
     if ($('.projects-section__area').length > 0) {
         let mm = gsap.matchMedia();
         mm.add("(min-width: 768px)", () => {
@@ -398,7 +391,8 @@
                     trigger: '.projects-section__area',
                     scrub: 1,
                     start: 'top -10%',
-                    end: "bottom 85%",
+                    end: "bottom 75%",
+                    pinSpacing: false,
                     pin: '.section-title__wrapper_2_anim',
                     markers: false,
                     toggleActions: 'play reverse play reverse',
@@ -408,7 +402,7 @@
     }
 
 
-
+    // work - process
     if ($('.work-process__section').length > 0) {
         let mm = gsap.matchMedia();
         mm.add("(min-width: 768px)", () => {
@@ -418,7 +412,7 @@
                     trigger: '.work-process__section',
                     scrub: 1,
                     start: 'top -30%',
-                    end: "bottom 108%",
+                    end: "bottom 85%",
                     pin: '.work-process-panel-pin',
                     markers: false,
                     toggleActions: 'play reverse play reverse',
@@ -427,6 +421,7 @@
         });
     }
 
+    // project - section - 3
     if ($('.project-section-3').length > 0) {
         let mm = gsap.matchMedia();
         mm.add("(min-width: 768px)", () => {
@@ -445,6 +440,7 @@
         });
     }
 
+    // faq - section
     if ($('.faq-section').length > 0) {
         let mm = gsap.matchMedia();
         mm.add("(min-width: 992px)", () => {
@@ -464,13 +460,14 @@
     }
 
 
+    // title - slide - section
     if (document.querySelectorAll(".title-slide-section-text").length > 0 && window.innerWidth > 768) {
         gsap.set('.title-slide-section-text', { x: '0%' });
 
         gsap.timeline({
             scrollTrigger: {
                 trigger: '.title-slide-section-text-animation',
-                start: '-750 0%',
+                start: '-850 0%',
                 end: 'bottom 0%',
                 scrub: true,
                 invalidateOnRefresh: true,
@@ -481,8 +478,7 @@
     }
 
 
-
-
+    // funfact - area - 2
     if (document.querySelectorAll(".funfact-area-2").length > 0 && window.innerWidth > 768) {
         gsap.to(".funfact-area-2 .thumb img", {
             scale: "1",
@@ -491,7 +487,7 @@
                 start: "top top",
                 end: "bottom -50%",
                 pin: ".funfact-area-2",
-                scrub: 2,
+                scrub: 1,
                 markers: false,
                 toggleActions: 'play reverse play reverse',
             }
@@ -499,7 +495,7 @@
     }
 
 
-    //  hover-active
+    // services-section---- hover-active
     let rightItems = document.querySelectorAll('.services-section__content .services-section__item');
     let leftItems = document.querySelectorAll('.services-section__thumb .service-image');
 
@@ -525,7 +521,7 @@
 
 
 
-
+    // Banner Title anim 
     if (document.querySelectorAll(".rr-char-animation").length > 0 && window.innerWidth > 768) {
         let char_come = gsap.utils.toArray(".rr-char-animation");
         char_come.forEach(splitTextLine => {
@@ -556,7 +552,7 @@
     }
 
 
-
+    // fade - item anim 
     if (document.querySelectorAll(".fade-wrapper").length > 0) {
         $(".fade-wrapper").each(function () {
             var section = $(this);
@@ -593,6 +589,7 @@
     }
 
 
+    // all title anim 
     if (document.querySelectorAll(".rr_title_animation").length > 0) {
         let elements = document.querySelectorAll(".rr_title_animation");
 
@@ -626,6 +623,7 @@
     //split-text animation end
 
 
+    // img - custom - anim - img
     if (document.querySelectorAll(".img-custom-anim-img").length > 0) {
         gsap.utils.toArray(".img-custom-anim-img").forEach((img) => {
             gsap.set(img, { opacity: 0, x: -50, clipPath: "inset(0 100% 0 0)" });
@@ -658,7 +656,8 @@
     }
 
 
-    if (document.querySelectorAll(".panels-container").length > 0) {
+    // scroll item Moving anim
+    if (document.querySelectorAll(".panels-container").length > 0 && window.innerWidth > 992) {
         const panelsContainer = document.querySelector(".panels-container");
         const panels = gsap.utils.toArray(".panel");
         let totalPanelsWidth = panels.reduce((acc, panel) => acc + panel.offsetWidth, 0);
@@ -673,12 +672,34 @@
                 pin: true,
                 pinSpacing: true,
                 scrub: true,
-                start: "-33% top",
+                start: "-53% top",
                 end: "+=" + (totalPanelsWidth - window.innerWidth + 500),
                 anticipatePin: 3,
                 markers: false,
                 toggleActions: "play none none reverse",
             }
+        });
+    }
+
+
+    
+    // Moving project		
+    if ($('.project-section-2__inner').length > 0 && window.innerWidth > 1200) {
+        gsap.utils.toArray('.project-section-2__inner').forEach((section, index) => {
+            const w = section.querySelector('.project-section-2__wrapper');
+            const [x, xEnd] = (index % 2) ? [(section.offsetWidth - w.scrollWidth), 0] : [0, section.offsetWidth - w.scrollWidth];
+            gsap.fromTo(w, {
+                x
+            }, {
+                x: xEnd,
+                scrollTrigger: {
+                    trigger: ".project-section-2",
+                    scrub: 2,
+                    start: "bottom bottom",
+                    pin: true,
+                    // markers: true,
+                }
+            });
         });
     }
 
@@ -706,7 +727,7 @@
 
 
 
-
+    // progress - ring
     if (document.querySelectorAll(".progress-ring__circle").length > 0) {
         document.addEventListener("DOMContentLoaded", () => {
 
@@ -760,7 +781,7 @@
     }
 
 
-
+    // testimonial - slide
     if (document.querySelector(".testimonial-slide__active")) {
         var testimonial = new Swiper(".testimonial-slide__active", {
             slidesPerView: 1,
@@ -773,7 +794,7 @@
         });
     }
 
-
+    // brand - slide
     if (document.querySelector(".brand-slide__active")) {
         document.addEventListener("DOMContentLoaded", function () {
             const swiper = new Swiper(".brand-slide__active", {
@@ -791,6 +812,7 @@
         });
     }
 
+    // title - slide
     if (document.querySelector(".title-slide__active")) {
         document.addEventListener("DOMContentLoaded", function () {
             const swiper = new Swiper(".title-slide__active", {
@@ -808,6 +830,7 @@
         });
     }
 
+    //title - slider - 3
     if (document.querySelector(".title-slider-3__active")) {
         document.addEventListener("DOMContentLoaded", function () {
             const swiper = new Swiper(".title-slider-3__active", {
@@ -825,7 +848,7 @@
         });
     }
 
-    // text slider 
+    //title-slider-3_2
     if ('.title-slider-3__active-2') {
         var text_slider = new Swiper(".title-slider-3__active-2", {
             slidesPerView: 'auto',
@@ -840,7 +863,7 @@
         });
     }
 
-
+    // project - section - 2
     if (document.querySelector(".project-section-2__active")) {
         var swiperProject = new Swiper(".project-section-2__active", {
             slidesPerView: 4,
@@ -870,7 +893,7 @@
         });
     }
 
-
+    // feedback - section
     if (document.querySelector(".feedback-section__active")) {
         var swiperfeedback = new Swiper(".feedback-section__active", {
             slidesPerView: 4,
@@ -913,7 +936,7 @@
     // Update 
 
 
-    // hover reveal 4 start
+    // service-section-4 hover reveal start
     if (document.querySelectorAll(".service-section-4__active").length > 0) {
         const hoveritem = document.querySelectorAll(
             ".service-section-4__active"
@@ -1029,7 +1052,7 @@
     });
 
 
-
+    // team - section - 5
     if (document.querySelector(".team-section-5__active")) {
         var swiperfeedback = new Swiper(".team-section-5__active", {
             slidesPerView: 5,
@@ -1074,6 +1097,7 @@
         });
     }
 
+    // project - section - 5
     if ($('.project-section-5').length > 0) {
         let mm = gsap.matchMedia();
         mm.add("(min-width: 768px)", () => {
@@ -1091,35 +1115,9 @@
             });
         });
     }
-
-    if (document.querySelectorAll(".project-section-5").length > 0 && window.innerWidth > 768) {
-        const fill = document.querySelector(".project-section-5__fill");
-        const current = document.getElementById("project-section-5__current");
-        const total = document.getElementById("project-section-5__total");
-
-        const steps = 5;
-        total.textContent = steps.toString().padStart(2, '0');
-
-        ScrollTrigger.create({
-            trigger: ".project-section-5",
-            start: "top top",
-            end: "bottom bottom",
-            scrub: true,
-            onUpdate: (self) => {
-                const progress = self.progress;
-
-                const step = Math.floor(progress * (steps - 1)) + 1;
-                const width = (step / steps) * 100;
-
-                fill.style.width = `${width}%`;
-                current.textContent = step.toString().padStart(2, '0');
-            }
-        });
-    }
-
-
     
 
+    // testimonial - section - 5
     if (window.innerWidth > 767) {
         let testiPanels = document.querySelectorAll('.testimonial-section-5__panel');
 
@@ -1130,7 +1128,7 @@
                     pin: section,
                     scrub: 1,
                     start: 'top 10%',
-                    end: 'bottom 104%',
+                    end: 'bottom 75%',
                     endTrigger: '.testimonial-section-5__panel-area',
                     pinSpacing: false,
                     markers: false
@@ -1142,6 +1140,7 @@
     }
 
 
+    // testimonial - section - 5
     if ($('.testimonial-section-5').length > 0) {
         let mm = gsap.matchMedia();
         mm.add("(min-width: 768px)", () => {
@@ -1151,7 +1150,7 @@
                     trigger: '.testimonial-section-5',
                     scrub: 1,
                     start: 'top 10%',
-                    end: "bottom 124%",
+                    end: "bottom 120.5%",
                     pin: '.testimonial-section-5-panel-pin',
                     markers: false,
                     toggleActions: 'play reverse play reverse',
@@ -1160,23 +1159,24 @@
         });
     }
 
+    // service - section - 5
     if (document.querySelectorAll(".service-section-5-anim-text").length > 0 && window.innerWidth > 768) {
-        gsap.set('.service-section-5-anim-text', { x: '25%' });
+        gsap.set('.service-section-5-anim-text', { x: '5%' });
 
         gsap.timeline({
             scrollTrigger: {
                 trigger: '.service-section-5-text-animation',
-                start: '-800 0%',
+                start: '-850 0%',
                 end: 'bottom 0%',
                 scrub: true,
                 invalidateOnRefresh: true,
                 markers: false,
                 toggleActions: 'play reverse play reverse',
             }
-        }).to('.service-section-5-anim-text', { x: '-11%' });
+        }).to('.service-section-5-anim-text', { x: '-12%' });
     }
 
-    
+    // title - slider - 5
     if (document.querySelector(".title-slider-5__active")) {
         document.addEventListener("DOMContentLoaded", function () {
             const swiper = new Swiper(".title-slider-5__active", {
@@ -1194,6 +1194,7 @@
         });
     }
 
+    // brand - section - 5
     if (document.querySelector(".brand-section-5__active")) {
         document.addEventListener("DOMContentLoaded", function () {
             const swiper = new Swiper(".brand-section-5__active", {
@@ -1211,6 +1212,7 @@
         });
     }
 
+    // service - section - 5
     if (document.querySelector(".service-section-5__active")) {
         var swiperservices = new Swiper(".service-section-5__active", {
             slidesPerView: 3.5,
@@ -1250,6 +1252,111 @@
             },
         });
     }
+
+
+
+        // Update --- 2
+
+
+    // Text Invert With Scroll 
+    const split = new SplitText(".text-invert", {
+        type: "lines"
+    });
+    split.lines.forEach((target) => {
+        gsap.to(target, {
+            backgroundPositionX: 0,
+            ease: "none",
+            scrollTrigger: {
+                trigger: target,
+                scrub: 1,
+                start: 'top 15%',
+                end: "bottom bottom",
+                markers: false,
+            }
+        });
+    });
+
+
+    // side-toggle animaton
+    document.addEventListener("DOMContentLoaded", () => {
+        const dotGrid = document.querySelector(".sidebar__toggle");
+
+        if (dotGrid) {
+            const dotSize = 4;
+            const gapX = 5;
+            const gapY = 5;
+            const centerOffset = 26;
+
+            const baseOffset = dotSize + gapX;
+            const baseOffsetY = dotSize + gapY;
+
+            const positions = [{
+                x: 0,
+                y: 0
+            },
+            {
+                x: baseOffset,
+                y: 0
+            },
+            {
+                x: baseOffset * 2,
+                y: 0
+            },
+            {
+                x: 0,
+                y: baseOffsetY
+            },
+            {
+                x: baseOffset,
+                y: baseOffsetY
+            },
+            {
+                x: baseOffset,
+                y: baseOffsetY * 2
+            },
+            {
+                x: baseOffset * 2,
+                y: baseOffsetY * 2
+            },
+            ];
+
+            const originalPositions = [...positions];
+            const dots = [];
+
+            function setDotPosition(dot, pos) {
+                dot.style.left = `${centerOffset + pos.x - baseOffset}px`;
+                dot.style.top = `${centerOffset + pos.y - baseOffsetY}px`;
+            }
+
+            positions.forEach(pos => {
+                const dot = document.createElement("div");
+                dot.classList.add("dot");
+                setDotPosition(dot, pos);
+                dotGrid.appendChild(dot);
+                dots.push(dot);
+            });
+
+            function applyShuffledPositions() {
+                const shuffled = [...positions].sort(() => Math.random() - 0.5);
+                dots.forEach((dot, i) => setDotPosition(dot, shuffled[i]));
+            }
+
+            function resetPositions() {
+                dots.forEach((dot, i) => setDotPosition(dot, originalPositions[i]));
+            }
+
+            dotGrid.addEventListener("mouseenter", applyShuffledPositions);
+            dotGrid.addEventListener("mouseleave", resetPositions);
+        }
+    });
+
+
+
+
+
+    
+
+
 
 
 

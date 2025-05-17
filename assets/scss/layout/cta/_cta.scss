@@ -59,46 +59,21 @@
 
 // cta section 4 =============
 .cta-section-4 {
-    &__thumb-title {
-        font-size: 30px;
-        line-height: 1.17;
-        font-weight: 400;
-        color: var(--rr-text-body-2);
-        font-family: var(--rr-ff-body);
-        max-width: 600px;
-
-        @media #{$xs} {
-            font-size: 20px;
-        }
-
-        &::before {
-            content: "";
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            margin-right: 10px;
-            display: inline-block;
-            background-color: var(--rr-color-white);
-        }
-    }
-
     &__thumb {
         overflow: hidden;
-        margin-top: 73px;
         border-radius: 5px;
         display: inline-block;
+
+        @media #{$lg,$md,$sm,$xs} {
+            margin-top: 30px;
+        }
 
         img {
             max-width: 100%;
         }
-
-        @media #{$lg,$md,$sm,$xs} {
-            margin-top: 40px;
-        }
     }
 
     &__title {
-        text-align: right;
         font-size: 80px;
         font-weight: 400;
         line-height: 1;
@@ -130,23 +105,14 @@
         }
     }
 
-    &__btn__wrap {
-        display: flex;
-        justify-content: end;
-
-        @media #{$xs} {
-            justify-content: center;
-        }
-    }
-
     &__btn {
         border: 1.5px solid var(--rr-color-white);
-        border-radius: 1000px;
         width: 346px;
         height: 127px;
         display: grid;
         place-items: center;
         margin-top: 20px;
+        border-radius: 500px;
 
         @media #{$xl,$lg,$sm,$xs} {
             width: 286px;
@@ -238,14 +204,17 @@
             font-size: 70px;
             transform: translateY(-10px);
         }
+
         @media #{$sm} {
             font-size: 65px;
             transform: translateY(-8px);
         }
+
         @media #{$xs} {
             font-size: 38px;
             transform: translateY(-5px);
-            br{
+
+            br {
                 display: none;
             }
         }
@@ -258,9 +227,11 @@
             @media #{$lg,$md} {
                 transform: translateY(-25px);
             }
+
             @media #{$sm} {
                 transform: translateY(-22px);
             }
+
             @media #{$xs} {
                 display: none;
             }
@@ -282,15 +253,19 @@
         @media #{$xl} {
             height: 500px;
         }
+
         @media #{$lg} {
             height: 450px;
         }
+
         @media #{$md} {
             height: 400px;
         }
+
         @media #{$sm} {
             height: 350px;
         }
+
         @media #{$xs} {
             height: 300px;
         }

@@ -144,29 +144,11 @@
     
                 <div class="rr-header__right">
                     <div class="rr-header__action d-flex align-items-center">
-                        <ul class="d-none d-sm-inline-flex">
-                            <li>
-                                <button id="popup-search-box" class="search-open-btn">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M13.7071 12.2929C13.3166 11.9024 12.6834 11.9024 12.2929 12.2929C11.9024 12.6834 11.9024 13.3166 12.2929 13.7071L13.7071 12.2929ZM18.2929 19.7071C18.6834 20.0976 19.3166 20.0976 19.7071 19.7071C20.0976 19.3166 20.0976 18.6834 19.7071 18.2929L18.2929 19.7071ZM8 14C4.68629 14 2 11.3137 2 8H0C0 12.4183 3.58172 16 8 16V14ZM2 8C2 4.68629 4.68629 2 8 2V0C3.58172 0 0 3.58172 0 8H2ZM8 2C11.3137 2 14 4.68629 14 8H16C16 3.58172 12.4183 0 8 0V2ZM14 8C14 11.3137 11.3137 14 8 14V16C12.4183 16 16 12.4183 16 8H14ZM12.2929 13.7071L18.2929 19.7071L19.7071 18.2929L13.7071 12.2929L12.2929 13.7071Z"
-                                            fill="white"></path>
-                                    </svg>
-                                </button>
-                            </li>
-                        </ul>
-                        <div class="rr-header__btn-wrap d-none d-lg-inline-flex">
+                        <div class="rr-header__btn-wrap d-none d-lg-inline-flex mr-10">
                             <a href="contact.html" class="rr-btn hover-anim">Explore our <span class="hover-bg"></span></a>
                         </div>
-                        <div class="header__hamburger ml-10 ml-lg-0 ml-md-0 ml-sm-0 ml-xs-0 d-lg-none">
-                            <div class="sidebar__toggle">
-                                <button class="bar-icon">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                            </div>
+                        <div class="rr-header__navicon">
+                            <button class="sidebar__toggle" id="side-toggle"></button>
                         </div>
                     </div>
                 </div>
@@ -234,12 +216,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="banner-section__wrapper">
-                                <h1 class="banner-section__title rr-char-animation">Our grow your business <br> with <img src="assets/imgs/icon/title-icon.png" alt="icon"> <span>digital marketing <br> creativity</span></h1>
+                                <h1 class="banner-section__title rr-char-animation">Our grow your business <br> with <img src="assets/imgs/icon/title-icon.png" alt="icon"> digital marketing <br> creativity</h1>
                             </div>
                         </div>
                         <div class="col-lg-6 offset-md-6">
                               <div class="banner-section__content fade-top">
-                                <p class="banner-section__dec">Growth marketing is a strategic <br> approach which drives rapid and <br> sustainable <span>business growth</span>. unlike <br> traditional
+                                <p class="banner-section__dec">Growth marketing is a strategic <br> approach which drives rapid and <br> sustainable business growth. unlike <br> traditional
                                 marketing</p>
                                 <div class="banner-section__btn">
                                     <a href="about-us.html" class="rr-arrow__btn">Discover more <svg width="15" height="16" viewBox="0 0 15 16"
@@ -252,28 +234,25 @@
                               </div>
                         </div>
                     </div>
-                    <div class="banner-section__social d-none d-md-grid fade-top">
-                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.twitch.com/"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <div class="banner-section__circle d-none d-md-flex fade-top ">
+                        <div class="text p-relative">
+                            <img class="image_1" src="assets/imgs/banner/banner-shape_1_01.webp" alt="image not found">
+                            <img class="image_2" src="assets/imgs/banner/banner-shape_1_02.webp" alt="image not found">
+                        </div>
                     </div>
-                </div>
-                <div class="banner-section__bg__text d-none d-md-block">
-                    <h3 class="upDown">Natrix digital studio</h3>
                 </div>
             </section>
 
             <!-- thumb-bg-section -->
-            <section class="thumb-bg-section__area thumb-bg-section body-bg">
-                <div class="thumb-bg-section__wrapper jarallax" data-background="assets/imgs/images/bg-thumb-01.jpg">
-                    <div class="thumb-bg-section__counter">
-                        <span class="title">Successfuly project with <br> internation markets</span>
+            <section class="thumb-bg-section__area thumb-bg-section body-bg fix">
+                <div class="thumb-bg-section__wrapper" data-background="assets/imgs/images/bg-thumb-01.jpg" data-speed="0.7">
+                    <div class="thumb-bg-section__counter p-relative z-index-11">
+                        <span class="title">Successfully projects done <br> in 24 countries</span>
                         <div class="thumb-bg-section__counter__thumb">
                             <img src="assets/imgs/images/counter-bg.jpg" alt="image not found">
                         </div>
                         <div class="thumb-bg-section__count">
-                            <h4><span class="odometer" data-count="495">0</span>+</h4>
+                            <h4><span class="odometer" data-count="120">0</span>+</h4>
                         </div>
                     </div>
                 </div>
@@ -330,13 +309,13 @@
                             <h4 class="title">the about</h4>
                         </div>
                         <div class="section-title__wrapper">
-                            <h2 class="section__title rr_title_animation"><span class="ml-80">Natrix digital marketing</span> Studio <br> brand which
-                                <span>creative solutions</span> to <br> marketing problems</h2>
+                            <h2 class="section__title rr_title_animation"> Natrix digital marketing Studio <br> brand which
+                                 creative solutions to <br> marketing problems</h2>
                         </div>
                         <div class="row align-items-center">
                             <div class="col-md-6">
-                                <div class="about-section__thumb">
-                                    <img class="img-custom-anim-img" src="assets/imgs/images/about-01.jpg" alt="image not found">
+                                <div class="about-section__thumb fix">
+                                    <img data-speed="0.9" src="assets/imgs/images/about-01.jpg" alt="image not found">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -378,23 +357,15 @@
                         </div>
                         <div class="section-title__wrapper_2 text_center">
                             <div class="section-title__wrapper_2_anim">
-                                <h2 class="section__title">Featured <br>
-                                    <span>work</span>
-                                </h2>
+                                <h2 class="section__title">work</h2>
                             </div>
-                            <a href="project-details.html" class="rr-arrow__btn">See all works <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M5.75621 13.4798L10.2153 9.02076L0.171615 9.02076L0.171614 6.67702L10.2153 6.67702L5.75952 2.22126L7.41471 0.566074L14.6975 7.84889L7.41471 15.1317L5.75952 13.4765L5.75621 13.4798Z"
-                                    fill="#C0C0C0" />
-                            </svg>
-                                </a>
                         </div>
                         <div class="row z-index-1 p-relative">
                             <div class="col-md-6">
                                 <div class="projects-section__item margin-bottom">
-                                    <div class="projects-section__thumb image_1">
+                                    <div class="projects-section__thumb image_1 fix">
                                             <a href="project-details.html">
-                                                <img src="assets/imgs/images/project-01.png" alt="image not found">
+                                                <img data-speed="0.8" src="assets/imgs/images/project-01.png" alt="image not found">
                                             </a>
                                     </div>
                                     <div class="projects-section__content">
@@ -404,9 +375,9 @@
                                     </div>
                                 </div>
                                 <div class="projects-section__item">
-                                        <div class="projects-section__thumb image_2">
+                                        <div class="projects-section__thumb image_2 fix">
                                             <a href="project-details.html">
-                                                <img src="assets/imgs/images/project-02.png" alt="image not found">
+                                                <img data-speed="0.8" src="assets/imgs/images/project-02.png" alt="image not found">
                                             </a>
                                         </div>
                                         <div class="projects-section__content">
@@ -417,9 +388,9 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="projects-section__item margin-left margin-top margin-bottom">
-                                        <div class="projects-section__thumb image_3">
+                                        <div class="projects-section__thumb image_3 fix">
                                             <a href="project-details.html">
-                                                <img src="assets/imgs/images/project-03.png" alt="image not found">
+                                                <img data-speed="0.8" src="assets/imgs/images/project-03.png" alt="image not found">
                                             </a>
                                         </div>
                                         <div class="projects-section__content">
@@ -430,9 +401,9 @@
                                    
                                 </div>
                                 <div class="projects-section__item margin-left">
-                                        <div class="projects-section__thumb image_4">
+                                        <div class="projects-section__thumb image_4 fix">
                                             <a href="project-details.html">
-                                                <img src="assets/imgs/images/project-04.png" alt="image not found">
+                                                <img data-speed="0.8" src="assets/imgs/images/project-04.png" alt="image not found">
                                             </a>
                                         </div>
                                         <div class="projects-section__content">
@@ -456,7 +427,7 @@
                         </div>
                         <div class="services-section__top">
                             <div class="section-title__wrapper">
-                                <h2 class="section__title rr_title_animation">We provide <br> Help to <span>services <br> agency</span></h2>
+                                <h2 class="section__title rr_title_animation">We provide <br> Help to services <br> agency</h2>
                             </div>
                             <div class="services-section__top__content">
                                 <p class="services-section__dec fade-top">I have expanded in comparison for faced here <br> with an open form
@@ -476,22 +447,22 @@
                                 <div class="services-section__thumb">
                                     <a href="service-details.html">
                                         <div class="service-image active">
-                                            <img class="main-image" src="assets/imgs/images/services-01.jpg" alt="image not found">
+                                            <img data-speed="0.8" class="main-image" src="assets/imgs/images/services-01.jpg" alt="image not found">
                                         </div>
                                     </a>
                                     <a href="service-details.html">
                                         <div class="service-image">
-                                            <img class="main-image" src="assets/imgs/images/services-2.jpg" alt="image not found">
+                                            <img data-speed="0.8" class="main-image" src="assets/imgs/images/services-2.jpg" alt="image not found">
                                         </div>
                                     </a>
                                     <a href="service-details.html">
                                         <div class="service-image">
-                                            <img class="main-image" src="assets/imgs/images/services-3.jpg" alt="image not found">
+                                            <img data-speed="0.8" class="main-image" src="assets/imgs/images/services-3.jpg" alt="image not found">
                                         </div>
                                     </a>
                                     <a href="service-details.html">
                                         <div class="service-image">
-                                            <img class="main-image" src="assets/imgs/images/services-4.jpg" alt="image not found">
+                                            <img data-speed="0.8" class="main-image" src="assets/imgs/images/services-4.jpg" alt="image not found">
                                         </div>
                                     </a>
                                 </div>
@@ -552,60 +523,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-                            <!-- <div class="col-xl-5 col-lg-5 col-12">
-                                <div class="ch-service-left-wrapper">
-                                    <div class="services-section__thumb__group">
-                                        <div class="service-image active">
-                                            <img class="main-image" src="assets/imgs/images/services-01.jpg" alt="image not found">
-                                        </div>
-                                        <div class="service-image">
-                                            <img class="imageParallax" src="assets/imgs/images/services-01.jpg" alt="image not found">
-                                        </div>
-                                        <div class="service-image">
-                                            <img class="imageParallax" src="assets/imgs/images/services-01.jpg" alt="image not found">
-                                        </div>
-                                        <div class="service-image">
-                                            <img class="imageParallax" src="assets/imgs/images/services-01.jpg" alt="image not found">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-7 col-lg-7 col-12">
-                                <div class="services-section__content">
-                                    <a href="service-single.php" class="item active">
-                                        <div class="item-left">
-                                            <span>01</span>
-                                            <h2>Creative Design Solutions</h2>
-                                        </div>
-                                        <i class="icon-arrow"></i>
-                                    </a>
-                                    <a href="service-single.php" class="item">
-                                        <div class="item-left">
-                                            <span>02</span>
-                                            <h2>Branding and Identity Mastery</h2>
-                                        </div>
-                                        <i class="icon-arrow"></i>
-                                    </a>
-                                    <a href="service-single.php" class="item">
-                                        <div class="item-left">
-                                            <span>03</span>
-                                            <h2>Photography and Videography</h2>
-                                        </div>
-                                        <i class="icon-arrow"></i>
-                                    </a>
-                                    <a href="service-single.php" class="item">
-                                        <div class="item-left">
-                                            <span>04</span>
-                                            <h2>UI/UX Design Innovation</h2>
-                                        </div>
-                                        <i class="icon-arrow"></i>
-                                    </a>
-                                </div>
-                            </div> -->
-
-
                         </div>
                     </div>
                 </div>
@@ -622,7 +539,7 @@
                             <div class="col-lg-5">
                                 <div class="testimonial-section__content">
                                     <div class="section-title__wrapper">
-                                        <h2 class="section__title rr_title_animation">What our <br> <span>natrix agency</span> <br> clients say</h2>
+                                        <h2 class="section__title rr_title_animation">What our <br> natrix agency <br> clients say</h2>
                                     </div>
                                     <p class="testimonial-section__dec fade-top">World class design and development agency</p>
                                     <div class="testimonial-section__review fade-top">
@@ -664,9 +581,6 @@
                                                     </div>
                                                     <p class="dec">“Amazing experience working with yo from the start to the end of the process, they were professional, and provided a
                                                     very high level of service. and produced a site that I am extremely happy with”</p>
-                                                    <div class="testimonial-section__author__sign">
-                                                        <img src="assets/imgs/icon/testi-icon-02.png" alt="icon">
-                                                    </div>
                                                     <div class="testimonial-section__author">
                                                         <div class="testimonial-section__author__thumb">
                                                             <img src="assets/imgs/images/author-01.png" alt="image not found">
@@ -705,8 +619,8 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <div class="section-title__wrapper text_center">
-                                    <h2 class="section__title rr_title_animation">Our design <span>process <br> thinking</span></h2>
+                                <div class="section-title__wrapper">
+                                    <h2 class="section__title rr_title_animation">Our design process <br> thinking</h2>
                                 </div>
                             </div>
                         </div>
@@ -717,15 +631,6 @@
                                         <p class="work-process__dec">It is a model related to creative complex <br> problem solving
                                             that aims to provide a <br> standardized innovation process to all <br>
                                             professionals.</p>
-                                        <div class="work-process__btn">
-                                            <a href="contact.html" class="rr-btn white-btn hover-anim">Work with us now <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M5.75645 13.6104L10.2155 9.15138L0.171859 9.15138L0.171858 6.80763L10.2155 6.80763L5.75977 2.35187L7.41495 0.696689L14.6978 7.9795L7.41495 15.2623L5.75977 13.6071L5.75645 13.6104Z"
-                                                        fill="#2E2828" />
-                                                </svg>
-                                                <span class="hover-bg"></span></a>
-                                        </div>
                                         <div class="work-process__step">
                                             <svg class="progress-ring" width="274" height="274">
                                                 <circle class="progress-ring__circle" cx="135" cy="137" r="134"></circle>
@@ -744,7 +649,7 @@
                                         <div class="work-process__icon">
                                             <img src="assets/imgs/icon/work-process-01.png" alt="icon">
                                         </div>
-                                        <h3 class="work-process__title">Design & <span>Development</span></h3>
+                                        <h3 class="work-process__title">Design & Development</h3>
                                         <p class="work-process__dec">The design development phase follows the schematic design <br>
                                             phase and further refines the initial details.</p>
                                     </div>
@@ -752,7 +657,7 @@
                                         <div class="work-process__icon">
                                             <img src="assets/imgs/icon/work-process-02.png" alt="icon">
                                         </div>
-                                        <h3 class="work-process__title">Discovery & <span>Strategy</span></h3>
+                                        <h3 class="work-process__title">Discovery & Strategy</h3>
                                         <p class="work-process__dec">A strategic approach might a strategic planning or a business
                                             <br> model or business plan </p>
                                     </div>
@@ -760,7 +665,7 @@
                                         <div class="work-process__icon">
                                             <img src="assets/imgs/icon/work-process-03.png" alt="icon">
                                         </div>
-                                        <h3 class="work-process__title">User <span>Research</span></h3>
+                                        <h3 class="work-process__title">User Research</h3>
                                         <p class="work-process__dec">Usability testing is a type of product research that helps <br>
                                             companies establish</p>
                                     </div>
@@ -768,7 +673,7 @@
                                         <div class="work-process__icon">
                                             <img src="assets/imgs/icon/work-process-04.png" alt="icon">
                                         </div>
-                                        <h3 class="work-process__title">testing & <span>Optimization</span></h3>
+                                        <h3 class="work-process__title">testing & Optimization</h3>
                                         <p class="work-process__dec">The process of testing variations of content, design, or a <br>
                                             culture of testing and optimization,</p>
                                     </div>
@@ -786,27 +691,27 @@
                         <div class="col-lg-3 col-sm-6">
                             <div class="counter-section__count mb-40 fade-top">
                                 <h4><span class="odometer" data-count="16">0</span>+</h4>
-                                <p>Years <br> experiences</p>
+                                <p>Years experiences</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
                             <div class="counter-section__count mb-40 fade-top">
                                 <h4><span class="odometer" data-count="98">0</span>%</h4>
-                                <p>Completed <br>
+                                <p>Completed
                                     Project</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
                             <div class="counter-section__count mb-40 fade-top">
                                 <h4><span class="odometer" data-count="10">0</span>k</h4>
-                                <p>Valuable <br>
+                                <p>Valuable
                                     happy clients.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
                             <div class="counter-section__count mb-40 fade-top">
                                 <h4><span class="odometer" data-count="60">0</span>+</h4>
-                                <p>Awards innovation <br> winner</p>
+                                <p>Awards innovation winner</p>
                             </div>
                         </div>
                     </div>
@@ -826,7 +731,7 @@
                         <div class="row align-items-center">
                             <div class="col-md-5">
                                 <div class="team-section__content fade-top">
-                                    <p class="team-section__dec">We are a creative studio We deliver <br> unique and fun team building activities, <br> and <a href="contact.html">Please contact us now.</a></p>
+                                    <p class="team-section__dec">We are a creative studio We deliver <br> unique and fun team building activities, <br> and Please contact us now.</p>
                                     <div class="team-section__btn">
                                         <a href="team-details.html" class="rr-arrow__btn">Meet our taem <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -837,8 +742,8 @@
                                 </div>
                             </div>
                             <div class="col-md-7">
-                                <div class="team-section__thumb">
-                                    <img class="img-custom-anim-img" src="assets/imgs/images/team-01.jpg" alt="image not found">
+                                <div class="team-section__thumb fix">
+                                    <img data-speed="0.9" src="assets/imgs/images/team-01.jpg" alt="image not found">
                                 </div>
                             </div>
                         </div>
@@ -870,32 +775,32 @@
                             <div class="col-lg-6">
                                 <div class="blog-section__item__wrapper fade-top">
                                     <div class="blog-section__item item_1">
-                                        <div class="blog-section__thumb">
+                                        <div class="blog-section__thumb fix">
                                             <a href="blog-details.html">
-                                                <img class="img-custom-anim-img" src="assets/imgs/images/blog-01.jpg" alt="image not found">
+                                                <img data-speed="0.9" src="assets/imgs/images/blog-01.jpg" alt="image not found">
                                             </a>
                                         </div>
                                         <div class="blog-section__content">
                                             <div class="blog-section__meta">
                                                 <span>Creative Design / May. 18/2023</span>
                                             </div>
-                                            <h3 class="blog-section__title"><a href="blog-details.html">Come online and <br> experience <span>digital <br> marketing</span></a></h3>
+                                            <h3 class="blog-section__title"><a href="blog-details.html">Come online and <br> experience digital <br> marketing</a></h3>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="blog-section__item item_2 fade-top">
-                                    <div class="blog-section__thumb">
+                                    <div class="blog-section__thumb fix">
                                         <a href="blog-details.html">
-                                            <img class="img-custom-anim-img" src="assets/imgs/images/blog-02.jpg" alt="image not found">
+                                            <img data-speed="0.9" src="assets/imgs/images/blog-02.jpg" alt="image not found">
                                         </a>
                                     </div>
                                     <div class="blog-section__content">
                                         <div class="blog-section__meta">
                                             <span>Creative Design / May. 18/2023</span>
                                         </div>
-                                        <h3 class="blog-section__title"><a href="blog-details.html">Creating the <br> perfect <span>approach to <br> marketing</span></a></h3>
+                                        <h3 class="blog-section__title"><a href="blog-details.html">Creating the <br> perfect approach to <br> marketing</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -1015,7 +920,6 @@
 <script src="assets/js/vendor/magnific-popup.min.js"></script>
 <script src="assets/js/vendor/vanilla-tilt.js"></script>
 <script src="assets/js/vendor/odometer.min.js"></script>
-<script src="assets/js/vendor/jarallax.min.js"></script>
 <script src="assets/js/vendor/jquery-ui.min.js"></script>
 <script src="assets/js/vendor/ajax-form.js"></script>
 <script src="assets/js/main.js"></script>
